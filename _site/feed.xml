@@ -1,4 +1,150 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-20T17:17:40+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2019/12/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-12-20T16:14:59+07:00</published><updated>2019-12-20T16:14:59+07:00</updated><id>http://localhost:4000/jekyll/update/2019/12/20/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/12/20/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-23T10:06:49+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>I write an awesome CompSci stuff in here, including my Projects' documentation, what i know and  what i learned. For the sake of knowledge</subtitle><entry><title type="html">PYTHON DAN R BERSAMA</title><link href="http://localhost:4000/indonesian/article/2019/12/23/python-dan-r.html" rel="alternate" type="text/html" title="PYTHON DAN R BERSAMA" /><published>2019-12-23T09:36:59+07:00</published><updated>2019-12-23T09:36:59+07:00</updated><id>http://localhost:4000/indonesian/article/2019/12/23/python-dan-r</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2019/12/23/python-dan-r.html">&lt;h1 id=&quot;penggunaan-bahasa-r-dan-python-secara-bersamaan&quot;&gt;PENGGUNAAN BAHASA R DAN PYTHON SECARA BERSAMAAN&lt;/h1&gt;
+
+&lt;h2 id=&quot;prakata&quot;&gt;Prakata&lt;/h2&gt;
+
+&lt;p&gt;Bahasa R dan Python seringkali digunakan dalam proses yang berkaitan dengan &lt;em&gt;data science&lt;/em&gt; dan sudah banyak pula yang membandingkan R dan Python dari segi kegunaan hingga &lt;em&gt;job opportunity&lt;/em&gt;. Pertanyaan yang timbul dari perbandingan antara dua bahasa yang masing-masing memiliki karakter yang berbeda adalah &quot;Bisakah keduanya dipakai bersamaan? Bagaimana jika dipakai bersamaan? Apakah lebih baik?&quot; dan pertanyaan lain yang menjurus ke &quot;R vs Python against the world&quot;.&lt;/p&gt;
+
+&lt;p&gt;Topik ini menarik untuk dibahas karena selama ini dan yang telah diketahui sebelumnya, R dan Python menjadi 2 hal yang harus dipilih untuk pekerjaan menyangkut data science dkk. dan hal ini tidak sepenuhnya salah, namun pada artikel ini, pilihan bertambah satu karena R dan Python bisa dipakai bersamaan.&lt;/p&gt;
+
+&lt;p&gt;Artikel ini bertujuan untuk membahas tujuan dari pemakaian masing-masing R dan Python dalam satu sistem pengolahan data dan bagaimana hal tersebut dapat dilakukan.&lt;/p&gt;
+
+&lt;h2 id=&quot;sekilas-tentang-python-dan-r&quot;&gt;Sekilas tentang Python dan R&lt;/h2&gt;
+
+&lt;p&gt;Python dikembangkan oleh Guido van Rossum dan rilis pertama kali tahun 1991 sebagai bahasa &lt;em&gt;scripting,&lt;/em&gt; high-level dan bersifat &lt;strong&gt;umum&lt;/strong&gt;. Pembuat dari Python menekankan aspek &lt;em&gt;readability&lt;/em&gt; pada desain bahasa Python dan memopulerkan &lt;em&gt;whitespace&lt;/em&gt; sebagai pengganti dari &lt;em&gt;bracket&lt;/em&gt; ({}).&lt;/p&gt;
+
+&lt;p&gt;Python pada dasarnya adalah bahasa pemrograman umum, Python dibuat tidak spesifik untuk statistika atau pengolahan data sebagai contoh Python dapat dimanfaatkan untuk pengembangan &lt;em&gt;game&lt;/em&gt;, pengolahan data atau machine learning (semakin populer karena ini), pengembangan aplikasi web sampai dengan pengembangan aplikasi berbasis &lt;em&gt;mobile&lt;/em&gt; (Android).&lt;/p&gt;
+
+&lt;p&gt;R adalah bahasa &lt;em&gt;scripting&lt;/em&gt; sama seperti Python dan R juga menyediakan &lt;em&gt;environment&lt;/em&gt; sendiri untuk pengembangan program dengan R. R yang diciptakan oleh Ross Ihaka dan Robert Gentleman dikhususkan untuk keperluan statistika atau masalah yang berhubungan dengan pengolahan data, hal itu menjadi salah satu hal yang membedakan R dengan bahasa lain khususnya Python.&lt;/p&gt;
+
+&lt;p&gt;R banyak digunakan pada masalah yang berkaitan dengan statistika dan data, seperti data mining, data analysis, data visualization dsb. R memiliki komunitas pemakai dan pengembang yang lumayan besar dan bisa memuat banyak paket dan library, sama seperti Python.&lt;/p&gt;
+
+&lt;p&gt;Python menjadi pilihan untuk data science karena banyaknya library scientific yang dapat diakses, bersifat umum dan &lt;em&gt;readable&lt;/em&gt; sehingga menawarkan kemudahan untuk tahap produksi (misal, deep learning). R sudah melabeli diri sebagai bahasa yang bersifat khusus dalam hal penggunaan, yaitu statistika yang menyebabkan R pilihan yang baik untuk data science dan menawarkan hasil analisis yang baik pada fokus penggunaan (statistika).&lt;/p&gt;
+
+&lt;h2 id=&quot;kelebihan-python-dan-r&quot;&gt;Kelebihan Python dan R&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;strong&gt;R&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Python&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lebih baik untuk analisis data&lt;/td&gt;
+      &lt;td&gt;Kegunaan lebih beragam&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sangat statistikis&lt;/td&gt;
+      &lt;td&gt;Produksi&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;visualisasi data yang lebih rapi&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;Code readability&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Tabel 1: Kelebihan R dan Python&lt;/p&gt;
+
+&lt;p&gt;R berfokus kepada komputasi yang membantu tahapan penyelesaian masalah dalam statistika, berdasarkan tujuan itu, R menjadi bahasa yang sangat baik dipakai untuk menganalisis data melalui pendekatan statistika seperti mencari rataan, median, modus atau interkuartil. R dikembangkan untuk para statistikawan, jadi karakter atau sintaks bahasa R sangat statistikis, mulai dari penggunaan fungsi dan library yang dapat dipahami oleh statistikawan, bahkan yang tidak pernah belajar &lt;em&gt;coding&lt;/em&gt; sebelumnya. Paket dan library yang dimiliki oleh R lebih lengkap daripada library milik Python dalam hal analisis data dan visualisasi data, dalam hal visualisasi data, R unggul dibanding Python karena lebih lengkapnya library visualisasi data di R.&lt;/p&gt;
+
+&lt;p&gt;Python lebih fleksibel dibandingkan R karena Python bahasa &lt;em&gt;general-purpose&lt;/em&gt; yang bisa dipakai bahkan untuk bidang di luar pengolahan data. Python dengan library yang ada, dapat mengolah data sekaligus menghasilkan produk hasil pengolahan data tersebut (misal, model ML), juga kode Python mudah dibaca dan dipelajari.&lt;/p&gt;
+
+&lt;p&gt;Kelebihan yang ada di atas menurut saya dapat bersinergi dengan baik untuk membuat suatu sistem yang menerapkan analisis data, namun tetap memperhatikan tujuan awal pengembangan sistem&lt;/p&gt;
+
+&lt;h2 id=&quot;caranya&quot;&gt;Caranya?&lt;/h2&gt;
+
+&lt;p&gt;Ada beberapa cara yang mungkin dilakukan untuk menggunakan R dan Python secara bersamaan tergantung tujuan yang sedang ingin diraih, ada 2 jenis pemakaian, yaitu Python yang diakses di R dan sebaliknya.&lt;/p&gt;
+
+&lt;p&gt;Paket-paket yang dapat mengakses Python di R adalah sebagai berikut:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;rJython&lt;/li&gt;
+  &lt;li&gt;rPython&lt;/li&gt;
+  &lt;li&gt;SnakeCharmR&lt;/li&gt;
+  &lt;li&gt;PythonInR&lt;/li&gt;
+  &lt;li&gt;reticulate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Paket-paket yang dapat mengakses R di Python adalah sebagai berikut:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;PypeR&lt;/li&gt;
+  &lt;li&gt;pyRserve&lt;/li&gt;
+  &lt;li&gt;rpy2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cara-cara di atas tidak akan saya bahas satu persatu, namun metode pemakaian rpy2 akan saya bahas di bagian bonus.&lt;/p&gt;
+
+&lt;h2 id=&quot;kesimpulan&quot;&gt;Kesimpulan&lt;/h2&gt;
+
+&lt;p&gt;Kesimpulan yang dapat diambil dari pembahasan di atas:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Python dan R dapat bersinergi dengan masing-masing kelebihan mereka&lt;/li&gt;
+  &lt;li&gt;Sinergi antara Python dan R dapat terasa dengan adanya paket dan library di atas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bonus&quot;&gt;Bonus&lt;/h2&gt;
+
+&lt;p&gt;Pada bagian bonus, saya akan menjelaskan langkah-langkah pemakaian rpy2 untuk Linux dengan Python 3.7 yang sudah terpasang.&lt;/p&gt;
+
+&lt;h3 id=&quot;pastikan-r-sudah-terpasang&quot;&gt;Pastikan R sudah terpasang&lt;/h3&gt;
+
+&lt;p&gt;Pasang R agar tahu apakah R sudah terpasang atau belum dengan command Linux Fedora:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Fedora&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;dnf &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;R
+
+&lt;span class=&quot;c&quot;&gt;# Ubuntu&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;R
+
+&lt;span class=&quot;c&quot;&gt;# sesuaikan dengan package manager yang anda pakai&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;pasang-rpy2-dengan-pip&quot;&gt;Pasang rpy2 dengan pip&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;rpy2
+&lt;span class=&quot;c&quot;&gt;# atau&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;rpy2&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;gunakan-rpy2-untuk-berbagai-keperluan-dengan-import&quot;&gt;Gunakan rpy2 untuk berbagai keperluan dengan Import&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rpy2.robjects.lib.ggplot2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ggplot2&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rpy2.robjects&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ro&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rpy2.robjects.packages&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;importr&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;importr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'base'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;mtcars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datasets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'mtcars'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'mtcars'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dataf_rnorm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;robjects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                                  &lt;span class=&quot;s&quot;&gt;'other_value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                                  &lt;span class=&quot;s&quot;&gt;'mean'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IntVector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# plotting
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ggplot2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ggplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mtcars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;pp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; \
+     &lt;span class=&quot;n&quot;&gt;ggplot2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aes_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'wt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'mpg'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; \
+     &lt;span class=&quot;n&quot;&gt;ggplot2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;geom_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;pp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# online at: https://rpy2.github.io/doc/latest/html/graphics.html#plot&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;gunakan-rpy2-untuk-berbagai-keperluan-dengan-load_ext&quot;&gt;Gunakan rpy2 untuk berbagai keperluan dengan load_ext&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# activate R magic
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load_ext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rpy2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipython&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;lalu untuk tiap line (jupyter notebook) yang berbahasa R, ditambahkan &lt;code class=&quot;highlighter-rouge&quot;&gt;%%R&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Terima kasih sudah mampir, akhir kata Salam. (Akhmal R)&lt;/p&gt;</content><author><name></name></author><summary type="html">PENGGUNAAN BAHASA R DAN PYTHON SECARA BERSAMAAN</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2019/12/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-12-20T16:14:59+07:00</published><updated>2019-12-20T16:14:59+07:00</updated><id>http://localhost:4000/jekyll/update/2019/12/20/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/12/20/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -10,151 +156,4 @@
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Data Mining With R</title><link href="http://localhost:4000/2019/12/20/Data-Mining-with-R.html" rel="alternate" type="text/html" title="Data Mining With R" /><published>2019-12-20T00:00:00+07:00</published><updated>2019-12-20T00:00:00+07:00</updated><id>http://localhost:4000/2019/12/20/Data-Mining-with-R</id><content type="html" xml:base="http://localhost:4000/2019/12/20/Data-Mining-with-R.html">&lt;h1 id=&quot;fruit-and-vegetables-availability&quot;&gt;Fruit and Vegetables Availability&lt;/h1&gt;
-
-&lt;p&gt;https://www.ers.usda.gov/data-products/food-availability-per-capita-data-system/food-availability-per-capita-data-system/#Food%20Availability&lt;/p&gt;
-
-&lt;p&gt;All data in Pounds&lt;/p&gt;
-
-&lt;h2 id=&quot;activate-r&quot;&gt;Activate R&lt;/h2&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# activate R magic
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load_ext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rpy2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipython&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[1] 42
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;import-csv&quot;&gt;import csv&lt;/h2&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fruitveg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'https://gist.githubusercontent.com/akhmal22/f398b2c192a50e8acec9c9dd31a96ee3/raw/5c8ab16d36332ddd2ec3ef06925f13b27d3300f4/fruitveg.csv'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datafv&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read.csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fruitveg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datafv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   year freshf canf freezef driedf juicef otherf totalProcf totalf freshv  canv
-1  1970  100.6 26.2     3.9   10.0   96.7    0.7      137.4  238.0  154.4 100.7
-2  1971  100.8 26.5     4.0   10.0  100.5    0.6      141.6  242.4  148.1 107.8
-3  1972   94.4 24.2     4.0    7.2  101.7    0.7      137.7  232.0  151.4 104.6
-4  1973   96.7 24.5     4.1   10.2  100.0    0.6      139.3  236.0  148.1  98.3
-5  1974   96.1 24.0     3.3    9.7  101.8    1.0      139.8  235.8  146.2  99.1
-6  1975  101.3 23.5     3.0   10.3  113.9    0.4      151.2  252.5  149.1  97.9
-7  1976  101.9 23.4     3.4   13.5  115.5    0.3      156.2  258.1  148.4 103.6
-8  1977   99.6 24.4     3.3    9.9  131.2    0.6      169.4  268.9  148.8 101.7
-9  1978  103.6 24.1     3.7    8.6  119.4    0.8      156.6  260.3  143.9  96.7
-10 1979   99.9 25.0     3.1   10.1  112.5    0.6      151.3  251.2  149.0 100.6
-   freezev driedv chips legume totalProcv totalv totalfv
-1     43.7   13.2  17.4    7.0      181.9  336.3   574.3
-2     45.3   13.8  17.2    7.4      191.5  339.5   581.9
-3     45.3   13.3  16.7    6.6      186.4  337.8   569.8
-4     50.6   14.2  16.3    8.0      187.4  335.5   571.5
-5     51.0   16.1  15.7    6.2      188.1  334.3   570.1
-6     52.6   16.7  15.5    7.2      189.8  338.9   591.4
-7     57.5   17.1  15.8    6.8      200.7  349.1   607.2
-8     59.0   12.7  16.2    7.0      196.7  345.5   614.5
-9     58.9   13.4  16.5    5.7      191.2  335.1   595.4
-10    55.4   13.1  16.7    6.7      192.6  341.6   592.8
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;remove-null&quot;&gt;remove null&lt;/h2&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datafv&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;na.omit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datafv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Remove NA&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datafv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  year freshf canf freezef driedf juicef otherf totalProcf totalf freshv  canv
-1 1970  100.6 26.2     3.9   10.0   96.7    0.7      137.4  238.0  154.4 100.7
-2 1971  100.8 26.5     4.0   10.0  100.5    0.6      141.6  242.4  148.1 107.8
-3 1972   94.4 24.2     4.0    7.2  101.7    0.7      137.7  232.0  151.4 104.6
-4 1973   96.7 24.5     4.1   10.2  100.0    0.6      139.3  236.0  148.1  98.3
-5 1974   96.1 24.0     3.3    9.7  101.8    1.0      139.8  235.8  146.2  99.1
-6 1975  101.3 23.5     3.0   10.3  113.9    0.4      151.2  252.5  149.1  97.9
-  freezev driedv chips legume totalProcv totalv totalfv
-1    43.7   13.2  17.4    7.0      181.9  336.3   574.3
-2    45.3   13.8  17.2    7.4      191.5  339.5   581.9
-3    45.3   13.3  16.7    6.6      186.4  337.8   569.8
-4    50.6   14.2  16.3    8.0      187.4  335.5   571.5
-5    51.0   16.1  15.7    6.2      188.1  334.3   570.1
-6    52.6   16.7  15.5    7.2      189.8  338.9   591.4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;year-column-is-not-used-drop-it&quot;&gt;year column is not used, drop it&lt;/h2&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datafv&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datafv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datafv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  freshf canf freezef driedf juicef otherf totalProcf totalf freshv  canv
-1  100.6 26.2     3.9   10.0   96.7    0.7      137.4  238.0  154.4 100.7
-2  100.8 26.5     4.0   10.0  100.5    0.6      141.6  242.4  148.1 107.8
-3   94.4 24.2     4.0    7.2  101.7    0.7      137.7  232.0  151.4 104.6
-4   96.7 24.5     4.1   10.2  100.0    0.6      139.3  236.0  148.1  98.3
-5   96.1 24.0     3.3    9.7  101.8    1.0      139.8  235.8  146.2  99.1
-6  101.3 23.5     3.0   10.3  113.9    0.4      151.2  252.5  149.1  97.9
-  freezev driedv chips legume totalProcv totalv totalfv
-1    43.7   13.2  17.4    7.0      181.9  336.3   574.3
-2    45.3   13.8  17.2    7.4      191.5  339.5   581.9
-3    45.3   13.3  16.7    6.6      186.4  337.8   569.8
-4    50.6   14.2  16.3    8.0      187.4  335.5   571.5
-5    51.0   16.1  15.7    6.2      188.1  334.3   570.1
-6    52.6   16.7  15.5    7.2      189.8  338.9   591.4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# this method similar to pandas.Dataframe.describe()
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datafv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     freshf           canf          freezef          driedf     
- Min.   : 94.4   Min.   :13.30   Min.   :3.000   Min.   : 7.20  
- 1st Qu.:107.7   1st Qu.:16.55   1st Qu.:3.850   1st Qu.: 9.90  
- Median :123.3   Median :19.95   Median :4.300   Median :10.30  
- Mean   :119.2   Mean   :19.49   Mean   :4.267   Mean   :10.79  
- 3rd Qu.:128.3   3rd Qu.:22.27   3rd Qu.:4.800   3rd Qu.:12.12  
- Max.   :142.7   Max.   :26.50   Max.   :5.600   Max.   :15.00  
-     juicef          otherf         totalProcf        totalf     
- Min.   : 80.9   Min.   :0.2000   Min.   :109.7   Min.   :232.0  
- 1st Qu.:100.5   1st Qu.:0.3000   1st Qu.:138.5   1st Qu.:254.5  
- Median :115.7   Median :0.5000   Median :151.4   Median :267.3  
- Mean   :111.1   Mean   :0.5292   Mean   :146.1   Mean   :265.4  
- 3rd Qu.:120.4   3rd Qu.:0.7000   3rd Qu.:156.4   3rd Qu.:277.5  
- Max.   :136.4   Max.   :1.0000   Max.   :170.5   Max.   :300.0  
-     freshv           canv           freezev          driedv     
- Min.   :143.9   Min.   : 81.90   Min.   :43.70   Min.   :10.50  
- 1st Qu.:151.8   1st Qu.: 96.50   1st Qu.:58.73   1st Qu.:12.80  
- Median :185.1   Median :100.50   Median :68.80   Median :13.90  
- Mean   :176.3   Mean   : 99.96   Mean   :67.05   Mean   :14.10  
- 3rd Qu.:194.2   3rd Qu.:103.85   3rd Qu.:75.95   3rd Qu.:15.32  
- Max.   :204.4   Max.   :112.40   Max.   :83.40   Max.   :17.70  
-     chips           legume         totalProcv        totalv     
- Min.   :13.70   Min.   : 5.700   Min.   :181.9   Min.   :334.3  
- 1st Qu.:16.18   1st Qu.: 6.700   1st Qu.:192.8   1st Qu.:344.5  
- Median :16.70   Median : 7.200   Median :202.0   Median :388.9  
- Mean   :16.79   Mean   : 7.365   Mean   :205.3   Mean   :381.5  
- 3rd Qu.:17.52   3rd Qu.: 8.025   3rd Qu.:218.4   3rd Qu.:413.9  
- Max.   :20.00   Max.   :11.200   Max.   :232.0   Max.   :425.1  
-    totalfv     
- Min.   :569.8  
- 1st Qu.:612.7  
- Median :647.0  
- Mean   :646.9  
- 3rd Qu.:686.2  
- Max.   :721.3  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Fruit and Vegetables Availability</summary></entry></feed>
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
