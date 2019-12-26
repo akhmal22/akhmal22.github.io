@@ -1,4 +1,148 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-23T10:06:49+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>I write an awesome CompSci stuff in here, including my Projects' documentation, what i know and  what i learned. For the sake of knowledge</subtitle><entry><title type="html">PYTHON DAN R BERSAMA</title><link href="http://localhost:4000/indonesian/article/2019/12/23/python-dan-r.html" rel="alternate" type="text/html" title="PYTHON DAN R BERSAMA" /><published>2019-12-23T09:36:59+07:00</published><updated>2019-12-23T09:36:59+07:00</updated><id>http://localhost:4000/indonesian/article/2019/12/23/python-dan-r</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2019/12/23/python-dan-r.html">&lt;h1 id=&quot;penggunaan-bahasa-r-dan-python-secara-bersamaan&quot;&gt;PENGGUNAAN BAHASA R DAN PYTHON SECARA BERSAMAAN&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-26T22:59:19+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>I write an awesome CompSci stuff in here, including my Projects' documentation, what i know and  what i learned. For the sake of knowledge</subtitle><entry><title type="html">BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL</title><link href="http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html" rel="alternate" type="text/html" title="BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL" /><published>2019-12-26T22:23:59+07:00</published><updated>2019-12-26T22:23:59+07:00</updated><id>http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html">&lt;h1 id=&quot;bangun-website-sendiri-dengan-github-pages-dan-jekyll&quot;&gt;BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL&lt;/h1&gt;
+
+&lt;h2 id=&quot;prakata&quot;&gt;Prakata&lt;/h2&gt;
+
+&lt;p&gt;Ingin bangun website sendiri? Ingin punya website untuk dokumentasikan proyek kamu? Ingin blogging tapi dengan cara baru? Kamu datang di artikel yang tepat. Artikel ini akan membahas Github Pages, Jekyll dan cara membuat website sendiri dengan 2 teknologi mutakhir tersebut. Jadi, mari kita mulai pembahasan ini dengan pertanyaan apa itu Github Pages dan Apa itu Jekyll.&lt;/p&gt;
+
+&lt;h2 id=&quot;apa-itu-github-pages&quot;&gt;Apa itu Github Pages?&lt;/h2&gt;
+
+&lt;p&gt;Github Pages merupakan salah satu fitur terbaru dari Github yang memungkinkan pengguna Github membuat semacam situs (website) secara gratis dengan menjalankan trio maut git cli (add, commit, push) pada repositori (repo) khusus. Github Pages hanya situs statis yang menampilkan hasil render HTML saja (frontend)  dan tidak menyimpan atau menampilkan (operasi CRUD) seperti website pada umumnya (ada backend dan frontend).&lt;/p&gt;
+
+&lt;p&gt;Github Pages bertujuan untuk berbagai kebutuhan yang dapat ditangani dengan website statis seperti company profile atau self profile, dokumentasi proyek milik pribadi atau komunitas sampai berbagi ilmu dengan artikel anda.&lt;/p&gt;
+
+&lt;h2 id=&quot;apa-itu-jekyll&quot;&gt;Apa itu Jekyll?&lt;/h2&gt;
+
+&lt;p&gt;Jekyll merupakan generator situs statis yang ditujukan untuk pembuatan situs pribadi, proyek atau organisasi. Jekyll hanya me-render file yang ada pada repo Github anda menjadi content yang menyerupai blog. Jekyll dapat dipakai untuk membuat Github Pages anda lebih cantik dan lebih gampang untuk diubahsuai, terlepas dari Github Pages, Jekyll juga bisa dioperasikan dengan engine web server seperti Apache atau Nginx.&lt;/p&gt;
+
+&lt;h2 id=&quot;caranya&quot;&gt;Caranya?&lt;/h2&gt;
+
+&lt;p&gt;Kebutuhan Software&lt;/p&gt;
+
+&lt;p&gt;Untuk guide ini, saya akan menggunakan Git CLI sebagai Git Client. Anda memerlukan beberapa software untuk bisa melakukan tahapan yang dibutuhkan, yaitu:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;strong&gt;Software&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Fungsi&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Git GUI/CLI&lt;/td&gt;
+      &lt;td&gt;Menjalankan operasi git dari repo lokal&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ruby&lt;/td&gt;
+      &lt;td&gt;Kebutuhan/dependensi untuk Jekyll&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Gem&lt;/td&gt;
+      &lt;td&gt;Package manager Ruby&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bundler&lt;/td&gt;
+      &lt;td&gt;Gem dependencies manager Ruby untuk repo&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Tabel 1: Kebutuhan Software&lt;/p&gt;
+
+&lt;p&gt;Sebenarnya, Jekyll juga mempunyai beberapa dependensi yang harus dipenuhi, namun saya sebut hanya 4 kebutuhan software karena tabel di atas hanya untuk keperluan instalasi dan Jekyll beserta dependensinya akan bisa diatur oleh Bundler. Biasanya (jika anda pakai Linux) Git CLI dan Ruby sudah terinstall, jika belum ada, install dengan command (saya pakai Fedora)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# install Git CLI&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;dnf &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git
+
+&lt;span class=&quot;c&quot;&gt;# install Ruby&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;dnf &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby ruby-devel
+&lt;span class=&quot;c&quot;&gt;# beberapa distro memakai ruby-dev, sesuaikan dengan distro anda&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# tiga command di atas bisa dijadikan 1&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;dnf &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git ruby ruby-devel
+
+&lt;span class=&quot;c&quot;&gt;# install bundler&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bundle&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Pembuatan Repo Github Baru&lt;/p&gt;
+
+&lt;p&gt;Setelah semua yang di atas terinstall, buat repo baru dari Git (repo lokal) dan dari website Github langsung. Pembuatan repo pada situs Github dapat dilakukan dengan klik menu tanda tambah '+' dan 'new repository' lalu:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Isi nama repo dengan &quot;&amp;lt;username&amp;gt;.github.io&quot; dengan &amp;lt;username&amp;gt; adalah username dari akun Github anda&lt;/li&gt;
+  &lt;li&gt;Tuliskan deskripsi (opsional)&lt;/li&gt;
+  &lt;li&gt;Repo diatur ke mode publik&lt;/li&gt;
+  &lt;li&gt;Inisiasi README (opsional)&lt;/li&gt;
+  &lt;li&gt;Jangan sertakan .gitignore&lt;/li&gt;
+  &lt;li&gt;License dibiarkan none juga tidak masalah&lt;/li&gt;
+  &lt;li&gt;Repo Github anda siap dibuat.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/d5HToIFAFm-kwTmx1y_AcagpuQm5BBsDqWdESDM40l8gSZEUXeFcxtbARX745W-W9lPK8WEI6V_q3_MxXLxAMd9-lzEShXCSExR_Vut-aFQjuEN3UrT1MvQnVvsGnZqd6s1SYM9T9YGQkvi5C0IlXP3_okcK4_XV3Ek4zdnCHr5Q8f5WODVjX6qpx2h74SMJCB8j5sY4GqxdfPpi3E3Y6GH7nhWUEB9BekjmC5tKJnbt2Q_6CTN4M5IpLayG5HCgcT8BShRMuhYaR4AZTNyO94mqDs72uxXAYk-tp0yL3V5GtGv_1vb6RdXhsQ7QxZ_UUtfUiRLV_sWHdALDm5So0-CLmuQY_ENiyykMzRwf1cuS35ypqCnP2zES12M81ibF9txHsxtAgVjQtyTY9pEkSGyDZiat9-GLnXRkh3bWI4oUM05OtVluzFQ9SH-c6rChMvDBVLWwtoQ0bWmshu5NQsu7vbxX0CkLMAa3dR9h2GJl2h2CdqUzGv2CKySZGNoql3gKxUIQzAEIWRX47gU3OvTRSBk7lTFkOP9E48l-gJvFaNmcN5FLOZKsns4VGoSCgWIOAEtB-3ei8WyH6VKd1KhZqbumPOPxonvx7pDRS0Vm2Z6upDa6oh1XNi4-7vEYk46v_gE_46q3ScpDeqAA5PJXTFF1h_S1pzHCY1gg3bdKlz-fxF0vpfM=w181-h206-no&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar 1: Cara membuat repo baru di Github&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/0TSy2BVOTQMrLJN1nqaEyDQs1ICgX1M4J11jMDrSg0AKjutu_5pfjNwG1i8dr4kXGgSUqGFMk7tHOdjMq0R3Byu5Dq8RzDoRz18oI31jBpxSNJHFltCzFFcGSabRy_C0StSTuy-GSg=w707-h640-no&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar 2: Cara membuat repo khusus Github Pages&lt;/p&gt;
+
+&lt;p&gt;Giliran pengaturan dari Git CLI, karena repo Git anda yang di Github sudah diatur langsung di situs Github, anda hanya tinggal clone repo Github anda ke repo lokal dan tes situs anda&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# clone git repo yang ada di github anda&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io
+
+&lt;span class=&quot;c&quot;&gt;# pindah direktori ke direktori yang di clone&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &amp;lt;username&amp;gt;.github.io
+
+&lt;span class=&quot;c&quot;&gt;# buat dan masukkan kata “Hello, World!” pada index.html&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello, World&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; index.html
+
+&lt;span class=&quot;c&quot;&gt;# tambahkan semua file yang ada di direktori tersebut&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# commit perubahan yang anda lakukan&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; “tulis perubahan yg anda lakukan disini”
+
+&lt;span class=&quot;c&quot;&gt;# push commit yang telah dibuat ke repo remote&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; origin master
+
+&lt;span class=&quot;c&quot;&gt;# jika ada masalah kredensial, bisa coba ini dan lakukan command di atas sekali lagi&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.name “&amp;lt;username&amp;gt;”
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.email “&amp;lt;email&amp;gt;”&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Setelah command-command di atas dilakukan tanpa error, anda bisa cek situs anda dengan mengunjungi https://&amp;lt;username&amp;gt;.github.io.&lt;/p&gt;
+
+&lt;p&gt;Setting Jekyll pada Repo Lokal&lt;/p&gt;
+
+&lt;p&gt;Jika anda sudah memenuhi kebutuhan software diatas, maka anda bisa melanjutkan tahapan ke instalasi Jekyll dan mengatur Jekyll agar bisa bekerja dengan baik, tahapan selanjutnya adalah sebagai berikut.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# instalasi jekyll&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll
+
+&lt;span class=&quot;c&quot;&gt;# inisiasi Gemfile&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle init
+
+&lt;span class=&quot;c&quot;&gt;# tambahkan Jekyll ke Gemfile&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle add jekyll &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; “&amp;lt;versi Jekyll&amp;gt;”
+&lt;span class=&quot;c&quot;&gt;# lihat https://pages.github.com/versions/ untuk mengisi &amp;lt;versi Jekyll&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# generate file Jekyll yang akan jadi komponen dari Github Pages&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll new &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# jalankan situs anda di komputer anda&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Jika anda sudah masuk ke tahap ini, anda sudah menambahkan Jekyll ke dalam Github Pages anda dan biasakan trio maut jika ada perubahan.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; “tulis perubahan yg anda lakukan disini”
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; origin master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Perubahan yang sudah disimpan akan perlu beberapa waktu untuk diterapkan, untuk itu bersabar. Cek website pribadi anda dengan mengunjungi https://&amp;lt;username&amp;gt;.github.io dan lihat penampilan dari website anda, lebih menarik bukan?&lt;/p&gt;
+
+&lt;p&gt;Saya kira artikel ini berakhir disini, mungkin akan di-update jika dirasa kurang. Terima kasih sudah mampir, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name></name></author><summary type="html">BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL</summary></entry><entry><title type="html">PYTHON DAN R BERSAMA</title><link href="http://localhost:4000/indonesian/article/2019/12/23/python-dan-r.html" rel="alternate" type="text/html" title="PYTHON DAN R BERSAMA" /><published>2019-12-23T09:36:59+07:00</published><updated>2019-12-23T09:36:59+07:00</updated><id>http://localhost:4000/indonesian/article/2019/12/23/python-dan-r</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2019/12/23/python-dan-r.html">&lt;h1 id=&quot;penggunaan-bahasa-r-dan-python-secara-bersamaan&quot;&gt;PENGGUNAAN BAHASA R DAN PYTHON SECARA BERSAMAAN&lt;/h1&gt;
 
 &lt;h2 id=&quot;prakata&quot;&gt;Prakata&lt;/h2&gt;
 

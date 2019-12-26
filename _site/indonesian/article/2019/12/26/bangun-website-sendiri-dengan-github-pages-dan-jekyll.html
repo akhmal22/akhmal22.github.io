@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL | akhmal22’s blog</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL" />
+<meta property="og:description" content="BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL" />
+<link rel="canonical" href="http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html" />
+<meta property="og:url" content="http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html" />
+<meta property="og:site_name" content="akhmal22’s blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-12-26T22:23:59+07:00" />
+<script type="application/ld+json">
+{"description":"BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL","datePublished":"2019-12-26T22:23:59+07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html"},"url":"http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html","headline":"BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL","dateModified":"2019-12-26T22:23:59+07:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="akhmal22's blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">akhmal22&#39;s blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-12-26T22:23:59+07:00" itemprop="datePublished">Dec 26, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="bangun-website-sendiri-dengan-github-pages-dan-jekyll">BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL</h1>
+
+<h2 id="prakata">Prakata</h2>
+
+<p>Ingin bangun website sendiri? Ingin punya website untuk dokumentasikan proyek kamu? Ingin blogging tapi dengan cara baru? Kamu datang di artikel yang tepat. Artikel ini akan membahas Github Pages, Jekyll dan cara membuat website sendiri dengan 2 teknologi mutakhir tersebut. Jadi, mari kita mulai pembahasan ini dengan pertanyaan apa itu Github Pages dan Apa itu Jekyll.</p>
+
+<h2 id="apa-itu-github-pages">Apa itu Github Pages?</h2>
+
+<p>Github Pages merupakan salah satu fitur terbaru dari Github yang memungkinkan pengguna Github membuat semacam situs (website) secara gratis dengan menjalankan trio maut git cli (add, commit, push) pada repositori (repo) khusus. Github Pages hanya situs statis yang menampilkan hasil render HTML saja (frontend)  dan tidak menyimpan atau menampilkan (operasi CRUD) seperti website pada umumnya (ada backend dan frontend).</p>
+
+<p>Github Pages bertujuan untuk berbagai kebutuhan yang dapat ditangani dengan website statis seperti company profile atau self profile, dokumentasi proyek milik pribadi atau komunitas sampai berbagi ilmu dengan artikel anda.</p>
+
+<h2 id="apa-itu-jekyll">Apa itu Jekyll?</h2>
+
+<p>Jekyll merupakan generator situs statis yang ditujukan untuk pembuatan situs pribadi, proyek atau organisasi. Jekyll hanya me-render file yang ada pada repo Github anda menjadi content yang menyerupai blog. Jekyll dapat dipakai untuk membuat Github Pages anda lebih cantik dan lebih gampang untuk diubahsuai, terlepas dari Github Pages, Jekyll juga bisa dioperasikan dengan engine web server seperti Apache atau Nginx.</p>
+
+<h2 id="caranya">Caranya?</h2>
+
+<p>Kebutuhan Software</p>
+
+<p>Untuk guide ini, saya akan menggunakan Git CLI sebagai Git Client. Anda memerlukan beberapa software untuk bisa melakukan tahapan yang dibutuhkan, yaitu:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Software</strong></th>
+      <th><strong>Fungsi</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Git GUI/CLI</td>
+      <td>Menjalankan operasi git dari repo lokal</td>
+    </tr>
+    <tr>
+      <td>Ruby</td>
+      <td>Kebutuhan/dependensi untuk Jekyll</td>
+    </tr>
+    <tr>
+      <td>Gem</td>
+      <td>Package manager Ruby</td>
+    </tr>
+    <tr>
+      <td>Bundler</td>
+      <td>Gem dependencies manager Ruby untuk repo</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Tabel 1: Kebutuhan Software</p>
+
+<p>Sebenarnya, Jekyll juga mempunyai beberapa dependensi yang harus dipenuhi, namun saya sebut hanya 4 kebutuhan software karena tabel di atas hanya untuk keperluan instalasi dan Jekyll beserta dependensinya akan bisa diatur oleh Bundler. Biasanya (jika anda pakai Linux) Git CLI dan Ruby sudah terinstall, jika belum ada, install dengan command (saya pakai Fedora)</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># install Git CLI</span>
+<span class="nv">$ </span><span class="nb">sudo </span>dnf <span class="nb">install </span>git
+
+<span class="c"># install Ruby</span>
+<span class="nv">$ </span><span class="nb">sudo </span>dnf <span class="nb">install </span>ruby ruby-devel
+<span class="c"># beberapa distro memakai ruby-dev, sesuaikan dengan distro anda</span>
+
+<span class="c"># tiga command di atas bisa dijadikan 1</span>
+<span class="nv">$ </span><span class="nb">sudo </span>dnf <span class="nb">install </span>git ruby ruby-devel
+
+<span class="c"># install bundler</span>
+<span class="nv">$ </span>gem <span class="nb">install </span>bundle</code></pre></figure>
+
+<p>Pembuatan Repo Github Baru</p>
+
+<p>Setelah semua yang di atas terinstall, buat repo baru dari Git (repo lokal) dan dari website Github langsung. Pembuatan repo pada situs Github dapat dilakukan dengan klik menu tanda tambah '+' dan 'new repository' lalu:</p>
+
+<ol>
+  <li>Isi nama repo dengan "&lt;username&gt;.github.io" dengan &lt;username&gt; adalah username dari akun Github anda</li>
+  <li>Tuliskan deskripsi (opsional)</li>
+  <li>Repo diatur ke mode publik</li>
+  <li>Inisiasi README (opsional)</li>
+  <li>Jangan sertakan .gitignore</li>
+  <li>License dibiarkan none juga tidak masalah</li>
+  <li>Repo Github anda siap dibuat.</li>
+</ol>
+
+<p><img src="https://lh3.googleusercontent.com/d5HToIFAFm-kwTmx1y_AcagpuQm5BBsDqWdESDM40l8gSZEUXeFcxtbARX745W-W9lPK8WEI6V_q3_MxXLxAMd9-lzEShXCSExR_Vut-aFQjuEN3UrT1MvQnVvsGnZqd6s1SYM9T9YGQkvi5C0IlXP3_okcK4_XV3Ek4zdnCHr5Q8f5WODVjX6qpx2h74SMJCB8j5sY4GqxdfPpi3E3Y6GH7nhWUEB9BekjmC5tKJnbt2Q_6CTN4M5IpLayG5HCgcT8BShRMuhYaR4AZTNyO94mqDs72uxXAYk-tp0yL3V5GtGv_1vb6RdXhsQ7QxZ_UUtfUiRLV_sWHdALDm5So0-CLmuQY_ENiyykMzRwf1cuS35ypqCnP2zES12M81ibF9txHsxtAgVjQtyTY9pEkSGyDZiat9-GLnXRkh3bWI4oUM05OtVluzFQ9SH-c6rChMvDBVLWwtoQ0bWmshu5NQsu7vbxX0CkLMAa3dR9h2GJl2h2CdqUzGv2CKySZGNoql3gKxUIQzAEIWRX47gU3OvTRSBk7lTFkOP9E48l-gJvFaNmcN5FLOZKsns4VGoSCgWIOAEtB-3ei8WyH6VKd1KhZqbumPOPxonvx7pDRS0Vm2Z6upDa6oh1XNi4-7vEYk46v_gE_46q3ScpDeqAA5PJXTFF1h_S1pzHCY1gg3bdKlz-fxF0vpfM=w181-h206-no" alt="alt text" title="Logo Title Text 1" /></p>
+
+<p>Gambar 1: Cara membuat repo baru di Github</p>
+
+<p><img src="https://lh3.googleusercontent.com/0TSy2BVOTQMrLJN1nqaEyDQs1ICgX1M4J11jMDrSg0AKjutu_5pfjNwG1i8dr4kXGgSUqGFMk7tHOdjMq0R3Byu5Dq8RzDoRz18oI31jBpxSNJHFltCzFFcGSabRy_C0StSTuy-GSg=w707-h640-no" alt="alt text" title="Logo Title Text 1" /></p>
+
+<p>Gambar 2: Cara membuat repo khusus Github Pages</p>
+
+<p>Giliran pengaturan dari Git CLI, karena repo Git anda yang di Github sudah diatur langsung di situs Github, anda hanya tinggal clone repo Github anda ke repo lokal dan tes situs anda</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># clone git repo yang ada di github anda</span>
+<span class="nv">$ </span>git clone https://github.com/&lt;username&gt;/&lt;username&gt;.github.io
+
+<span class="c"># pindah direktori ke direktori yang di clone</span>
+<span class="nv">$ </span><span class="nb">cd</span> &lt;username&gt;.github.io
+
+<span class="c"># buat dan masukkan kata “Hello, World!” pada index.html</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"Hello, World"</span> <span class="o">&gt;&gt;</span> index.html
+
+<span class="c"># tambahkan semua file yang ada di direktori tersebut</span>
+<span class="nv">$ </span>git add <span class="nb">.</span>
+
+<span class="c"># commit perubahan yang anda lakukan</span>
+<span class="nv">$ </span>git commit <span class="nt">-m</span> “tulis perubahan yg anda lakukan disini”
+
+<span class="c"># push commit yang telah dibuat ke repo remote</span>
+<span class="nv">$ </span>git push <span class="nt">-u</span> origin master
+
+<span class="c"># jika ada masalah kredensial, bisa coba ini dan lakukan command di atas sekali lagi</span>
+<span class="nv">$ </span>git config <span class="nt">--global</span> user.name “&lt;username&gt;”
+<span class="nv">$ </span>git config <span class="nt">--global</span> user.email “&lt;email&gt;”</code></pre></figure>
+
+<p>Setelah command-command di atas dilakukan tanpa error, anda bisa cek situs anda dengan mengunjungi https://&lt;username&gt;.github.io.</p>
+
+<p>Setting Jekyll pada Repo Lokal</p>
+
+<p>Jika anda sudah memenuhi kebutuhan software diatas, maka anda bisa melanjutkan tahapan ke instalasi Jekyll dan mengatur Jekyll agar bisa bekerja dengan baik, tahapan selanjutnya adalah sebagai berikut.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># instalasi jekyll</span>
+<span class="nv">$ </span>gem <span class="nb">install </span>jekyll
+
+<span class="c"># inisiasi Gemfile</span>
+<span class="nv">$ </span>bundle init
+
+<span class="c"># tambahkan Jekyll ke Gemfile</span>
+<span class="nv">$ </span>bundle add jekyll <span class="nt">-v</span> “&lt;versi Jekyll&gt;”
+<span class="c"># lihat https://pages.github.com/versions/ untuk mengisi &lt;versi Jekyll&gt;</span>
+
+<span class="c"># generate file Jekyll yang akan jadi komponen dari Github Pages</span>
+<span class="nv">$ </span>bundle <span class="nb">exec </span>jekyll new <span class="nb">.</span>
+
+<span class="c"># jalankan situs anda di komputer anda</span>
+<span class="nv">$ </span>bundle <span class="nb">exec </span>jekyll serve</code></pre></figure>
+
+<p>Jika anda sudah masuk ke tahap ini, anda sudah menambahkan Jekyll ke dalam Github Pages anda dan biasakan trio maut jika ada perubahan.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git add <span class="nb">.</span>
+
+<span class="nv">$ </span>git commit <span class="nt">-m</span> “tulis perubahan yg anda lakukan disini”
+
+<span class="nv">$ </span>git push <span class="nt">-u</span> origin master</code></pre></figure>
+
+<p>Perubahan yang sudah disimpan akan perlu beberapa waktu untuk diterapkan, untuk itu bersabar. Cek website pribadi anda dengan mengunjungi https://&lt;username&gt;.github.io dan lihat penampilan dari website anda, lebih menarik bukan?</p>
+
+<p>Saya kira artikel ini berakhir disini, mungkin akan di-update jika dirasa kurang. Terima kasih sudah mampir, akhir kata, Salam (Akhmal R)</p>
+
+  </div><a class="u-url" href="/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">akhmal22&#39;s blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">akhmal22&#39;s blog</li><li><a class="u-email" href="mailto:rizkyantorig355@gmail.com">rizkyantorig355@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/akhmal22"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">akhmal22</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I write an awesome CompSci stuff in here, including my Projects&#39; documentation, what i know and  what i learned. For the sake of knowledge</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
