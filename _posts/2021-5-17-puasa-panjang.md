@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "NATAL DAN TAHUN BARU"
-date:   2019-5-17 21:12:59 +0700
+title:  "PUASA PANJANG"
+date:   2021-5-17 21:12:59 +0700
 categories: indonesian misc
 ---
 
-# SELAMAT LIBURAN NATAL DAN TAHUN BARU
-Di masa-masa libur kayak ini, sepertinya saya akan lebih banyak nulis artikel tentang IT/CompSci entah sekedar pengetahuan atau tuntunan lengkap, stay tune aja...
+# REHAT NULIS
+Dunia memang pada dasarnya terus berubah, begitu juga kebiasaan menulis penulis yang juga sedang turun tahun lalu, salah satu faktor perubahan itu ya skripsi (hmmhmm corona gak usah diingetin ya, udah pada tau). Iya dengan naiknya tulisan ini saya sebagai penulis menyatakan kembali aktif di blog sederhana ini. Semoga tulisan di blog ini semakin baik seiring berjalannya waktu, akhir kata, Salam (Akhmal R)
