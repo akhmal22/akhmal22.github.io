@@ -64,11 +64,11 @@ Setelah semua yang di atas terinstall, buat repo baru dari Git (repo lokal) dan 
 6. License dibiarkan none juga tidak masalah
 7. Repo Github anda siap dibuat.
 
-![alt text](https://lh4.googleusercontent.com/ngw3kVtdxrLTW_ayLszMRcDx5P6msE_XXIuxkE-1TI3tK6bpPtzzXyqjamF3ZRfu5r-7SbtPhFg9sVen7IWA=w1920-h728)
+![alt text](https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/new-repo.png)
 
 <sub>Gambar 1: Cara membuat repo baru di Github</sub>
 
-![alt text](https://lh3.googleusercontent.com/0TSy2BVOTQMrLJN1nqaEyDQs1ICgX1M4J11jMDrSg0AKjutu_5pfjNwG1i8dr4kXGgSUqGFMk7tHOdjMq0R3Byu5Dq8RzDoRz18oI31jBpxSNJHFltCzFFcGSabRy_C0StSTuy-GSg=w707-h640-no "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/make-new-repo.png)
 
 <sub>Gambar 2: Cara membuat repo khusus Github Pages</sub>
 
