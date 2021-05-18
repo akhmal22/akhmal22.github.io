@@ -110,14 +110,14 @@ Setelah mendapat foto/video yang dimaksud, pilih gambar-gambar (jika anda dapat 
 
 Kode diatas berguna untuk mengganti wallpaper secara berkala berdasarkan waktu perkiraan 4 waktu tersebut mulai dan berakhir, kode tersebut dapat diubah tergantung kebutuhan tertentu anda (misalkan, path menuju gambar atau durasi penggantian dapat diubah sesuai keinginan).
 
-![directory](direktori-timed-background.png)
+![directory](https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/direktori-timed-background.png)
 <sub>Gambar 1: file-file dalam direktori timed background</sub>
 
 Setelah 5 file tersebut siap, buat direktori dan masukkan 5 file tersebut ke direktori yang telah dibuat agar tidak tercecer di root/home directory anda. Sekian adalah pembuatan timed background, sampai saat ini, timed background sudah bisa diaplikasikan.
 
-![directory](tweaks.png)
+![directory](https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/tweaks.png)
 <sub>Gambar 2: aplikasikan timed background dengan GNOME Tweaks</sub>
 
 Pengaplikasian timed background dapat dilakukan dengan GNOME Tweaks, oleh karena itu jika anda belum menginstall (GNOME Tweaks bukan aplikasi bawaan) anda harus menginstall GNOME Tweaks terlebih dulu, jika sudah, anda dapat langsung mengaplikasikan timed background dengan beralih ke seksi Appearance lalu pada file selector image, pilih file .xml yang telah dibuat sebelumnya dan selesai, timed background sudah teraplikasikan pada laptop/PC anda.
 
-Sampai disini dulu artikel pertama saya di tahun 2021 semoga membantu, akhir kata, Salam (Akhmal R)
+Sampai disini dulu artikel pertama saya di tahun 2021 semoga bukan menjadi satu-satunya di tahun ini, akhir kata, Salam (Akhmal R)
