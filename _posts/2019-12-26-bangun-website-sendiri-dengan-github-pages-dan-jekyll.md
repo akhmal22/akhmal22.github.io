@@ -64,13 +64,13 @@ Setelah semua yang di atas terinstall, buat repo baru dari Git (repo lokal) dan 
 6. License dibiarkan none juga tidak masalah
 7. Repo Github anda siap dibuat.
 
-![alt text](https://lh3.googleusercontent.com/d5HToIFAFm-kwTmx1y_AcagpuQm5BBsDqWdESDM40l8gSZEUXeFcxtbARX745W-W9lPK8WEI6V_q3_MxXLxAMd9-lzEShXCSExR_Vut-aFQjuEN3UrT1MvQnVvsGnZqd6s1SYM9T9YGQkvi5C0IlXP3_okcK4_XV3Ek4zdnCHr5Q8f5WODVjX6qpx2h74SMJCB8j5sY4GqxdfPpi3E3Y6GH7nhWUEB9BekjmC5tKJnbt2Q_6CTN4M5IpLayG5HCgcT8BShRMuhYaR4AZTNyO94mqDs72uxXAYk-tp0yL3V5GtGv_1vb6RdXhsQ7QxZ_UUtfUiRLV_sWHdALDm5So0-CLmuQY_ENiyykMzRwf1cuS35ypqCnP2zES12M81ibF9txHsxtAgVjQtyTY9pEkSGyDZiat9-GLnXRkh3bWI4oUM05OtVluzFQ9SH-c6rChMvDBVLWwtoQ0bWmshu5NQsu7vbxX0CkLMAa3dR9h2GJl2h2CdqUzGv2CKySZGNoql3gKxUIQzAEIWRX47gU3OvTRSBk7lTFkOP9E48l-gJvFaNmcN5FLOZKsns4VGoSCgWIOAEtB-3ei8WyH6VKd1KhZqbumPOPxonvx7pDRS0Vm2Z6upDa6oh1XNi4-7vEYk46v_gE_46q3ScpDeqAA5PJXTFF1h_S1pzHCY1gg3bdKlz-fxF0vpfM=w181-h206-no "Logo Title Text 1")
+![alt text](https://lh4.googleusercontent.com/ngw3kVtdxrLTW_ayLszMRcDx5P6msE_XXIuxkE-1TI3tK6bpPtzzXyqjamF3ZRfu5r-7SbtPhFg9sVen7IWA=w1920-h728)
 
-Gambar 1: Cara membuat repo baru di Github
+<sub>Gambar 1: Cara membuat repo baru di Github</sub>
 
 ![alt text](https://lh3.googleusercontent.com/0TSy2BVOTQMrLJN1nqaEyDQs1ICgX1M4J11jMDrSg0AKjutu_5pfjNwG1i8dr4kXGgSUqGFMk7tHOdjMq0R3Byu5Dq8RzDoRz18oI31jBpxSNJHFltCzFFcGSabRy_C0StSTuy-GSg=w707-h640-no "Logo Title Text 1")
 
-Gambar 2: Cara membuat repo khusus Github Pages
+<sub>Gambar 2: Cara membuat repo khusus Github Pages</sub>
 
 Giliran pengaturan dari Git CLI, karena repo Git anda yang di Github sudah diatur langsung di situs Github, anda hanya tinggal clone repo Github anda ke repo lokal dan tes situs anda
 

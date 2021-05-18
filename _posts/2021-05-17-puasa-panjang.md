@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PUASA PANJANG"
-date:   2021-5-17 21:12:59 +0700
+date:   2021-05-17 21:12:59 +0700
 categories: indonesian misc
 ---
 

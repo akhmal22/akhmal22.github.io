@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>TIMED BACKGROUND | akhmal22’s blog</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="TIMED BACKGROUND" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Membuat Wallpaper yang mengikuti pergerakan matahari" />
+<meta property="og:description" content="Membuat Wallpaper yang mengikuti pergerakan matahari" />
+<link rel="canonical" href="http://localhost:4000/indonesian/article/2021/05/18/timed-background.html" />
+<meta property="og:url" content="http://localhost:4000/indonesian/article/2021/05/18/timed-background.html" />
+<meta property="og:site_name" content="akhmal22’s blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-18T11:12:59+07:00" />
+<script type="application/ld+json">
+{"headline":"TIMED BACKGROUND","dateModified":"2021-05-18T11:12:59+07:00","datePublished":"2021-05-18T11:12:59+07:00","description":"Membuat Wallpaper yang mengikuti pergerakan matahari","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/indonesian/article/2021/05/18/timed-background.html"},"url":"http://localhost:4000/indonesian/article/2021/05/18/timed-background.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="akhmal22's blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">akhmal22&#39;s blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">TIMED BACKGROUND</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-05-18T11:12:59+07:00" itemprop="datePublished">May 18, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="membuat-wallpaper-yang-mengikuti-pergerakan-matahari">Membuat Wallpaper yang mengikuti pergerakan matahari</h1>
+
+<h2 id="prakata">Prakata</h2>
+
+<p>Pernah kepikiran kalau wallpaper kita bisa berubah sendiri? Saya yakin pasti pernah, tapi pernah kepikiran matahari wallpaper kita bisa bergerak sendiri? Harusnya pernah kalau anda pake si M dari toko A. Tapi jika kita males beli produk dari toko A tersebut apakah matahari di wallpaper kita bisa bergerak sendiri? Bisa lah! Lanjutan dari artikel ini akan membahas (semoga bisa dimengerti) cara supaya matahari di laptop/PC anda bisa gerak sendiri.</p>
+
+<h2 id="beneran-bisa-emang-ada-fitur-seperti-itu">Beneran bisa? Emang ada fitur seperti itu?</h2>
+
+<p>Iya sejujurnya setau saya tidak ada fitur bawaan seperti itu di laptop/PC selain dari toko A, di Windows setau saya tidak ada (kalaupun ada, tidak dibahas disini) tapi di OS Linux, bisa dibikin timed background itu dan kita akan bahas.</p>
+
+<h2 id="timed-background-apa-itu">Timed Background? Apa itu?</h2>
+
+<p>Timed background (istilah bikinan saya sih ini ckck) itu istilah yang merujuk pada suatu file yang dipakai untuk background desktop yang berubah mengikuti waktu setempat, sejauh ini sejalan kan dengan judul yang mau matahari di laptop/PC kita gerak sendiri. Timed background terdiri dari beberapa gambar yang bergantian mengisi wallpaper anda sesuai waktu di tempat anda.</p>
+
+<h2 id="gak-bahas-windows-berarti-cuma-untuk-linux">Gak bahas Windows? Berarti cuma untuk Linux?</h2>
+
+<p>Iya artikel ini ditujukan untuk pengguna Linux dengan Desktop Environment (DE) GNOME. Untuk DE lainnya saya belum pernah coba tetapi jika DE yang sedikit-banyak memakai komponen GNOME untuk struktur DE mereka (seperti Budgie atau Cinnamon) kemungkinan sih bisa.</p>
+
+<h2 id="untuk-linux-apa-ya">Untuk Linux apa ya?</h2>
+
+<p>Saya bilang semua Linux dengan DE GNOME bisa dengan cara ini karena ini fitur dari GNOME, tapi saya akan praktikan dengan Fedora.</p>
+
+<h2 id="yaudah-kasih-tau-caranya">Yaudah kasih tau caranya!</h2>
+
+<p>Iya yaudah langsung dikasih caranya, biar gak pusing, kita bikin daftar cara-caranya dulu ya.</p>
+<ol>
+  <li>Boot ke Linux pada komputer anda dan pastikan DE yang dipakai adalah GNOME (Budgie/Cinnamon kemungkinan bisa, tapi artikel ini hanya berfokus pada GNOME).</li>
+  <li>Cari foto/video yang menunjukkan pergerakan matahari pada suatu tempat (keyword hint: sky timelapse) lalu download.</li>
+  <li>Pilih 4 gambar yang menunjukkan waktu fajar, siang, senja dan malam dari foto/video yang di-download.</li>
+  <li>Beri sufiks pada 4 gambar sesuai waktu yang ditunjukkan gambar dan buat timed background.</li>
+  <li>Buat direktori untuk menampung gambar-gambar dan timed background yang sudah dibuat.</li>
+  <li>Aplikasikan timed background.</li>
+</ol>
+
+<p>Seperti biasa, cek dulu kelengkapan prasyarat untuk praktik. Ceklisnya sebenarnya cuma OS Linux dengan DE GNOME yang sudah terinstall, kalau belum, silakan install terlebih dulu. Jika OS yang disebut sudah terinstall, cari video dengan gambar pemandangan langit dengan mataharinya (sky timelapse) yang menunjukkan sedang terbit, siang dan tenggelam, bisa juga kumpulan foto yang memenuhi syarat tersebut (misalnya gambar Mojave).</p>
+
+<p>Setelah mendapat foto/video yang dimaksud, pilih gambar-gambar (jika anda dapat video, potong video menjadi 4 gambar) yang menunjukkan waktu fajar, tengah hari, senja dan malam hari lalu beri sufiks keempat waktu tersebut pada gambar yang sesuai -dawn untuk gambar fajar, -day untuk gambar tengah hari, -dusk untuk gambar senja dan -night untuk gambar malam hari, nama gambar disarankan menggunakan nama file timed background (misalnya timed background bernama “Bristol.xml”) ditambah sufiks yang sesuai (misalkan gambar senja, disarankan bernama “Bristol-dusk.jpg”). Jika anda mendapat 4 gambar dengan sufiks yang telah disebut, maka kita bisa membuat timed background yang telah disebutkan di awal artikel dengan membuat file .xml dan salin kode di bawah.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;background&gt;</span>
+<span class="nt">&lt;starttime&gt;</span>
+  <span class="nt">&lt;year&gt;</span>2020<span class="nt">&lt;/year&gt;</span>
+  <span class="nt">&lt;month&gt;</span>10<span class="nt">&lt;/month&gt;</span>
+  <span class="nt">&lt;day&gt;</span>20<span class="nt">&lt;/day&gt;</span>
+  <span class="nt">&lt;hour&gt;</span>07<span class="nt">&lt;/hour&gt;</span>
+  <span class="nt">&lt;minute&gt;</span>00<span class="nt">&lt;/minute&gt;</span>
+  <span class="nt">&lt;second&gt;</span>00<span class="nt">&lt;/second&gt;</span>
+<span class="nt">&lt;/starttime&gt;</span>
+<span class="c">&lt;!-- This animation will start at 7 AM. --&gt;</span>
+
+<span class="c">&lt;!-- We start with dawn at 7 AM. It will remain up for 2 hours. --&gt;</span>
+<span class="nt">&lt;static&gt;</span>
+<span class="nt">&lt;duration&gt;</span>7200.0<span class="nt">&lt;/duration&gt;</span>
+<span class="nt">&lt;file&gt;</span>/home/akhmalr/timedBackground/Bristol-dawn.jpg<span class="nt">&lt;/file&gt;</span>
+<span class="nt">&lt;/static&gt;</span>
+
+<span class="c">&lt;!-- Dawn ended and starts to transition to day at 9 AM. The transition lasts for 2 hours, ending at 11 AM. --&gt;</span>
+<span class="nt">&lt;transition</span> <span class="na">type=</span><span class="s">"overlay"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;duration&gt;</span>7200.0<span class="nt">&lt;/duration&gt;</span>
+<span class="nt">&lt;from&gt;</span>/home/akhmalr/timedBackground/Bristol-dawn.jpg<span class="nt">&lt;/from&gt;</span>
+<span class="nt">&lt;to&gt;</span>/home/akhmalr/timedBackground/Bristol-day.jpg<span class="nt">&lt;/to&gt;</span>
+<span class="nt">&lt;/transition&gt;</span>
+
+<span class="c">&lt;!-- It's 11 AM, we're showing the day image in full force now, for 4 hours ending at 3 PM. --&gt;</span>
+<span class="nt">&lt;static&gt;</span>
+<span class="nt">&lt;duration&gt;</span>14400.0<span class="nt">&lt;/duration&gt;</span>
+<span class="nt">&lt;file&gt;</span>/home/akhmalr/timedBackground/Bristol-day.jpg<span class="nt">&lt;/file&gt;</span>
+<span class="nt">&lt;/static&gt;</span>
+
+<span class="c">&lt;!-- It's 3 PM, and we're starting to transition to dusk. Transition completes at 7 PM. --&gt;</span>
+<span class="nt">&lt;transition</span> <span class="na">type=</span><span class="s">"overlay"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;duration&gt;</span>14400.0<span class="nt">&lt;/duration&gt;</span>
+<span class="nt">&lt;from&gt;</span>/home/akhmalr/timedBackground/Bristol-day.jpg<span class="nt">&lt;/from&gt;</span>
+<span class="nt">&lt;to&gt;</span>/home/akhmalr/timedBackground/Bristol-dusk.jpg<span class="nt">&lt;/to&gt;</span>
+<span class="nt">&lt;/transition&gt;</span>
+
+<span class="c">&lt;!-- It's 7 PM, we're showing the dusk for 2 hours ending at 9 PM. --&gt;</span>
+<span class="nt">&lt;static&gt;</span>
+<span class="nt">&lt;duration&gt;</span>7200.0<span class="nt">&lt;/duration&gt;</span>
+<span class="nt">&lt;file&gt;</span>/home/akhmalr/timedBackground/Bristol-dusk.jpg<span class="nt">&lt;/file&gt;</span>
+<span class="nt">&lt;/static&gt;</span>
+
+<span class="c">&lt;!-- It's 9 PM, and we're starting to transition to night. Transition completes at 11 PM. --&gt;</span>
+<span class="nt">&lt;transition</span> <span class="na">type=</span><span class="s">"overlay"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;duration&gt;</span>7200.0<span class="nt">&lt;/duration&gt;</span>
+<span class="nt">&lt;from&gt;</span>/home/akhmalr/timedBackground/Bristol-dusk.jpg<span class="nt">&lt;/from&gt;</span>
+<span class="nt">&lt;to&gt;</span>/home/akhmalr/timedBackground/Bristol-night.jpg<span class="nt">&lt;/to&gt;</span>
+<span class="nt">&lt;/transition&gt;</span>
+
+<span class="c">&lt;!-- It's 11 PM, we're showing the night till 5 AM. --&gt;</span>
+<span class="nt">&lt;static&gt;</span>
+<span class="nt">&lt;duration&gt;</span>21600.0<span class="nt">&lt;/duration&gt;</span>
+<span class="nt">&lt;file&gt;</span>/home/akhmalr/timedBackground/Bristol-night.jpg<span class="nt">&lt;/file&gt;</span>
+<span class="nt">&lt;/static&gt;</span>
+
+<span class="c">&lt;!-- It's 5 AM, and we're starting to transition to dawn. Transition completes at 7 AM. --&gt;</span>
+<span class="nt">&lt;transition</span> <span class="na">type=</span><span class="s">"overlay"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;duration&gt;</span>7200.0<span class="nt">&lt;/duration&gt;</span>
+<span class="nt">&lt;from&gt;</span>/home/akhmalr/timedBackground/Bristol-night.jpg<span class="nt">&lt;/from&gt;</span>
+<span class="nt">&lt;to&gt;</span>/home/akhmalr/timedBackground/Bristol-dawn.jpg<span class="nt">&lt;/to&gt;</span>
+<span class="nt">&lt;/transition&gt;</span>
+
+<span class="nt">&lt;/background&gt;</span></code></pre></figure>
+
+<p>Kode diatas berguna untuk mengganti wallpaper secara berkala berdasarkan waktu perkiraan 4 waktu tersebut mulai dan berakhir, kode tersebut dapat diubah tergantung kebutuhan tertentu anda (misalkan, path menuju gambar atau durasi penggantian dapat diubah sesuai keinginan).</p>
+
+<p><img src="direktori-timed-background.png" alt="directory" />
+<sub>Gambar 1: file-file dalam direktori timed background</sub></p>
+
+<p>Setelah 5 file tersebut siap, buat direktori dan masukkan 5 file tersebut ke direktori yang telah dibuat agar tidak tercecer di root/home directory anda. Sekian adalah pembuatan timed background, sampai saat ini, timed background sudah bisa diaplikasikan.</p>
+
+<p><img src="tweaks.png" alt="directory" />
+<sub>Gambar 2: aplikasikan timed background dengan GNOME Tweaks</sub></p>
+
+<p>Pengaplikasian timed background dapat dilakukan dengan GNOME Tweaks, oleh karena itu jika anda belum menginstall (GNOME Tweaks bukan aplikasi bawaan) anda harus menginstall GNOME Tweaks terlebih dulu, jika sudah, anda dapat langsung mengaplikasikan timed background dengan beralih ke seksi Appearance lalu pada file selector image, pilih file .xml yang telah dibuat sebelumnya dan selesai, timed background sudah teraplikasikan pada laptop/PC anda.</p>
+
+<p>Sampai disini dulu artikel pertama saya di tahun 2021 semoga membantu, akhir kata, Salam (Akhmal R)</p>
+
+  </div><a class="u-url" href="/indonesian/article/2021/05/18/timed-background.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">akhmal22&#39;s blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">akhmal22&#39;s blog</li><li><a class="u-email" href="mailto:rizkyantorig355@gmail.com">rizkyantorig355@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/akhmal22"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">akhmal22</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>All about CompSci Stuff</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

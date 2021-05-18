@@ -1,4 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-18T08:26:41+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">PUASA PANJANG</title><link href="http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang.html" rel="alternate" type="text/html" title="PUASA PANJANG" /><published>2021-05-17T21:12:59+07:00</published><updated>2021-05-17T21:12:59+07:00</updated><id>http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang</id><content type="html" xml:base="http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang.html">&lt;h1 id=&quot;kembali-nulis-setelah-rehat&quot;&gt;KEMBALI NULIS SETELAH REHAT&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-18T16:21:37+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">TIMED BACKGROUND</title><link href="http://localhost:4000/indonesian/article/2021/05/18/timed-background.html" rel="alternate" type="text/html" title="TIMED BACKGROUND" /><published>2021-05-18T11:12:59+07:00</published><updated>2021-05-18T11:12:59+07:00</updated><id>http://localhost:4000/indonesian/article/2021/05/18/timed-background</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2021/05/18/timed-background.html">&lt;h1 id=&quot;membuat-wallpaper-yang-mengikuti-pergerakan-matahari&quot;&gt;Membuat Wallpaper yang mengikuti pergerakan matahari&lt;/h1&gt;
+
+&lt;h2 id=&quot;prakata&quot;&gt;Prakata&lt;/h2&gt;
+
+&lt;p&gt;Pernah kepikiran kalau wallpaper kita bisa berubah sendiri? Saya yakin pasti pernah, tapi pernah kepikiran matahari wallpaper kita bisa bergerak sendiri? Harusnya pernah kalau anda pake si M dari toko A. Tapi jika kita males beli produk dari toko A tersebut apakah matahari di wallpaper kita bisa bergerak sendiri? Bisa lah! Lanjutan dari artikel ini akan membahas (semoga bisa dimengerti) cara supaya matahari di laptop/PC anda bisa gerak sendiri.&lt;/p&gt;
+
+&lt;h2 id=&quot;beneran-bisa-emang-ada-fitur-seperti-itu&quot;&gt;Beneran bisa? Emang ada fitur seperti itu?&lt;/h2&gt;
+
+&lt;p&gt;Iya sejujurnya setau saya tidak ada fitur bawaan seperti itu di laptop/PC selain dari toko A, di Windows setau saya tidak ada (kalaupun ada, tidak dibahas disini) tapi di OS Linux, bisa dibikin timed background itu dan kita akan bahas.&lt;/p&gt;
+
+&lt;h2 id=&quot;timed-background-apa-itu&quot;&gt;Timed Background? Apa itu?&lt;/h2&gt;
+
+&lt;p&gt;Timed background (istilah bikinan saya sih ini ckck) itu istilah yang merujuk pada suatu file yang dipakai untuk background desktop yang berubah mengikuti waktu setempat, sejauh ini sejalan kan dengan judul yang mau matahari di laptop/PC kita gerak sendiri. Timed background terdiri dari beberapa gambar yang bergantian mengisi wallpaper anda sesuai waktu di tempat anda.&lt;/p&gt;
+
+&lt;h2 id=&quot;gak-bahas-windows-berarti-cuma-untuk-linux&quot;&gt;Gak bahas Windows? Berarti cuma untuk Linux?&lt;/h2&gt;
+
+&lt;p&gt;Iya artikel ini ditujukan untuk pengguna Linux dengan Desktop Environment (DE) GNOME. Untuk DE lainnya saya belum pernah coba tetapi jika DE yang sedikit-banyak memakai komponen GNOME untuk struktur DE mereka (seperti Budgie atau Cinnamon) kemungkinan sih bisa.&lt;/p&gt;
+
+&lt;h2 id=&quot;untuk-linux-apa-ya&quot;&gt;Untuk Linux apa ya?&lt;/h2&gt;
+
+&lt;p&gt;Saya bilang semua Linux dengan DE GNOME bisa dengan cara ini karena ini fitur dari GNOME, tapi saya akan praktikan dengan Fedora.&lt;/p&gt;
+
+&lt;h2 id=&quot;yaudah-kasih-tau-caranya&quot;&gt;Yaudah kasih tau caranya!&lt;/h2&gt;
+
+&lt;p&gt;Iya yaudah langsung dikasih caranya, biar gak pusing, kita bikin daftar cara-caranya dulu ya.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Boot ke Linux pada komputer anda dan pastikan DE yang dipakai adalah GNOME (Budgie/Cinnamon kemungkinan bisa, tapi artikel ini hanya berfokus pada GNOME).&lt;/li&gt;
+  &lt;li&gt;Cari foto/video yang menunjukkan pergerakan matahari pada suatu tempat (keyword hint: sky timelapse) lalu download.&lt;/li&gt;
+  &lt;li&gt;Pilih 4 gambar yang menunjukkan waktu fajar, siang, senja dan malam dari foto/video yang di-download.&lt;/li&gt;
+  &lt;li&gt;Beri sufiks pada 4 gambar sesuai waktu yang ditunjukkan gambar dan buat timed background.&lt;/li&gt;
+  &lt;li&gt;Buat direktori untuk menampung gambar-gambar dan timed background yang sudah dibuat.&lt;/li&gt;
+  &lt;li&gt;Aplikasikan timed background.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Seperti biasa, cek dulu kelengkapan prasyarat untuk praktik. Ceklisnya sebenarnya cuma OS Linux dengan DE GNOME yang sudah terinstall, kalau belum, silakan install terlebih dulu. Jika OS yang disebut sudah terinstall, cari video dengan gambar pemandangan langit dengan mataharinya (sky timelapse) yang menunjukkan sedang terbit, siang dan tenggelam, bisa juga kumpulan foto yang memenuhi syarat tersebut (misalnya gambar Mojave).&lt;/p&gt;
+
+&lt;p&gt;Setelah mendapat foto/video yang dimaksud, pilih gambar-gambar (jika anda dapat video, potong video menjadi 4 gambar) yang menunjukkan waktu fajar, tengah hari, senja dan malam hari lalu beri sufiks keempat waktu tersebut pada gambar yang sesuai -dawn untuk gambar fajar, -day untuk gambar tengah hari, -dusk untuk gambar senja dan -night untuk gambar malam hari, nama gambar disarankan menggunakan nama file timed background (misalnya timed background bernama “Bristol.xml”) ditambah sufiks yang sesuai (misalkan gambar senja, disarankan bernama “Bristol-dusk.jpg”). Jika anda mendapat 4 gambar dengan sufiks yang telah disebut, maka kita bisa membuat timed background yang telah disebutkan di awal artikel dengan membuat file .xml dan salin kode di bawah.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;background&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;starttime&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;year&amp;gt;&lt;/span&gt;2020&lt;span class=&quot;nt&quot;&gt;&amp;lt;/year&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;month&amp;gt;&lt;/span&gt;10&lt;span class=&quot;nt&quot;&gt;&amp;lt;/month&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;day&amp;gt;&lt;/span&gt;20&lt;span class=&quot;nt&quot;&gt;&amp;lt;/day&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;hour&amp;gt;&lt;/span&gt;07&lt;span class=&quot;nt&quot;&gt;&amp;lt;/hour&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;minute&amp;gt;&lt;/span&gt;00&lt;span class=&quot;nt&quot;&gt;&amp;lt;/minute&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;second&amp;gt;&lt;/span&gt;00&lt;span class=&quot;nt&quot;&gt;&amp;lt;/second&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/starttime&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- This animation will start at 7 AM. --&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- We start with dawn at 7 AM. It will remain up for 2 hours. --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;static&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;duration&amp;gt;&lt;/span&gt;7200.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/duration&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;file&amp;gt;&lt;/span&gt;/home/akhmalr/timedBackground/Bristol-dawn.jpg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/file&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/static&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Dawn ended and starts to transition to day at 9 AM. The transition lasts for 2 hours, ending at 11 AM. --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;transition&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;overlay&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;duration&amp;gt;&lt;/span&gt;7200.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/duration&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;from&amp;gt;&lt;/span&gt;/home/akhmalr/timedBackground/Bristol-dawn.jpg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/from&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;to&amp;gt;&lt;/span&gt;/home/akhmalr/timedBackground/Bristol-day.jpg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/to&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/transition&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- It's 11 AM, we're showing the day image in full force now, for 4 hours ending at 3 PM. --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;static&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;duration&amp;gt;&lt;/span&gt;14400.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/duration&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;file&amp;gt;&lt;/span&gt;/home/akhmalr/timedBackground/Bristol-day.jpg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/file&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/static&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- It's 3 PM, and we're starting to transition to dusk. Transition completes at 7 PM. --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;transition&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;overlay&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;duration&amp;gt;&lt;/span&gt;14400.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/duration&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;from&amp;gt;&lt;/span&gt;/home/akhmalr/timedBackground/Bristol-day.jpg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/from&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;to&amp;gt;&lt;/span&gt;/home/akhmalr/timedBackground/Bristol-dusk.jpg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/to&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/transition&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- It's 7 PM, we're showing the dusk for 2 hours ending at 9 PM. --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;static&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;duration&amp;gt;&lt;/span&gt;7200.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/duration&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;file&amp;gt;&lt;/span&gt;/home/akhmalr/timedBackground/Bristol-dusk.jpg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/file&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/static&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- It's 9 PM, and we're starting to transition to night. Transition completes at 11 PM. --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;transition&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;overlay&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;duration&amp;gt;&lt;/span&gt;7200.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/duration&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;from&amp;gt;&lt;/span&gt;/home/akhmalr/timedBackground/Bristol-dusk.jpg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/from&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;to&amp;gt;&lt;/span&gt;/home/akhmalr/timedBackground/Bristol-night.jpg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/to&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/transition&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- It's 11 PM, we're showing the night till 5 AM. --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;static&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;duration&amp;gt;&lt;/span&gt;21600.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/duration&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;file&amp;gt;&lt;/span&gt;/home/akhmalr/timedBackground/Bristol-night.jpg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/file&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/static&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- It's 5 AM, and we're starting to transition to dawn. Transition completes at 7 AM. --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;transition&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;overlay&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;duration&amp;gt;&lt;/span&gt;7200.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/duration&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;from&amp;gt;&lt;/span&gt;/home/akhmalr/timedBackground/Bristol-night.jpg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/from&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;to&amp;gt;&lt;/span&gt;/home/akhmalr/timedBackground/Bristol-dawn.jpg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/to&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/transition&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/background&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Kode diatas berguna untuk mengganti wallpaper secara berkala berdasarkan waktu perkiraan 4 waktu tersebut mulai dan berakhir, kode tersebut dapat diubah tergantung kebutuhan tertentu anda (misalkan, path menuju gambar atau durasi penggantian dapat diubah sesuai keinginan).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;direktori-timed-background.png&quot; alt=&quot;directory&quot; /&gt;
+&lt;sub&gt;Gambar 1: file-file dalam direktori timed background&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah 5 file tersebut siap, buat direktori dan masukkan 5 file tersebut ke direktori yang telah dibuat agar tidak tercecer di root/home directory anda. Sekian adalah pembuatan timed background, sampai saat ini, timed background sudah bisa diaplikasikan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;tweaks.png&quot; alt=&quot;directory&quot; /&gt;
+&lt;sub&gt;Gambar 2: aplikasikan timed background dengan GNOME Tweaks&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;Pengaplikasian timed background dapat dilakukan dengan GNOME Tweaks, oleh karena itu jika anda belum menginstall (GNOME Tweaks bukan aplikasi bawaan) anda harus menginstall GNOME Tweaks terlebih dulu, jika sudah, anda dapat langsung mengaplikasikan timed background dengan beralih ke seksi Appearance lalu pada file selector image, pilih file .xml yang telah dibuat sebelumnya dan selesai, timed background sudah teraplikasikan pada laptop/PC anda.&lt;/p&gt;
+
+&lt;p&gt;Sampai disini dulu artikel pertama saya di tahun 2021 semoga membantu, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name></name></author><summary type="html">Membuat Wallpaper yang mengikuti pergerakan matahari</summary></entry><entry><title type="html">PUASA PANJANG</title><link href="http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang.html" rel="alternate" type="text/html" title="PUASA PANJANG" /><published>2021-05-17T21:12:59+07:00</published><updated>2021-05-17T21:12:59+07:00</updated><id>http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang</id><content type="html" xml:base="http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang.html">&lt;h1 id=&quot;kembali-nulis-setelah-rehat&quot;&gt;KEMBALI NULIS SETELAH REHAT&lt;/h1&gt;
 &lt;p&gt;Dunia memang pada dasarnya terus berubah, begitu juga kebiasaan menulis penulis yang juga sedang turun tahun lalu, salah satu faktor perubahan itu ya skripsi (hmmhmm corona gak usah diingetin ya, udah pada tau). Iya dengan naiknya tulisan ini saya sebagai penulis menyatakan kembali aktif di blog sederhana ini (jujur gua juga baca-baca tutorial lagi pas nulis ini dan commit beberapa perubahan gak guna ckck). Semoga tulisan di blog ini semakin baik seiring berjalannya waktu, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name></name></author><summary type="html">KEMBALI NULIS SETELAH REHAT Dunia memang pada dasarnya terus berubah, begitu juga kebiasaan menulis penulis yang juga sedang turun tahun lalu, salah satu faktor perubahan itu ya skripsi (hmmhmm corona gak usah diingetin ya, udah pada tau). Iya dengan naiknya tulisan ini saya sebagai penulis menyatakan kembali aktif di blog sederhana ini (jujur gua juga baca-baca tutorial lagi pas nulis ini dan commit beberapa perubahan gak guna ckck). Semoga tulisan di blog ini semakin baik seiring berjalannya waktu, akhir kata, Salam (Akhmal R)</summary></entry><entry><title type="html">NATAL DAN TAHUN BARU</title><link href="http://localhost:4000/indonesian/misc/2019/12/26/natal-dan-tahun-baru.html" rel="alternate" type="text/html" title="NATAL DAN TAHUN BARU" /><published>2019-12-26T23:12:59+07:00</published><updated>2019-12-26T23:12:59+07:00</updated><id>http://localhost:4000/indonesian/misc/2019/12/26/natal-dan-tahun-baru</id><content type="html" xml:base="http://localhost:4000/indonesian/misc/2019/12/26/natal-dan-tahun-baru.html">&lt;h1 id=&quot;selamat-liburan-natal-dan-tahun-baru&quot;&gt;SELAMAT LIBURAN NATAL DAN TAHUN BARU&lt;/h1&gt;
 &lt;p&gt;Di masa-masa libur kayak ini, sepertinya saya akan lebih banyak nulis artikel tentang IT/CompSci entah sekedar pengetahuan atau tuntunan lengkap, stay tune aja…&lt;/p&gt;</content><author><name></name></author><summary type="html">SELAMAT LIBURAN NATAL DAN TAHUN BARU Di masa-masa libur kayak ini, sepertinya saya akan lebih banyak nulis artikel tentang IT/CompSci entah sekedar pengetahuan atau tuntunan lengkap, stay tune aja…</summary></entry><entry><title type="html">BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL</title><link href="http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html" rel="alternate" type="text/html" title="BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL" /><published>2019-12-26T22:23:59+07:00</published><updated>2019-12-26T22:23:59+07:00</updated><id>http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html">&lt;h1 id=&quot;bangun-website-sendiri-dengan-github-pages-dan-jekyll&quot;&gt;BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL&lt;/h1&gt;
 
@@ -80,13 +195,13 @@
   &lt;li&gt;Repo Github anda siap dibuat.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/d5HToIFAFm-kwTmx1y_AcagpuQm5BBsDqWdESDM40l8gSZEUXeFcxtbARX745W-W9lPK8WEI6V_q3_MxXLxAMd9-lzEShXCSExR_Vut-aFQjuEN3UrT1MvQnVvsGnZqd6s1SYM9T9YGQkvi5C0IlXP3_okcK4_XV3Ek4zdnCHr5Q8f5WODVjX6qpx2h74SMJCB8j5sY4GqxdfPpi3E3Y6GH7nhWUEB9BekjmC5tKJnbt2Q_6CTN4M5IpLayG5HCgcT8BShRMuhYaR4AZTNyO94mqDs72uxXAYk-tp0yL3V5GtGv_1vb6RdXhsQ7QxZ_UUtfUiRLV_sWHdALDm5So0-CLmuQY_ENiyykMzRwf1cuS35ypqCnP2zES12M81ibF9txHsxtAgVjQtyTY9pEkSGyDZiat9-GLnXRkh3bWI4oUM05OtVluzFQ9SH-c6rChMvDBVLWwtoQ0bWmshu5NQsu7vbxX0CkLMAa3dR9h2GJl2h2CdqUzGv2CKySZGNoql3gKxUIQzAEIWRX47gU3OvTRSBk7lTFkOP9E48l-gJvFaNmcN5FLOZKsns4VGoSCgWIOAEtB-3ei8WyH6VKd1KhZqbumPOPxonvx7pDRS0Vm2Z6upDa6oh1XNi4-7vEYk46v_gE_46q3ScpDeqAA5PJXTFF1h_S1pzHCY1gg3bdKlz-fxF0vpfM=w181-h206-no&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/ngw3kVtdxrLTW_ayLszMRcDx5P6msE_XXIuxkE-1TI3tK6bpPtzzXyqjamF3ZRfu5r-7SbtPhFg9sVen7IWA=w1920-h728&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Gambar 1: Cara membuat repo baru di Github&lt;/p&gt;
+&lt;p&gt;&lt;sub&gt;Gambar 1: Cara membuat repo baru di Github&lt;/sub&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/0TSy2BVOTQMrLJN1nqaEyDQs1ICgX1M4J11jMDrSg0AKjutu_5pfjNwG1i8dr4kXGgSUqGFMk7tHOdjMq0R3Byu5Dq8RzDoRz18oI31jBpxSNJHFltCzFFcGSabRy_C0StSTuy-GSg=w707-h640-no&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Gambar 2: Cara membuat repo khusus Github Pages&lt;/p&gt;
+&lt;p&gt;&lt;sub&gt;Gambar 2: Cara membuat repo khusus Github Pages&lt;/sub&gt;&lt;/p&gt;
 
 &lt;p&gt;Giliran pengaturan dari Git CLI, karena repo Git anda yang di Github sudah diatur langsung di situs Github, anda hanya tinggal clone repo Github anda ke repo lokal dan tes situs anda&lt;/p&gt;
 
