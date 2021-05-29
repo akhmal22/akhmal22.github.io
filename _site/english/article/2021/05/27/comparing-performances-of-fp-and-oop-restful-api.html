@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>RESTFUL API PERFORMANCE COMPARISON | akhmal22’s blog</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="RESTFUL API PERFORMANCE COMPARISON" />
+<meta name="author" content="Akhmal R" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Comparing performance of Functional and Object-Oriented Programming RESTFUL API" />
+<meta property="og:description" content="Comparing performance of Functional and Object-Oriented Programming RESTFUL API" />
+<link rel="canonical" href="http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api.html" />
+<meta property="og:url" content="http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api.html" />
+<meta property="og:site_name" content="akhmal22’s blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-27T21:12:59+07:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Akhmal R"},"description":"Comparing performance of Functional and Object-Oriented Programming RESTFUL API","@type":"BlogPosting","headline":"RESTFUL API PERFORMANCE COMPARISON","dateModified":"2021-05-27T21:12:59+07:00","datePublished":"2021-05-27T21:12:59+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api.html"},"url":"http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="akhmal22's blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">akhmal22&#39;s blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/posts/">Posts</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">RESTFUL API PERFORMANCE COMPARISON</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-05-27T21:12:59+07:00" itemprop="datePublished">May 27, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Akhmal R</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="comparing-performance-of-functional-and-object-oriented-programming-restful-api">Comparing performance of Functional and Object-Oriented Programming RESTFUL API</h1>
+
+<h2 id="preface">Preface</h2>
+
+<p>So this is basically my final essay required for my bachelor’s degree of computer science, I just wrote it down the line to this article in fact of any topic did not really pop out onto my mind right now, maybe tomorrow it will. In this article, I will compare two RESTFUL API I made each using Functional and Object-Oriented (OO) Programming paradigms, the value compared is performance per request sent until responded, that can be broken down to be metrics of execution time, memory used and throughput of the requests.</p>
+
+<h2 id="restful-api-introduce-me-to-them">RESTFUL API? introduce me to them!</h2>
+
+<p>As I said before, I made 2 RESTFUL API then compare it, API at a glance is the web service that act like the bridge between two or more isolated resource and RESTFUL API is an API that obey REST constraint. You can read about REST constraint yourself [here][fielding-rest][fielding-rest]:[https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm].</p>
+
+<h2 id="ok-i-got-it-what-about-them-paradigms">OK I got it, what about them paradigms?</h2>
+
+<p>Yeah two paradigms I am going to compare are Functional and OO paradigm, these two of course can be identified by its unique attributes of paradigm. API built using Functional paradigm consists of several small functions, the execution of this API is basically the chain of function call. API built using OO paradigm consists of several programmatically-defined objects, the execution of this API is basically declared objects worked together as a team.</p>
+
+<h2 id="before-we-go-further-is-paradigm-difference-really-matter-for-them-performance">Before we go further, is paradigm difference really matter for them performance?</h2>
+
+<p>I heard that question before ever started writing the essay, there’s some journal refer the paradigm to be a real deal for the performance but I will show you one of them in here, the rest of the pack written on footnote. Cited from essay authored by Kim Svensson Sand and Tord Eliasson, the essay conducted similar performance comparison of program written in Functional and OO manner, then on near future they found out that OO have better performance than Functional one and for some development metrics like development time and length of code, Functional code required less time and less code than OO.</p>
+
+<h2 id="what-method-did-you-use-to-conduct-such-comparison">What method did you use to conduct such comparison?</h2>
+
+<p>The method used was honestly similar to Kim and Tord’s method, I developed the API with Create, Read, Update and Delete (CRUD) capabilities, design the simple database table, put the HTTP requests on the table and match to CRUD program principle, test the program to ensure its correctness, collect the data and analyze to extract the conclusion.</p>
+<ol>
+  <li>Design DB table.</li>
+  <li>Put the HTTP requests to matched CRUD principle.</li>
+  <li>Developed the API.</li>
+  <li>Unit-test the API.</li>
+  <li>Collect and analyze data.</li>
+  <li>Extract the conclusion.</li>
+</ol>
+
+<p>In the beginning, we first defined what we going to develop, database structure are the crucial one. Database used is a simple one with just one table with 5 table attributes, the motive is database defined could be enough of a playing ground for the comparison. Some predevelopment thing we had to do are define the CRUD functionality and put the HTTP requests on its side, its important to do it in fact some CRUD functionality can be performed by specified HTTP requests.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Kriminal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Id:int</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Nama:string</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Umur:unsign</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">TIndak:string</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Status:string</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><sub>Table 1: A table from database</sub></p>
+
+<p>Since the two previous steps fulfilled, the API development it is, in this step we basically develop two API using each two drill. Meanwhile the HTTP requests used were 6 of POST, GET, PUT, DELETE, HEAD and PATCH for 10 kind of CRUD functionality that can be viewed in table 2.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">CRUD Function</th>
+      <th style="text-align: center">HTTP Requests</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Get first 5 row</td>
+      <td style="text-align: center">GET</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Add a new row</td>
+      <td style="text-align: center">POST</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Edit ‘status’ column on a row</td>
+      <td style="text-align: center">PUT</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Delete a row</td>
+      <td style="text-align: center">DELETE</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Get a row</td>
+      <td style="text-align: center">GET</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Edit ‘status’ column on a row</td>
+      <td style="text-align: center">PATCH</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Get a row’s meta data</td>
+      <td style="text-align: center">HEAD</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Edit ‘tindak’ column on a row</td>
+      <td style="text-align: center">PUT</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Edit ‘tindak’ column on a row</td>
+      <td style="text-align: center">POST</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Edit ‘tindak’ column on a row</td>
+      <td style="text-align: center">PATCH</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><sub>Table 2: CRUD function and matched HTTP requests</sub></p>
+
+<p>After the above table completed, we then prepared the development environment and start to write some code. Two APIs written in the guide of two paradigm said above, Functional and OO , but in case you don’t get the main point, here I expresses two of them in comparison table 3.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Object-oriented</th>
+      <th style="text-align: center">Functional</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Encapsulate its data with ‘class declaration’</td>
+      <td style="text-align: center">Encapsulate its data with ‘data immutability’</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Class, object and member have access to data</td>
+      <td style="text-align: center">Data are in open-access to any function but editing privilege</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Class encapsulates function</td>
+      <td style="text-align: center">Function are declared globally</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">No side effect restriction</td>
+      <td style="text-align: center">Have side effect restriction</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><sub>Table 3: Functional and object-oriented main difference</sub></p>
+
+<h2 id="hows-the-result">How’s the result?</h2>
+
+<p>I will jump to step 5 of the list and assume previous steps done perfectly under the bridge. For the note before we go further ahead, the entire process of the comparison took place in one local computer, so no internet connection or local area connection involved.</p>
+
+<p>Data collection separated into 3 scenario of request sending, with one user, hundred users and five hundreds users, the users are controlled by load testing machine. The result of data collection for performance metric of execution time (microseconds) expressed in table 4 below and to ensure the comparison are good to analyze, Mann-Whitney value are generated as well to find out if the performance differences are such significant.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Functional (mean)</th>
+      <th style="text-align: center">Object-oriented (mean)</th>
+      <th style="text-align: center">Mann-Whitney (p-value)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">248.1</td>
+      <td style="text-align: center">251.4</td>
+      <td style="text-align: center">0.41</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">230.7</td>
+      <td style="text-align: center">226.6</td>
+      <td style="text-align: center">0.44</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">141.5</td>
+      <td style="text-align: center">138.2</td>
+      <td style="text-align: center">0.248</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><sub>Table 4: Data collection result</sub></p>
+
+<h2 id="data-were-collected-so-the-conclusion">Data were collected, so the conclusion?</h2>
+
+<p>We can see some insight from the comparison, that the comparison indeed have resulted such different value of performance metric every scenarios then the question is ‘are the differences exist significant?’. The answer of said question is all explained by Mann-Whitney p-value, two values are in null hypothesis range until p-value are below 0.05, knowing that null hypothesis means they have insignificant difference in-between. Looking for the result, APIs I made had no significant difference.</p>
+
+<h2 id="closure">Closure</h2>
+
+<p>The result was concluded and its honestly had difference each, but not such significant. For responses of this article’s airing, this is by-far my first english article and I honestly looking forward to write more especially in the performance comparison land. Good bye for now (Akhmal R).</p>
+
+<h2 id="footnote">Footnote</h2>
+
+<ul>
+  <li>K. S. Sand and T. Eliasson, “A Comparison of Functional and Object-Oriented Programming Paradigms in JavaScript” 2017</li>
+  <li>A. Rizkyanto, “Comparative Study of Functional and Object-oriented Programming Paradigms for RESTFUL API with JavaScript” 2021</li>
+</ul>
+
+  </div><a class="u-url" href="/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">akhmal22&#39;s blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">akhmal22&#39;s blog</li><li><a class="u-email" href="mailto:rizkyantorig355@gmail.com">rizkyantorig355@gmail.com</a></li><li><a href="https://instagram.com/akhmalrakmal"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#instagram"></use></svg> <span class="username">akhmalrakmal</span></a></li><li><a href="https://www.linkedin.com/in/akhmal-rizkyanto"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">akhmal-rizkyanto</span></a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/akhmal22"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">akhmal22</span></a></li><li><a href="https://www.twitter.com/akhmalrakmal"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">akhmalrakmal</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>All about CompSci Stuff</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

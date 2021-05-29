@@ -2,6 +2,7 @@
 layout: post
 title:  "NATAL DAN TAHUN BARU"
 date:   2019-12-26 23:12:59 +0700
+author: "Akhmal R"
 categories: indonesian misc
 ---
 

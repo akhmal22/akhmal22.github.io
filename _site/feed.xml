@@ -1,4 +1,197 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-20T22:51:08+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">TENTANG BLOG INI</title><link href="http://localhost:4000/indonesian/misc/2021/05/20/tentang-blog-ini.html" rel="alternate" type="text/html" title="TENTANG BLOG INI" /><published>2021-05-20T21:12:59+07:00</published><updated>2021-05-20T21:12:59+07:00</updated><id>http://localhost:4000/indonesian/misc/2021/05/20/tentang-blog-ini</id><content type="html" xml:base="http://localhost:4000/indonesian/misc/2021/05/20/tentang-blog-ini.html">&lt;h1 id=&quot;cerita-tentang-blog-ini&quot;&gt;Cerita Tentang Blog Ini&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-29T13:54:27+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">RESTFUL API PERFORMANCE COMPARISON</title><link href="http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api.html" rel="alternate" type="text/html" title="RESTFUL API PERFORMANCE COMPARISON" /><published>2021-05-27T21:12:59+07:00</published><updated>2021-05-27T21:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api</id><content type="html" xml:base="http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api.html">&lt;h1 id=&quot;comparing-performance-of-functional-and-object-oriented-programming-restful-api&quot;&gt;Comparing performance of Functional and Object-Oriented Programming RESTFUL API&lt;/h1&gt;
+
+&lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
+
+&lt;p&gt;So this is basically my final essay required for my bachelor’s degree of computer science, I just wrote it down the line to this article in fact of any topic did not really pop out onto my mind right now, maybe tomorrow it will. In this article, I will compare two RESTFUL API I made each using Functional and Object-Oriented (OO) Programming paradigms, the value compared is performance per request sent until responded, that can be broken down to be metrics of execution time, memory used and throughput of the requests.&lt;/p&gt;
+
+&lt;h2 id=&quot;restful-api-introduce-me-to-them&quot;&gt;RESTFUL API? introduce me to them!&lt;/h2&gt;
+
+&lt;p&gt;As I said before, I made 2 RESTFUL API then compare it, API at a glance is the web service that act like the bridge between two or more isolated resource and RESTFUL API is an API that obey REST constraint. You can read about REST constraint yourself [here][fielding-rest][fielding-rest]:[https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm].&lt;/p&gt;
+
+&lt;h2 id=&quot;ok-i-got-it-what-about-them-paradigms&quot;&gt;OK I got it, what about them paradigms?&lt;/h2&gt;
+
+&lt;p&gt;Yeah two paradigms I am going to compare are Functional and OO paradigm, these two of course can be identified by its unique attributes of paradigm. API built using Functional paradigm consists of several small functions, the execution of this API is basically the chain of function call. API built using OO paradigm consists of several programmatically-defined objects, the execution of this API is basically declared objects worked together as a team.&lt;/p&gt;
+
+&lt;h2 id=&quot;before-we-go-further-is-paradigm-difference-really-matter-for-them-performance&quot;&gt;Before we go further, is paradigm difference really matter for them performance?&lt;/h2&gt;
+
+&lt;p&gt;I heard that question before ever started writing the essay, there’s some journal refer the paradigm to be a real deal for the performance but I will show you one of them in here, the rest of the pack written on footnote. Cited from essay authored by Kim Svensson Sand and Tord Eliasson, the essay conducted similar performance comparison of program written in Functional and OO manner, then on near future they found out that OO have better performance than Functional one and for some development metrics like development time and length of code, Functional code required less time and less code than OO.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-method-did-you-use-to-conduct-such-comparison&quot;&gt;What method did you use to conduct such comparison?&lt;/h2&gt;
+
+&lt;p&gt;The method used was honestly similar to Kim and Tord’s method, I developed the API with Create, Read, Update and Delete (CRUD) capabilities, design the simple database table, put the HTTP requests on the table and match to CRUD program principle, test the program to ensure its correctness, collect the data and analyze to extract the conclusion.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Design DB table.&lt;/li&gt;
+  &lt;li&gt;Put the HTTP requests to matched CRUD principle.&lt;/li&gt;
+  &lt;li&gt;Developed the API.&lt;/li&gt;
+  &lt;li&gt;Unit-test the API.&lt;/li&gt;
+  &lt;li&gt;Collect and analyze data.&lt;/li&gt;
+  &lt;li&gt;Extract the conclusion.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In the beginning, we first defined what we going to develop, database structure are the crucial one. Database used is a simple one with just one table with 5 table attributes, the motive is database defined could be enough of a playing ground for the comparison. Some predevelopment thing we had to do are define the CRUD functionality and put the HTTP requests on its side, its important to do it in fact some CRUD functionality can be performed by specified HTTP requests.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Kriminal&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Id:int&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Nama:string&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Umur:unsign&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;TIndak:string&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Status:string&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;sub&gt;Table 1: A table from database&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;Since the two previous steps fulfilled, the API development it is, in this step we basically develop two API using each two drill. Meanwhile the HTTP requests used were 6 of POST, GET, PUT, DELETE, HEAD and PATCH for 10 kind of CRUD functionality that can be viewed in table 2.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;CRUD Function&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;HTTP Requests&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Get first 5 row&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;GET&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Add a new row&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;POST&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Edit ‘status’ column on a row&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;PUT&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Delete a row&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;DELETE&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Get a row&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;GET&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Edit ‘status’ column on a row&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;PATCH&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Get a row’s meta data&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;HEAD&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Edit ‘tindak’ column on a row&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;PUT&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Edit ‘tindak’ column on a row&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;POST&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Edit ‘tindak’ column on a row&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;PATCH&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;sub&gt;Table 2: CRUD function and matched HTTP requests&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;After the above table completed, we then prepared the development environment and start to write some code. Two APIs written in the guide of two paradigm said above, Functional and OO , but in case you don’t get the main point, here I expresses two of them in comparison table 3.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Object-oriented&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Functional&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Encapsulate its data with ‘class declaration’&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Encapsulate its data with ‘data immutability’&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Class, object and member have access to data&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Data are in open-access to any function but editing privilege&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Class encapsulates function&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Function are declared globally&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;No side effect restriction&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Have side effect restriction&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;sub&gt;Table 3: Functional and object-oriented main difference&lt;/sub&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;hows-the-result&quot;&gt;How’s the result?&lt;/h2&gt;
+
+&lt;p&gt;I will jump to step 5 of the list and assume previous steps done perfectly under the bridge. For the note before we go further ahead, the entire process of the comparison took place in one local computer, so no internet connection or local area connection involved.&lt;/p&gt;
+
+&lt;p&gt;Data collection separated into 3 scenario of request sending, with one user, hundred users and five hundreds users, the users are controlled by load testing machine. The result of data collection for performance metric of execution time (microseconds) expressed in table 4 below and to ensure the comparison are good to analyze, Mann-Whitney value are generated as well to find out if the performance differences are such significant.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Functional (mean)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Object-oriented (mean)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Mann-Whitney (p-value)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;248.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;251.4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.41&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;230.7&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;226.6&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.44&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;141.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;138.2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.248&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;sub&gt;Table 4: Data collection result&lt;/sub&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;data-were-collected-so-the-conclusion&quot;&gt;Data were collected, so the conclusion?&lt;/h2&gt;
+
+&lt;p&gt;We can see some insight from the comparison, that the comparison indeed have resulted such different value of performance metric every scenarios then the question is ‘are the differences exist significant?’. The answer of said question is all explained by Mann-Whitney p-value, two values are in null hypothesis range until p-value are below 0.05, knowing that null hypothesis means they have insignificant difference in-between. Looking for the result, APIs I made had no significant difference.&lt;/p&gt;
+
+&lt;h2 id=&quot;closure&quot;&gt;Closure&lt;/h2&gt;
+
+&lt;p&gt;The result was concluded and its honestly had difference each, but not such significant. For responses of this article’s airing, this is by-far my first english article and I honestly looking forward to write more especially in the performance comparison land. Good bye for now (Akhmal R).&lt;/p&gt;
+
+&lt;h2 id=&quot;footnote&quot;&gt;Footnote&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;K. S. Sand and T. Eliasson, “A Comparison of Functional and Object-Oriented Programming Paradigms in JavaScript” 2017&lt;/li&gt;
+  &lt;li&gt;A. Rizkyanto, “Comparative Study of Functional and Object-oriented Programming Paradigms for RESTFUL API with JavaScript” 2021&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhmal R</name></author><summary type="html">Comparing performance of Functional and Object-Oriented Programming RESTFUL API</summary></entry><entry><title type="html">TENTANG BLOG INI</title><link href="http://localhost:4000/indonesian/misc/2021/05/20/tentang-blog-ini.html" rel="alternate" type="text/html" title="TENTANG BLOG INI" /><published>2021-05-20T21:12:59+07:00</published><updated>2021-05-20T21:12:59+07:00</updated><id>http://localhost:4000/indonesian/misc/2021/05/20/tentang-blog-ini</id><content type="html" xml:base="http://localhost:4000/indonesian/misc/2021/05/20/tentang-blog-ini.html">&lt;h1 id=&quot;cerita-tentang-blog-ini&quot;&gt;Cerita Tentang Blog Ini&lt;/h1&gt;
 
 &lt;h2 id=&quot;prakata&quot;&gt;Prakata&lt;/h2&gt;
 
@@ -22,7 +215,7 @@
 
 &lt;h2 id=&quot;penutup&quot;&gt;Penutup&lt;/h2&gt;
 
-&lt;p&gt;Sekian beberapa paragraf tentang blog ini, tapi sebelum habis tulisan ini gua sebenarnya mau berterimakasih kepada dosen gua waktu itu yang jadi enabler kegiatan blogging gua ini (Bu Ariana, special regards) kalau bukan karena ibu, saya mungkin cuma main game atau bikin CV selama menganggur ini. Salam (Akhmal R).&lt;/p&gt;</content><author><name></name></author><summary type="html">Cerita Tentang Blog Ini</summary></entry><entry><title type="html">TIMED BACKGROUND</title><link href="http://localhost:4000/indonesian/article/2021/05/18/timed-background.html" rel="alternate" type="text/html" title="TIMED BACKGROUND" /><published>2021-05-18T11:12:59+07:00</published><updated>2021-05-18T11:12:59+07:00</updated><id>http://localhost:4000/indonesian/article/2021/05/18/timed-background</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2021/05/18/timed-background.html">&lt;h1 id=&quot;membuat-wallpaper-yang-mengikuti-pergerakan-matahari&quot;&gt;Membuat Wallpaper yang mengikuti pergerakan matahari&lt;/h1&gt;
+&lt;p&gt;Sekian beberapa paragraf tentang blog ini, tapi sebelum habis tulisan ini gua sebenarnya mau berterimakasih kepada dosen gua waktu itu yang jadi enabler kegiatan blogging gua ini (Bu Ariana, special regards) kalau bukan karena ibu, saya mungkin cuma main game atau bikin CV selama menganggur ini. Salam (Akhmal R).&lt;/p&gt;</content><author><name>Akhmal R</name></author><summary type="html">Cerita Tentang Blog Ini</summary></entry><entry><title type="html">TIMED BACKGROUND</title><link href="http://localhost:4000/indonesian/article/2021/05/18/timed-background.html" rel="alternate" type="text/html" title="TIMED BACKGROUND" /><published>2021-05-18T11:12:59+07:00</published><updated>2021-05-18T11:12:59+07:00</updated><id>http://localhost:4000/indonesian/article/2021/05/18/timed-background</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2021/05/18/timed-background.html">&lt;h1 id=&quot;membuat-wallpaper-yang-mengikuti-pergerakan-matahari&quot;&gt;Membuat Wallpaper yang mengikuti pergerakan matahari&lt;/h1&gt;
 
 &lt;h2 id=&quot;prakata&quot;&gt;Prakata&lt;/h2&gt;
 
@@ -137,9 +330,9 @@
 
 &lt;p&gt;Pengaplikasian timed background dapat dilakukan dengan GNOME Tweaks, oleh karena itu jika anda belum menginstall (GNOME Tweaks bukan aplikasi bawaan) anda harus menginstall GNOME Tweaks terlebih dulu, jika sudah, anda dapat langsung mengaplikasikan timed background dengan beralih ke seksi Appearance lalu pada file selector image, pilih file .xml yang telah dibuat sebelumnya dan selesai, timed background sudah teraplikasikan pada laptop/PC anda.&lt;/p&gt;
 
-&lt;p&gt;Sampai disini dulu artikel pertama saya di tahun 2021 semoga bukan menjadi satu-satunya di tahun ini, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name></name></author><summary type="html">Membuat Wallpaper yang mengikuti pergerakan matahari</summary></entry><entry><title type="html">PUASA PANJANG</title><link href="http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang.html" rel="alternate" type="text/html" title="PUASA PANJANG" /><published>2021-05-17T21:12:59+07:00</published><updated>2021-05-17T21:12:59+07:00</updated><id>http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang</id><content type="html" xml:base="http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang.html">&lt;h1 id=&quot;kembali-nulis-setelah-rehat&quot;&gt;KEMBALI NULIS SETELAH REHAT&lt;/h1&gt;
-&lt;p&gt;Dunia memang pada dasarnya terus berubah, begitu juga kebiasaan menulis penulis yang juga sedang turun tahun lalu, salah satu faktor perubahan itu ya skripsi (hmmhmm corona gak usah diingetin ya, udah pada tau). Iya dengan naiknya tulisan ini saya sebagai penulis menyatakan kembali aktif di blog sederhana ini (jujur gua juga baca-baca tutorial lagi pas nulis ini dan commit beberapa perubahan gak guna ckck). Semoga tulisan di blog ini semakin baik seiring berjalannya waktu, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name></name></author><summary type="html">KEMBALI NULIS SETELAH REHAT Dunia memang pada dasarnya terus berubah, begitu juga kebiasaan menulis penulis yang juga sedang turun tahun lalu, salah satu faktor perubahan itu ya skripsi (hmmhmm corona gak usah diingetin ya, udah pada tau). Iya dengan naiknya tulisan ini saya sebagai penulis menyatakan kembali aktif di blog sederhana ini (jujur gua juga baca-baca tutorial lagi pas nulis ini dan commit beberapa perubahan gak guna ckck). Semoga tulisan di blog ini semakin baik seiring berjalannya waktu, akhir kata, Salam (Akhmal R)</summary></entry><entry><title type="html">NATAL DAN TAHUN BARU</title><link href="http://localhost:4000/indonesian/misc/2019/12/26/natal-dan-tahun-baru.html" rel="alternate" type="text/html" title="NATAL DAN TAHUN BARU" /><published>2019-12-26T23:12:59+07:00</published><updated>2019-12-26T23:12:59+07:00</updated><id>http://localhost:4000/indonesian/misc/2019/12/26/natal-dan-tahun-baru</id><content type="html" xml:base="http://localhost:4000/indonesian/misc/2019/12/26/natal-dan-tahun-baru.html">&lt;h1 id=&quot;selamat-liburan-natal-dan-tahun-baru&quot;&gt;SELAMAT LIBURAN NATAL DAN TAHUN BARU&lt;/h1&gt;
-&lt;p&gt;Di masa-masa libur kayak ini, sepertinya saya akan lebih banyak nulis artikel tentang IT/CompSci entah sekedar pengetahuan atau tuntunan lengkap, stay tune aja…&lt;/p&gt;</content><author><name></name></author><summary type="html">SELAMAT LIBURAN NATAL DAN TAHUN BARU Di masa-masa libur kayak ini, sepertinya saya akan lebih banyak nulis artikel tentang IT/CompSci entah sekedar pengetahuan atau tuntunan lengkap, stay tune aja…</summary></entry><entry><title type="html">BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL</title><link href="http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html" rel="alternate" type="text/html" title="BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL" /><published>2019-12-26T22:23:59+07:00</published><updated>2019-12-26T22:23:59+07:00</updated><id>http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html">&lt;h1 id=&quot;bangun-website-sendiri-dengan-github-pages-dan-jekyll&quot;&gt;BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL&lt;/h1&gt;
+&lt;p&gt;Sampai disini dulu artikel pertama saya di tahun 2021 semoga bukan menjadi satu-satunya di tahun ini, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name>Akhmal R</name></author><summary type="html">Membuat Wallpaper yang mengikuti pergerakan matahari</summary></entry><entry><title type="html">PUASA PANJANG</title><link href="http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang.html" rel="alternate" type="text/html" title="PUASA PANJANG" /><published>2021-05-17T21:12:59+07:00</published><updated>2021-05-17T21:12:59+07:00</updated><id>http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang</id><content type="html" xml:base="http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang.html">&lt;h1 id=&quot;kembali-nulis-setelah-rehat&quot;&gt;KEMBALI NULIS SETELAH REHAT&lt;/h1&gt;
+&lt;p&gt;Dunia memang pada dasarnya terus berubah, begitu juga kebiasaan menulis penulis yang juga sedang turun tahun lalu, salah satu faktor perubahan itu ya skripsi (hmmhmm corona gak usah diingetin ya, udah pada tau). Iya dengan naiknya tulisan ini saya sebagai penulis menyatakan kembali aktif di blog sederhana ini (jujur gua juga baca-baca tutorial lagi pas nulis ini dan commit beberapa perubahan gak guna ckck). Semoga tulisan di blog ini semakin baik seiring berjalannya waktu, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name>Akhmal R</name></author><summary type="html">KEMBALI NULIS SETELAH REHAT Dunia memang pada dasarnya terus berubah, begitu juga kebiasaan menulis penulis yang juga sedang turun tahun lalu, salah satu faktor perubahan itu ya skripsi (hmmhmm corona gak usah diingetin ya, udah pada tau). Iya dengan naiknya tulisan ini saya sebagai penulis menyatakan kembali aktif di blog sederhana ini (jujur gua juga baca-baca tutorial lagi pas nulis ini dan commit beberapa perubahan gak guna ckck). Semoga tulisan di blog ini semakin baik seiring berjalannya waktu, akhir kata, Salam (Akhmal R)</summary></entry><entry><title type="html">NATAL DAN TAHUN BARU</title><link href="http://localhost:4000/indonesian/misc/2019/12/26/natal-dan-tahun-baru.html" rel="alternate" type="text/html" title="NATAL DAN TAHUN BARU" /><published>2019-12-26T23:12:59+07:00</published><updated>2019-12-26T23:12:59+07:00</updated><id>http://localhost:4000/indonesian/misc/2019/12/26/natal-dan-tahun-baru</id><content type="html" xml:base="http://localhost:4000/indonesian/misc/2019/12/26/natal-dan-tahun-baru.html">&lt;h1 id=&quot;selamat-liburan-natal-dan-tahun-baru&quot;&gt;SELAMAT LIBURAN NATAL DAN TAHUN BARU&lt;/h1&gt;
+&lt;p&gt;Di masa-masa libur kayak ini, sepertinya saya akan lebih banyak nulis artikel tentang IT/CompSci entah sekedar pengetahuan atau tuntunan lengkap, stay tune aja…&lt;/p&gt;</content><author><name>Akhmal R</name></author><summary type="html">SELAMAT LIBURAN NATAL DAN TAHUN BARU Di masa-masa libur kayak ini, sepertinya saya akan lebih banyak nulis artikel tentang IT/CompSci entah sekedar pengetahuan atau tuntunan lengkap, stay tune aja…</summary></entry><entry><title type="html">BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL</title><link href="http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html" rel="alternate" type="text/html" title="BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL" /><published>2019-12-26T22:23:59+07:00</published><updated>2019-12-26T22:23:59+07:00</updated><id>http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2019/12/26/bangun-website-sendiri-dengan-github-pages-dan-jekyll.html">&lt;h1 id=&quot;bangun-website-sendiri-dengan-github-pages-dan-jekyll&quot;&gt;BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL&lt;/h1&gt;
 
 &lt;h2 id=&quot;prakata&quot;&gt;Prakata&lt;/h2&gt;
 
@@ -283,7 +476,7 @@
 
 &lt;p&gt;Perubahan yang sudah disimpan akan perlu beberapa waktu untuk diterapkan, untuk itu bersabar. Cek website pribadi anda dengan mengunjungi https://&amp;lt;username&amp;gt;.github.io dan lihat penampilan dari website anda, lebih menarik bukan?&lt;/p&gt;
 
-&lt;p&gt;Saya kira artikel ini berakhir disini, mungkin akan di-update jika dirasa kurang. Terima kasih sudah mampir, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name></name></author><summary type="html">BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL</summary></entry><entry><title type="html">PYTHON DAN R BERSAMA</title><link href="http://localhost:4000/indonesian/article/2019/12/23/python-dan-r.html" rel="alternate" type="text/html" title="PYTHON DAN R BERSAMA" /><published>2019-12-23T09:36:59+07:00</published><updated>2019-12-23T09:36:59+07:00</updated><id>http://localhost:4000/indonesian/article/2019/12/23/python-dan-r</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2019/12/23/python-dan-r.html">&lt;h1 id=&quot;penggunaan-bahasa-r-dan-python-secara-bersamaan&quot;&gt;PENGGUNAAN BAHASA R DAN PYTHON SECARA BERSAMAAN&lt;/h1&gt;
+&lt;p&gt;Saya kira artikel ini berakhir disini, mungkin akan di-update jika dirasa kurang. Terima kasih sudah mampir, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name>Akhmal R</name></author><summary type="html">BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL</summary></entry><entry><title type="html">PYTHON DAN R BERSAMA</title><link href="http://localhost:4000/indonesian/article/2019/12/23/python-dan-r.html" rel="alternate" type="text/html" title="PYTHON DAN R BERSAMA" /><published>2019-12-23T09:36:59+07:00</published><updated>2019-12-23T09:36:59+07:00</updated><id>http://localhost:4000/indonesian/article/2019/12/23/python-dan-r</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2019/12/23/python-dan-r.html">&lt;h1 id=&quot;penggunaan-bahasa-r-dan-python-secara-bersamaan&quot;&gt;PENGGUNAAN BAHASA R DAN PYTHON SECARA BERSAMAAN&lt;/h1&gt;
 
 &lt;h2 id=&quot;prakata&quot;&gt;Prakata&lt;/h2&gt;
 
@@ -429,4 +622,4 @@
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Terima kasih sudah mampir, akhir kata Salam. (Akhmal R)&lt;/p&gt;</content><author><name></name></author><summary type="html">PENGGUNAAN BAHASA R DAN PYTHON SECARA BERSAMAAN</summary></entry></feed>
+&lt;p&gt;Terima kasih sudah mampir, akhir kata Salam. (Akhmal R)&lt;/p&gt;</content><author><name>Akhmal R</name></author><summary type="html">PENGGUNAAN BAHASA R DAN PYTHON SECARA BERSAMAAN</summary></entry></feed>

@@ -2,6 +2,7 @@
 layout: post
 title:  "TIMED BACKGROUND"
 date:   2021-05-18 11:12:59 +0700
+author: "Akhmal R"
 categories: indonesian article
 ---
 

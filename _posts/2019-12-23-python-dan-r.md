@@ -2,6 +2,7 @@
 layout: post
 title:  "PYTHON DAN R BERSAMA"
 date:   2019-12-23 09:36:59 +0700
+author: "Akhmal R"
 categories: indonesian article
 ---
 # PENGGUNAAN BAHASA R DAN PYTHON SECARA BERSAMAAN

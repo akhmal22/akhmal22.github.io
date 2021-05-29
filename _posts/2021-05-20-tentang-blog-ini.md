@@ -2,6 +2,8 @@
 layout: post
 title:  "TENTANG BLOG INI"
 date:   2021-05-20 21:12:59 +0700
+sticky: true
+author: "Akhmal R"
 categories: indonesian misc
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title:  "PUASA PANJANG"
 date:   2021-05-17 21:12:59 +0700
+author: "Akhmal R"
 categories: indonesian misc
 ---
 

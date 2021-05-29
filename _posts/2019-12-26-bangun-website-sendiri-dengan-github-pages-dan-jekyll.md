@@ -2,6 +2,7 @@
 layout: post
 title:  "BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL"
 date:   2019-12-26 22:23:59 +0700
+author: "Akhmal R"
 categories: indonesian article
 ---
 # BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL
