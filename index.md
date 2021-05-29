@@ -5,7 +5,6 @@
 layout: home
 list_title: Latest Post
 ---
-# Welcome
 
 Akhmal Rizkyanto, Currently Studying Computer Science. I like to share what i know and what i learn, so enjoy my little blog!
 
