@@ -1,4 +1,147 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-29T14:06:36+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">RESTFUL API PERFORMANCE COMPARISON</title><link href="http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api.html" rel="alternate" type="text/html" title="RESTFUL API PERFORMANCE COMPARISON" /><published>2021-05-27T21:12:59+07:00</published><updated>2021-05-27T21:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api</id><content type="html" xml:base="http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api.html">&lt;h1 id=&quot;comparing-performance-of-functional-and-object-oriented-programming-restful-api&quot;&gt;Comparing performance of Functional and Object-Oriented Programming RESTFUL API&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-05T16:07:32+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">REACT NATIVE WITHOUT ANDROID STUDIO</title><link href="http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio.html" rel="alternate" type="text/html" title="REACT NATIVE WITHOUT ANDROID STUDIO" /><published>2021-06-04T21:12:59+07:00</published><updated>2021-06-04T21:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio</id><content type="html" xml:base="http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio.html">&lt;h1 id=&quot;setting-up-react-native-development-environment-without-android-studio&quot;&gt;Setting up React Native Development Environment without Android Studio&lt;/h1&gt;
+
+&lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
+
+&lt;p&gt;Some of Mobile Developer (I don’t know about iOS since they have particular hardware and software bundled for development) especially Android often had a tantrum about their machine being unnecessarily slow with the presence of Android Studio, well admitted I am too the one of them. With the rant comes the idea to make the life easier without that slow IDE, at the first sight, its hard to be possible but if you looking closely to the documentation, its not that hard. In this article, I am going to make an environment that can generate Android Apps with only the essential tools of Android Development.&lt;/p&gt;
+
+&lt;h2 id=&quot;so-we-are-going-to-install-something-right&quot;&gt;So, we are going to install something right?&lt;/h2&gt;
+
+&lt;p&gt;Yes, the setting up activities are basically the installation matters for required tools and some adjustment for the tools installed before in strive for proper functionality of the tools. So we first define the tools required for the development environment setups. According to the React Native Docs, this list are required for the setups and to be noted that we will use the React Native CLI Quickstart. According to the list, I will explain list members at a glance before we continue.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Node&lt;/li&gt;
+  &lt;li&gt;Java Development Kit&lt;/li&gt;
+  &lt;li&gt;Android Development Environment&lt;/li&gt;
+  &lt;li&gt;Watchman&lt;/li&gt;
+  &lt;li&gt;React Native CLI&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Node is the runtime environment of the JavaScript development, all of React Native development things runs on Node environment and the JavaScript version of Java Development Kit (JDK). JDK itself is not runtime environment, it is the compiler used to compile Java code into executable form, we don’t need Runtime Environment (JRE) yet since the scope of this article are to develop, not run the Java exec. Android Development Environment (ADE) of course must be installed in case we want to develop Android Apps, ADE is bundled with Android Studio so if you install Android Studio, you are automatically installing ADE, but in this case, we will skip Android Studio for a while and focused to main component of the ADE, the Android SDK. Watchman is file changes watching tools, yeah you might say like Git but little bit modern from Facebook. React Native CLI take part of the development as the main controller of the runtime.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-do-we-install-it-anyway&quot;&gt;How do we install it, anyway?&lt;/h2&gt;
+
+&lt;p&gt;The ‘how’ thing may vary depends on your OS, but i will show you the steps for Fedora. The installation pipeline must be defined in the beginning of this section in fact that the writing of the list in front of the explanation is far more understandable than not.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install JDK and NodeJS.&lt;/li&gt;
+  &lt;li&gt;Download sdkmanager.&lt;/li&gt;
+  &lt;li&gt;Add path and aliases on ‘.bashrc’.&lt;/li&gt;
+  &lt;li&gt;Install SDK component.&lt;/li&gt;
+  &lt;li&gt;Create Android project directory.&lt;/li&gt;
+  &lt;li&gt;Install required packages.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Before we continue, the sequence above are not an absolute sequence, you can do step 1, 2 and three concurrently depend on your hardware and internet spec, but step 4 until 6 are meant to be done sequentially. Hence the installation sequence written, let me advance to the ‘how’.&lt;/p&gt;
+
+&lt;p&gt;You can start with installing JDK first, then Node or else sequentially done then in one installation command.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;dnf &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;java-latest-openjdk-devel.x86_64 nodejs&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To be noted that nodejs version in the repo is stable version, you can get current version by execute these command first.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;dnf &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; gcc-c++ make
+curl &lt;span class=&quot;nt&quot;&gt;-sL&lt;/span&gt; https://rpm.nodesource.com/setup_16.x | &lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-E&lt;/span&gt; bash -&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Another way to install your Node is if you have any version of Python 3 (version 3 recommended) and virtualenv module installed on your Python, you can create a virtualenv and then create Node virtualenv by executing these commands.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# activate your virtualenv&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /path/to/virtualenv/bin/activate
+&lt;span class=&quot;c&quot;&gt;# you can install nodeenv by execute&lt;/span&gt;
+python &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;nodeenv
+&lt;span class=&quot;c&quot;&gt;# create your nodeenv by&lt;/span&gt;
+nodeenv &amp;lt;nodeenv-foldername&amp;gt;
+&lt;span class=&quot;c&quot;&gt;## add option if you wish to install the specified version&lt;/span&gt;
+nodeenv &amp;lt;nodeenv-foldername&amp;gt; &lt;span class=&quot;nt&quot;&gt;--node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;NODE_VER
+&lt;span class=&quot;c&quot;&gt;### or&lt;/span&gt;
+nodeenv &amp;lt;nodeenv-foldername&amp;gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; NODE_VER
+&lt;span class=&quot;c&quot;&gt;# deactivate your virtualenv&lt;/span&gt;
+deactivate
+&lt;span class=&quot;c&quot;&gt;# and activate your nodeenv&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /path/to/nodeenv/bin/activate&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;While you can create node virtual environment, you can choose which version of node you want to install by adding ‘-n NODE_VER’ or ‘–node=NODE_VER’ option when you create your nodeenv.&lt;/p&gt;
+
+&lt;p&gt;While it takes some times, you can light up your I/O with downloading Android SDK by browsing to the Android Studio download site, go to ‘Command line tools only’ and download one based on your OS, choose Linux for this occasion, and then let them to be completed or you can add aliases on your ‘.bashrc’ if you use bash shell (I am using bash shell in this article).&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# add onto very bottom line of .bashrc&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ANDROID_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/Android/Sdk
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ANDROID_SDK_ROOT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/Android/Sdk
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$ANDROID_HOME&lt;/span&gt;/cmdline-tools/latest
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$ANDROID_HOME&lt;/span&gt;/platform-tools
+
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sdkmanager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ANDROID_HOME&lt;/span&gt;/cmdline-tools/latest/bin/sdkmanager
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;adb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ANDROID_HOME&lt;/span&gt;/platform-tools/adb&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;After Android SDK successfully downloaded, you can take the folder to your home directory to get aligned with your ‘.bashrc’ or adjust your ‘.bashrc’ based on your current Android SDK folder location. Downloaded .zip can be stored in ‘$HOME/Android/Sdk’ and make new directory on ‘cmdline-tools’ (folder you just unzipped) name it ‘latest’ and move the rest of ‘cmdline-tools’ occupants to ‘latest’ folder, said instructions ran in case of you want to aligned your SDK tools with your ‘.bashrc’. If the SDK were clearly installed, you can execute this command to install its component.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# installing the platform tools required for development (ADB...etc)&lt;/span&gt;
+sdkmanager &lt;span class=&quot;s2&quot;&gt;&quot;platform-tools&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;platforms;android-28&quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# installing the build tools to build React Native to Android App&lt;/span&gt;
+sdkmanager &lt;span class=&quot;s2&quot;&gt;&quot;build-tools;31.0.0-rc4&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;SDK now ready to be used, so we first ensure the node are installed by checking ‘node’ command&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;node &lt;span class=&quot;nt&quot;&gt;--v&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;if the version appears, you can advance to next sequence else you must reinstall you NodeJS using method said above. You can create the React Native project by executing&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npx react-native init yourprojectName&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then you have to wait until the process finished, after the process completion, you can install node packages required by your project, since this project are starting point of the React Native Apps, the required packages may vary depend on what app do you wish to develop.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If you need to know the required packages your project had to satisfy, you can open your project’s ‘package.json’. In this point, the sequence was all done then the environment setup is finished, so you can develop your own project with them tools.&lt;/p&gt;
+
+&lt;h2 id=&quot;you-install-all-of-the-required-tools-i-dont-see-watchman-in-action-though&quot;&gt;You install all of the required tools? I don’t see watchman in action, though.&lt;/h2&gt;
+
+&lt;p&gt;Watchman is automatically installed on the creation of your project’s folder (step 5 of the installation sequence) so you don’t bother downloading it and place it to your folder over again.&lt;/p&gt;
+
+&lt;h2 id=&quot;bonus-run-your-android-app-in-your-device&quot;&gt;Bonus: Run your Android App in your device&lt;/h2&gt;
+
+&lt;p&gt;Decided to make some additional references of how to run your Android App in your physical Android Device, since it was pretty simple to do. First, ensure the previous required Node packages are provided, if not, you can try installing them again by.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If all packages are provided, then you can run the engine called ‘Metro’ that act as JavaScript bundler by execute this command.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npx react-native start&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Open another terminal, run this command&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npx react-native run-android&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Before the command mentioned above, you have to ensure your device is connected properly to the ADB by identifying your device, the id can be obtained by executing&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;lsusb
+&lt;span class=&quot;c&quot;&gt;# the output must be list of devices connected through BUS interface&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Identify your device by executing it when device unplugged and when device plugged to your USB port and see the ‘lsusb’ output differences, take as an example this device.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# difference between two outputs of 'lsusb'&lt;/span&gt;
+Bus 001 Device 003: ID 22b8:2e76 Motorola PCS&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Hence the example, take the ID as ‘22b8’, then you must add udev rule by executing above command, remember to replace the ID with your own.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'SUBSYSTEM==&quot;usb&quot;, ATTR{idVendor}==&quot;22b8&quot;, MODE=&quot;0666&quot;, GROUP=&quot;plugdev&quot;'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sudo tee&lt;/span&gt; /etc/udev/rules.d/51-android-usb.rules&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And then you can check the Android Device connected to your computer, to be remembered that your Android device must be in USB debugging mode to be able to do this task so enable it before you can find it on adb by&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;adb devices&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If available, then you can run this command once again to run debugger mode on your device&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npx react-native run-android&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Wait until the App shows up on your Android screen and it is the debugger mode of your app. The End.&lt;/p&gt;
+
+&lt;h2 id=&quot;article-source&quot;&gt;Article Source&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://reactnative.dev/docs/environment-setup&quot;&gt;https://reactnative.dev/docs/environment-setup&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/studio&quot;&gt;https://developer.android.com/studio&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.fedoraproject.org/en-US/quick-docs/installing-java/&quot;&gt;https://docs.fedoraproject.org/en-US/quick-docs/installing-java/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pypi.org/project/nodeenv/&quot;&gt;https://pypi.org/project/nodeenv/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhmal R</name></author><summary type="html">Setting up React Native Development Environment without Android Studio</summary></entry><entry><title type="html">RESTFUL API PERFORMANCE COMPARISON</title><link href="http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api.html" rel="alternate" type="text/html" title="RESTFUL API PERFORMANCE COMPARISON" /><published>2021-05-27T21:12:59+07:00</published><updated>2021-05-27T21:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api</id><content type="html" xml:base="http://localhost:4000/english/article/2021/05/27/comparing-performances-of-fp-and-oop-restful-api.html">&lt;h1 id=&quot;comparing-performance-of-functional-and-object-oriented-programming-restful-api&quot;&gt;Comparing performance of Functional and Object-Oriented Programming RESTFUL API&lt;/h1&gt;
 
 &lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
 

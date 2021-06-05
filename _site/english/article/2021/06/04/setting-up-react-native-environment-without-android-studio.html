@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>REACT NATIVE WITHOUT ANDROID STUDIO | akhmal22’s blog</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="REACT NATIVE WITHOUT ANDROID STUDIO" />
+<meta name="author" content="Akhmal R" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Setting up React Native Development Environment without Android Studio" />
+<meta property="og:description" content="Setting up React Native Development Environment without Android Studio" />
+<link rel="canonical" href="http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio.html" />
+<meta property="og:url" content="http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio.html" />
+<meta property="og:site_name" content="akhmal22’s blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-04T21:12:59+07:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Akhmal R"},"description":"Setting up React Native Development Environment without Android Studio","@type":"BlogPosting","headline":"REACT NATIVE WITHOUT ANDROID STUDIO","dateModified":"2021-06-04T21:12:59+07:00","datePublished":"2021-06-04T21:12:59+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio.html"},"url":"http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="akhmal22's blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">akhmal22&#39;s blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/posts/">Posts</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">REACT NATIVE WITHOUT ANDROID STUDIO</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-06-04T21:12:59+07:00" itemprop="datePublished">Jun 4, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Akhmal R</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="setting-up-react-native-development-environment-without-android-studio">Setting up React Native Development Environment without Android Studio</h1>
+
+<h2 id="preface">Preface</h2>
+
+<p>Some of Mobile Developer (I don’t know about iOS since they have particular hardware and software bundled for development) especially Android often had a tantrum about their machine being unnecessarily slow with the presence of Android Studio, well admitted I am too the one of them. With the rant comes the idea to make the life easier without that slow IDE, at the first sight, its hard to be possible but if you looking closely to the documentation, its not that hard. In this article, I am going to make an environment that can generate Android Apps with only the essential tools of Android Development.</p>
+
+<h2 id="so-we-are-going-to-install-something-right">So, we are going to install something right?</h2>
+
+<p>Yes, the setting up activities are basically the installation matters for required tools and some adjustment for the tools installed before in strive for proper functionality of the tools. So we first define the tools required for the development environment setups. According to the React Native Docs, this list are required for the setups and to be noted that we will use the React Native CLI Quickstart. According to the list, I will explain list members at a glance before we continue.</p>
+
+<ul>
+  <li>Node</li>
+  <li>Java Development Kit</li>
+  <li>Android Development Environment</li>
+  <li>Watchman</li>
+  <li>React Native CLI</li>
+</ul>
+
+<p>Node is the runtime environment of the JavaScript development, all of React Native development things runs on Node environment and the JavaScript version of Java Development Kit (JDK). JDK itself is not runtime environment, it is the compiler used to compile Java code into executable form, we don’t need Runtime Environment (JRE) yet since the scope of this article are to develop, not run the Java exec. Android Development Environment (ADE) of course must be installed in case we want to develop Android Apps, ADE is bundled with Android Studio so if you install Android Studio, you are automatically installing ADE, but in this case, we will skip Android Studio for a while and focused to main component of the ADE, the Android SDK. Watchman is file changes watching tools, yeah you might say like Git but little bit modern from Facebook. React Native CLI take part of the development as the main controller of the runtime.</p>
+
+<h2 id="how-do-we-install-it-anyway">How do we install it, anyway?</h2>
+
+<p>The ‘how’ thing may vary depends on your OS, but i will show you the steps for Fedora. The installation pipeline must be defined in the beginning of this section in fact that the writing of the list in front of the explanation is far more understandable than not.</p>
+
+<ol>
+  <li>Install JDK and NodeJS.</li>
+  <li>Download sdkmanager.</li>
+  <li>Add path and aliases on ‘.bashrc’.</li>
+  <li>Install SDK component.</li>
+  <li>Create Android project directory.</li>
+  <li>Install required packages.</li>
+</ol>
+
+<p>Before we continue, the sequence above are not an absolute sequence, you can do step 1, 2 and three concurrently depend on your hardware and internet spec, but step 4 until 6 are meant to be done sequentially. Hence the installation sequence written, let me advance to the ‘how’.</p>
+
+<p>You can start with installing JDK first, then Node or else sequentially done then in one installation command.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>dnf <span class="nb">install </span>java-latest-openjdk-devel.x86_64 nodejs</code></pre></figure>
+
+<p>To be noted that nodejs version in the repo is stable version, you can get current version by execute these command first.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>dnf <span class="nb">install</span> <span class="nt">-y</span> gcc-c++ make
+curl <span class="nt">-sL</span> https://rpm.nodesource.com/setup_16.x | <span class="nb">sudo</span> <span class="nt">-E</span> bash -</code></pre></figure>
+
+<p>Another way to install your Node is if you have any version of Python 3 (version 3 recommended) and virtualenv module installed on your Python, you can create a virtualenv and then create Node virtualenv by executing these commands.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># activate your virtualenv</span>
+<span class="nb">source</span> /path/to/virtualenv/bin/activate
+<span class="c"># you can install nodeenv by execute</span>
+python <span class="nt">-m</span> pip <span class="nb">install </span>nodeenv
+<span class="c"># create your nodeenv by</span>
+nodeenv &lt;nodeenv-foldername&gt;
+<span class="c">## add option if you wish to install the specified version</span>
+nodeenv &lt;nodeenv-foldername&gt; <span class="nt">--node</span><span class="o">=</span>NODE_VER
+<span class="c">### or</span>
+nodeenv &lt;nodeenv-foldername&gt; <span class="nt">-n</span> NODE_VER
+<span class="c"># deactivate your virtualenv</span>
+deactivate
+<span class="c"># and activate your nodeenv</span>
+<span class="nb">source</span> /path/to/nodeenv/bin/activate</code></pre></figure>
+
+<p>While you can create node virtual environment, you can choose which version of node you want to install by adding ‘-n NODE_VER’ or ‘–node=NODE_VER’ option when you create your nodeenv.</p>
+
+<p>While it takes some times, you can light up your I/O with downloading Android SDK by browsing to the Android Studio download site, go to ‘Command line tools only’ and download one based on your OS, choose Linux for this occasion, and then let them to be completed or you can add aliases on your ‘.bashrc’ if you use bash shell (I am using bash shell in this article).</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># add onto very bottom line of .bashrc</span>
+<span class="nb">export </span><span class="nv">ANDROID_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/Android/Sdk
+<span class="nb">export </span><span class="nv">ANDROID_SDK_ROOT</span><span class="o">=</span><span class="nv">$HOME</span>/Android/Sdk
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/cmdline-tools/latest
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/platform-tools
+
+<span class="nb">alias </span><span class="nv">sdkmanager</span><span class="o">=</span><span class="nv">$ANDROID_HOME</span>/cmdline-tools/latest/bin/sdkmanager
+<span class="nb">alias </span><span class="nv">adb</span><span class="o">=</span><span class="nv">$ANDROID_HOME</span>/platform-tools/adb</code></pre></figure>
+
+<p>After Android SDK successfully downloaded, you can take the folder to your home directory to get aligned with your ‘.bashrc’ or adjust your ‘.bashrc’ based on your current Android SDK folder location. Downloaded .zip can be stored in ‘$HOME/Android/Sdk’ and make new directory on ‘cmdline-tools’ (folder you just unzipped) name it ‘latest’ and move the rest of ‘cmdline-tools’ occupants to ‘latest’ folder, said instructions ran in case of you want to aligned your SDK tools with your ‘.bashrc’. If the SDK were clearly installed, you can execute this command to install its component.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># installing the platform tools required for development (ADB...etc)</span>
+sdkmanager <span class="s2">"platform-tools"</span> <span class="s2">"platforms;android-28"</span>
+<span class="c"># installing the build tools to build React Native to Android App</span>
+sdkmanager <span class="s2">"build-tools;31.0.0-rc4"</span></code></pre></figure>
+
+<p>SDK now ready to be used, so we first ensure the node are installed by checking ‘node’ command</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">node <span class="nt">--v</span></code></pre></figure>
+
+<p>if the version appears, you can advance to next sequence else you must reinstall you NodeJS using method said above. You can create the React Native project by executing</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npx react-native init yourprojectName</code></pre></figure>
+
+<p>Then you have to wait until the process finished, after the process completion, you can install node packages required by your project, since this project are starting point of the React Native Apps, the required packages may vary depend on what app do you wish to develop.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm <span class="nb">install</span></code></pre></figure>
+
+<p>If you need to know the required packages your project had to satisfy, you can open your project’s ‘package.json’. In this point, the sequence was all done then the environment setup is finished, so you can develop your own project with them tools.</p>
+
+<h2 id="you-install-all-of-the-required-tools-i-dont-see-watchman-in-action-though">You install all of the required tools? I don’t see watchman in action, though.</h2>
+
+<p>Watchman is automatically installed on the creation of your project’s folder (step 5 of the installation sequence) so you don’t bother downloading it and place it to your folder over again.</p>
+
+<h2 id="bonus-run-your-android-app-in-your-device">Bonus: Run your Android App in your device</h2>
+
+<p>Decided to make some additional references of how to run your Android App in your physical Android Device, since it was pretty simple to do. First, ensure the previous required Node packages are provided, if not, you can try installing them again by.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm <span class="nb">install</span></code></pre></figure>
+
+<p>If all packages are provided, then you can run the engine called ‘Metro’ that act as JavaScript bundler by execute this command.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npx react-native start</code></pre></figure>
+
+<p>Open another terminal, run this command</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npx react-native run-android</code></pre></figure>
+
+<p>Before the command mentioned above, you have to ensure your device is connected properly to the ADB by identifying your device, the id can be obtained by executing</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">lsusb
+<span class="c"># the output must be list of devices connected through BUS interface</span></code></pre></figure>
+
+<p>Identify your device by executing it when device unplugged and when device plugged to your USB port and see the ‘lsusb’ output differences, take as an example this device.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># difference between two outputs of 'lsusb'</span>
+Bus 001 Device 003: ID 22b8:2e76 Motorola PCS</code></pre></figure>
+
+<p>Hence the example, take the ID as ‘22b8’, then you must add udev rule by executing above command, remember to replace the ID with your own.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s1">'SUBSYSTEM=="usb", ATTR{idVendor}=="22b8", MODE="0666", GROUP="plugdev"'</span> | <span class="nb">sudo tee</span> /etc/udev/rules.d/51-android-usb.rules</code></pre></figure>
+
+<p>And then you can check the Android Device connected to your computer, to be remembered that your Android device must be in USB debugging mode to be able to do this task so enable it before you can find it on adb by</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">adb devices</code></pre></figure>
+
+<p>If available, then you can run this command once again to run debugger mode on your device</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npx react-native run-android</code></pre></figure>
+
+<p>Wait until the App shows up on your Android screen and it is the debugger mode of your app. The End.</p>
+
+<h2 id="article-source">Article Source</h2>
+<ul>
+  <li><a href="https://reactnative.dev/docs/environment-setup">https://reactnative.dev/docs/environment-setup</a></li>
+  <li><a href="https://developer.android.com/studio">https://developer.android.com/studio</a></li>
+  <li><a href="https://docs.fedoraproject.org/en-US/quick-docs/installing-java/">https://docs.fedoraproject.org/en-US/quick-docs/installing-java/</a></li>
+  <li><a href="https://pypi.org/project/nodeenv/">https://pypi.org/project/nodeenv/</a></li>
+</ul>
+
+
+  </div><a class="u-url" href="/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">akhmal22&#39;s blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">akhmal22&#39;s blog</li><li><a class="u-email" href="mailto:rizkyantorig355@gmail.com">rizkyantorig355@gmail.com</a></li><li><a href="https://instagram.com/akhmalrakmal"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#instagram"></use></svg> <span class="username">akhmalrakmal</span></a></li><li><a href="https://www.linkedin.com/in/akhmal-rizkyanto"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">akhmal-rizkyanto</span></a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/akhmal22"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">akhmal22</span></a></li><li><a href="https://www.twitter.com/akhmalrakmal"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">akhmalrakmal</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>All about CompSci Stuff</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
