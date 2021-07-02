@@ -1,4 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-05T16:07:32+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">REACT NATIVE WITHOUT ANDROID STUDIO</title><link href="http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio.html" rel="alternate" type="text/html" title="REACT NATIVE WITHOUT ANDROID STUDIO" /><published>2021-06-04T21:12:59+07:00</published><updated>2021-06-04T21:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio</id><content type="html" xml:base="http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio.html">&lt;h1 id=&quot;setting-up-react-native-development-environment-without-android-studio&quot;&gt;Setting up React Native Development Environment without Android Studio&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-02T23:54:10+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">TELEGRAM BOT: WHAT, WHY AND HOW</title><link href="http://localhost:4000/english/article/2021/07/02/telegram-bot-what-why-and-how.html" rel="alternate" type="text/html" title="TELEGRAM BOT: WHAT, WHY AND HOW" /><published>2021-07-02T17:12:59+07:00</published><updated>2021-07-02T17:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/07/02/telegram-bot-what-why-and-how</id><content type="html" xml:base="http://localhost:4000/english/article/2021/07/02/telegram-bot-what-why-and-how.html">&lt;h1 id=&quot;telegram-bot-understand-reasoned-and-known-how-to&quot;&gt;Telegram Bot: Understand, reasoned and known how to&lt;/h1&gt;
+
+&lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
+
+&lt;p&gt;I in the near past, comes to the new layer of the instant messaging (IM), besides of two (IM) I have known in previous stage of my life named WhatsApp and LINE, the new IM is Telegram. For the record, I used Telegram in academic and learning manners in early stage of usage for example to catch up with lecturer’s matter or sometimes online QnA session with lecturer, more of the time, I find out that technology called bot also available in Telegram with numerous example of bots on the market, then my brain towards the development side and wondering if i can build it by myself, and the answer is yes. Thus the preface ending, this article will show you my thought and steps in learning Telegram Bot and of course learn to build it based on the documentation available.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-bot&quot;&gt;What is Bot?&lt;/h2&gt;
+
+&lt;p&gt;Bot is generally a computer program that can execute human actor’s use case scenario, Telegram is an IM application so the human actors on the app do the use case of messaging. The conclusion is the Telegram Bot is a running computer program that can send message to human or fellow bots.&lt;/p&gt;
+
+&lt;h2 id=&quot;bot-and-human-in-telegram-differentiated-right&quot;&gt;Bot and human in Telegram differentiated, right?&lt;/h2&gt;
+
+&lt;p&gt;Telegram as an application differs bots from humans user account, so you cannot be mistaken the bots account as humans account.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-using-bot-is-it-really-essential-or-urgent&quot;&gt;Why using Bot? Is it really essential or urgent?&lt;/h2&gt;
+
+&lt;p&gt;One of reasons of using bot is automating human’s business, that’s how we mean in Telegram too. There’s some human business that human should not mind do it all along, bots do it instead, you can say something tiring like moderate Telegram group, deleting spam message on your group and so on, that’s why bots mean business. With the platform Telegram being free as in freedom, bots can be freely developed too and it opens possibility to unlimited range of bots usage.&lt;/p&gt;
+
+&lt;p&gt;I feel I can make the urgencies up from the essence of bot usage above, user-oriented urgencies. But when it comes to developers urgencies aside of the nature of open source Telegram bore in hand, developers must be gained some new experience of doing something by building and they will get perks of new skill while bot usages are increasing by the year and of course new career opportunity.&lt;/p&gt;
+
+&lt;h2 id=&quot;we-can-learn-something-new-then-how-to-started&quot;&gt;We can learn something new then, how to started?&lt;/h2&gt;
+
+&lt;p&gt;Firstly in this article, I will define the scope of the article so you don’t getting confused as article goes by.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Article use Python as language for bot building&lt;/li&gt;
+  &lt;li&gt;Steps in the article take place in Linux environment&lt;/li&gt;
+  &lt;li&gt;Using python-telegram-bot to build the bot, install with ‘pip install python-telegram-bot’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After above line, you should know the scope and your expectation here, thus we can start the how, very first of the how is enroll your bot to &lt;a href=&quot;https://telegram.me/botfather&quot;&gt;@BotFather&lt;/a&gt;, get the token and you are ready to build your own bot.&lt;/p&gt;
+
+&lt;h2 id=&quot;is-that-it-we-want-the-actual-howto&quot;&gt;Is that it? We want the actual howto!&lt;/h2&gt;
+
+&lt;p&gt;Okay, so at this point I assume the previous prerequisite is not a problem anymore and we can take actual lesson of the bot, I can put it on numbered list below so you can keep on the line. there is 3 essential entities for the bot and they must form the program so it can work perfectly. The track is like this:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Updater&lt;/li&gt;
+  &lt;li&gt;Dispatcher&lt;/li&gt;
+  &lt;li&gt;Handlers&lt;/li&gt;
+  &lt;li&gt;Filters&lt;/li&gt;
+  &lt;li&gt;Form the program&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So the point number 1 until 3 is technically a class on the python-telegram-bot library and I can take its role for you starting from the beginning.&lt;/p&gt;
+
+&lt;p&gt;Updater set to be update catcher of the bot activity, the Updater will ring the bell if the bot said get an update or two from the user, for the bell working properly you need a Dispatcher to read the bell ring. Dispatcher is like real-life dispatch imagine you are in public service field of job (cop for example), you will need a dispatch if you need something based on the newest event on the field, cop need back up, sent to dispatch then dispatch communicate the message to back up personnel. As of example, I can say Updater is cop and Dispatcher is a dispatch, Updater ring the bell for help, dispatch translate the bell so wanted help can be accommodated to Updater. Handlers is a class where the Dispatcher communicates in order to fulfill Updater’s requests, Handlers can be called by Dispatcher when the condition met. Handlers will need Filters to sort out the dispatcher call&lt;/p&gt;
+
+&lt;p&gt;At this point, I hope you complete your knowledge about point 1 until 3 above and ready to make the program up. With that knowledge you have, you can utilize 3 entities above starting with Updater.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; You should do this first &quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;telegram.ext&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; Declare and define your updater first &quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;updater&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;telegra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Updater&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;YOURTOKEN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;use_context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If written, your updater is ready and do declare the line to the dispatch, Dispatcher can be initialized from Updater class itself by using&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; Declare the dispatch &quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dispatch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;updater&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dispatcher&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Only if the dispatch declared, you can able to do jobs based on event occurred, you can designed your bot to respond on sent message using handler, there’s many Handlers available but for the entry level how to, this article only use MessageHandler to carry on. Filters user by Handlers to determine the kind of request sent from dispatch so the Handlers can respond correctly&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; import handler from the library &quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;telegram.ext&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessageHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Filters&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; make up the handler to respond sent message filtered as text &quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dispatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MessageHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Filters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; previously you must define the function called 'yes' like this&quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;yes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reply_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;yes&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Your reaching of this line means you are ready to get more exploration on the bot development, for the reference you can use your own bot using above explanation, for example &lt;a href=&quot;https://www.codementor.io/@karandeepbatra/part-1-how-to-create-a-telegram-bot-in-python-in-under-10-minutes-19yfdv4wrq&quot;&gt;echobot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;closure&quot;&gt;Closure&lt;/h2&gt;
+
+&lt;p&gt;I think the knowledge of bot building can be very useful, professionally or casually in remembrance of automation usefulness. With the openness of Telegram, build the Telegram bot can be nice starting point for your bot building journey in the same platform or the others, and I think you might going so with the essential this article provided. You reach the end of the word, thank you.&lt;/p&gt;
+
+&lt;p&gt;Special Note: Oh my god, three weeks without an update, this week finally it airs. More articles to come, i assure you. (Akhmal R.)&lt;/p&gt;
+
+&lt;h2 id=&quot;article-source&quot;&gt;Article Source&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.morningbrew.com/emerging-tech/stories/2020/09/16/survey-chatbot-usage-increased-925-2019-2020&quot;&gt;https://www.morningbrew.com/emerging-tech/stories/2020/09/16/survey-chatbot-usage-increased-925-2019-2020&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://python-telegram-bot.readthedocs.io/en/stable/&quot;&gt;https://python-telegram-bot.readthedocs.io/en/stable/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/python-telegram-bot/python-telegram-bot/wiki/Extensions-%E2%80%93-Your-first-Bot&quot;&gt;https://github.com/python-telegram-bot/python-telegram-bot/wiki/Extensions-%E2%80%93-Your-first-Bot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.codementor.io/@karandeepbatra/part-1-how-to-create-a-telegram-bot-in-python-in-under-10-minutes-19yfdv4wrq&quot;&gt;https://www.codementor.io/@karandeepbatra/part-1-how-to-create-a-telegram-bot-in-python-in-under-10-minutes-19yfdv4wrq&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhmal R</name></author><summary type="html">Telegram Bot: Understand, reasoned and known how to</summary></entry><entry><title type="html">REACT NATIVE WITHOUT ANDROID STUDIO</title><link href="http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio.html" rel="alternate" type="text/html" title="REACT NATIVE WITHOUT ANDROID STUDIO" /><published>2021-06-04T21:12:59+07:00</published><updated>2021-06-04T21:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio</id><content type="html" xml:base="http://localhost:4000/english/article/2021/06/04/setting-up-react-native-environment-without-android-studio.html">&lt;h1 id=&quot;setting-up-react-native-development-environment-without-android-studio&quot;&gt;Setting up React Native Development Environment without Android Studio&lt;/h1&gt;
 
 &lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
 
