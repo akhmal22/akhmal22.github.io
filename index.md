@@ -14,7 +14,7 @@ You can find the source code of my projects in:
 
 I will uploaded some materials at weekly basis, maybe one or two in a week in uncertain days of week, so stay tune. Also the language can swing between Indonesian or English for an uncertain occasion too.
 
-Update May 29: Layout changes
+Update May 29: Layout changes; July 6: New Content Format
 
 
 [akhmal-github]: https://github.com/akhmal22
