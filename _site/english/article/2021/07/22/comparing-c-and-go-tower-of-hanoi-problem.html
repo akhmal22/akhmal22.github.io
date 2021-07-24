@@ -60,6 +60,9 @@
 
 <p>Tower of Hanoi is mathematical problem invented by E. Lucas in 1883. The problem given us stack of disks stacked over the pole and another two empty poles, the disks stacked are differ in term of size, top-most disk is the smallest and bottom-most disk is the largest. In order to solve the problem, solver has to place whole stack of disks to one of two empty poles named ‘target’ pole and ensure the placement steps are the same number to optimal solution according to disk number. Steps commited must be disk-size-concerned, that smaller disks must be placed above larger disks, otherwise, the step is illegal and not counted.</p>
 
+<p><img src="https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/Tower-of-Hanoi-Tower-of-Brahma-or-Lucas-Tower.jpg" alt="directory" />
+<sub>Figure 1: Tower of Hanoi illustration</sub></p>
+
 <p>For the Tower of Hanoi problem, given the optimal amount of solution steps are based on pattern (2^n)-1 which ‘n’ is represent the stack thickness. The question is, how the algorithm going to find the optimal solution? How can we interpret it to the code? and How the comparison going between C and Go code of Tower of Hanoi interpretation?</p>
 
 <h2 id="how-the-algorithm-going">How the algorithm going?</h2>
@@ -136,13 +139,7 @@ if n is not divisible by 2 then:
 
 <p><sub>Table 2: Methods of solution delivery</sub></p>
 
-<p>With the specification and explanation above, implementations of the solution are embed below.</p>
-
-<noscript><pre>400: Invalid request</pre></noscript>
-<script src="https://gist.github.com/5555251.js"> </script>
-
-<noscript><pre>400: Invalid request</pre></noscript>
-<script src="https://gist.github.com/5555251.js"> </script>
+<p>With the specification and explanation above, implementations of the solution are listed in bonus section.</p>
 
 <h2 id="how-the-comparison-going">How the comparison going?</h2>
 
@@ -180,6 +177,14 @@ if n is not divisible by 2 then:
 
 <p>The measurement resulted that code in C was faster in terms of compilation time than code in Go, contrary to execution time, Go was faster than C.</p>
 
+<h2 id="bonus">Bonus</h2>
+
+<p>The implementations are below.</p>
+
+<p>C: <a href="https://git.io/J8i4a">https://git.io/J8i4a</a></p>
+
+<p>Go: <a href="https://git.io/J8iBt">https://git.io/J8iBt</a></p>
+
 <h2 id="article-source">Article Source</h2>
 
 <ul>
@@ -188,8 +193,8 @@ if n is not divisible by 2 then:
   <li>I. Moscovich, 1000 playthinks: puzzles, paradoxes, illusions &amp; games. New York: Workman Pub., 2001.</li>
   <li>Petković Miodrag, Famous puzzles of great mathematicians. Providence, RI: American Mathematical Society, 2013.</li>
   <li><a href="https://www.geeksforgeeks.org/stack-data-structure-introduction-program/">https://www.geeksforgeeks.org/stack-data-structure-introduction-program/</a></li>
-  <li><a href="https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1">https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1</a></li>
   <li><a href="https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm">https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm</a></li>
+  <li><a href="https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1">https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1</a></li>
 </ul>
 
 

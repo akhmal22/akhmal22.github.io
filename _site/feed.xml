@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-24T18:19:56+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">COMPARING C AND GO: TOWER OF HANOI PROBLEM</title><link href="http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-tower-of-hanoi-problem.html" rel="alternate" type="text/html" title="COMPARING C AND GO: TOWER OF HANOI PROBLEM" /><published>2021-07-22T21:12:59+07:00</published><updated>2021-07-22T21:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-tower-of-hanoi-problem</id><content type="html" xml:base="http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-tower-of-hanoi-problem.html">&lt;h1 id=&quot;comparing-c-and-go-solutions-of-tower-of-hanoi-problem&quot;&gt;Comparing C and Go Solutions of Tower of Hanoi Problem&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-24T19:01:39+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">COMPARING C AND GO: TOWER OF HANOI PROBLEM</title><link href="http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-tower-of-hanoi-problem.html" rel="alternate" type="text/html" title="COMPARING C AND GO: TOWER OF HANOI PROBLEM" /><published>2021-07-22T21:12:59+07:00</published><updated>2021-07-22T21:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-tower-of-hanoi-problem</id><content type="html" xml:base="http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-tower-of-hanoi-problem.html">&lt;h1 id=&quot;comparing-c-and-go-solutions-of-tower-of-hanoi-problem&quot;&gt;Comparing C and Go Solutions of Tower of Hanoi Problem&lt;/h1&gt;
 
 &lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
 
@@ -9,6 +9,9 @@
 &lt;h2 id=&quot;what-is-tower-of-hanoi&quot;&gt;What is Tower of Hanoi?&lt;/h2&gt;
 
 &lt;p&gt;Tower of Hanoi is mathematical problem invented by E. Lucas in 1883. The problem given us stack of disks stacked over the pole and another two empty poles, the disks stacked are differ in term of size, top-most disk is the smallest and bottom-most disk is the largest. In order to solve the problem, solver has to place whole stack of disks to one of two empty poles named ‘target’ pole and ensure the placement steps are the same number to optimal solution according to disk number. Steps commited must be disk-size-concerned, that smaller disks must be placed above larger disks, otherwise, the step is illegal and not counted.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/Tower-of-Hanoi-Tower-of-Brahma-or-Lucas-Tower.jpg&quot; alt=&quot;directory&quot; /&gt;
+&lt;sub&gt;Figure 1: Tower of Hanoi illustration&lt;/sub&gt;&lt;/p&gt;
 
 &lt;p&gt;For the Tower of Hanoi problem, given the optimal amount of solution steps are based on pattern (2^n)-1 which ‘n’ is represent the stack thickness. The question is, how the algorithm going to find the optimal solution? How can we interpret it to the code? and How the comparison going between C and Go code of Tower of Hanoi interpretation?&lt;/p&gt;
 
@@ -86,13 +89,7 @@ if n is not divisible by 2 then:
 
 &lt;p&gt;&lt;sub&gt;Table 2: Methods of solution delivery&lt;/sub&gt;&lt;/p&gt;
 
-&lt;p&gt;With the specification and explanation above, implementations of the solution are embed below.&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/5555251.js&quot;&gt; &lt;/script&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/5555251.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;With the specification and explanation above, implementations of the solution are listed in bonus section.&lt;/p&gt;
 
 &lt;h2 id=&quot;how-the-comparison-going&quot;&gt;How the comparison going?&lt;/h2&gt;
 
@@ -130,6 +127,14 @@ if n is not divisible by 2 then:
 
 &lt;p&gt;The measurement resulted that code in C was faster in terms of compilation time than code in Go, contrary to execution time, Go was faster than C.&lt;/p&gt;
 
+&lt;h2 id=&quot;bonus&quot;&gt;Bonus&lt;/h2&gt;
+
+&lt;p&gt;The implementations are below.&lt;/p&gt;
+
+&lt;p&gt;C: &lt;a href=&quot;https://git.io/J8i4a&quot;&gt;https://git.io/J8i4a&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Go: &lt;a href=&quot;https://git.io/J8iBt&quot;&gt;https://git.io/J8iBt&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;article-source&quot;&gt;Article Source&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -138,8 +143,8 @@ if n is not divisible by 2 then:
   &lt;li&gt;I. Moscovich, 1000 playthinks: puzzles, paradoxes, illusions &amp;amp; games. New York: Workman Pub., 2001.&lt;/li&gt;
   &lt;li&gt;Petković Miodrag, Famous puzzles of great mathematicians. Providence, RI: American Mathematical Society, 2013.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/stack-data-structure-introduction-program/&quot;&gt;https://www.geeksforgeeks.org/stack-data-structure-introduction-program/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1&quot;&gt;https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm&quot;&gt;https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1&quot;&gt;https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Akhmal R</name></author><category term="english" /><category term="article" /><summary type="html">Comparing C and Go Solutions of Tower of Hanoi Problem</summary></entry><entry><title type="html">NEW FORMAT</title><link href="http://localhost:4000/english/misc/2021/07/06/new-format.html" rel="alternate" type="text/html" title="NEW FORMAT" /><published>2021-07-06T21:12:59+07:00</published><updated>2021-07-06T21:12:59+07:00</updated><id>http://localhost:4000/english/misc/2021/07/06/new-format</id><content type="html" xml:base="http://localhost:4000/english/misc/2021/07/06/new-format.html">&lt;h1 id=&quot;new-content-format&quot;&gt;New Content Format&lt;/h1&gt;
 &lt;p&gt;I decided to create new format of writing content, until now, there are 2 category of writing format, ‘article’ and ‘misc’. I am going to make a category for paper breakdown writing, the content will be write down in 4 sections that can describe the paper well, the paper breaks into ‘features’, ‘facts’, ‘findings’ and ‘future works’. Feature section describes what did the paper offers in term of research topic, objective and scope. Facts section describes the facts existed by the research documented on the paper goes on. Findings section describes all new things found through the research process. Future Works section describes possible research conduction following the current research’s findings.&lt;/p&gt;
 

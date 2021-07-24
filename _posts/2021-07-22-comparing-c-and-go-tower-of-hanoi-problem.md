@@ -18,6 +18,9 @@ Comparison commited using two programs written in C and Go that solved old class
 
 Tower of Hanoi is mathematical problem invented by E. Lucas in 1883. The problem given us stack of disks stacked over the pole and another two empty poles, the disks stacked are differ in term of size, top-most disk is the smallest and bottom-most disk is the largest. In order to solve the problem, solver has to place whole stack of disks to one of two empty poles named 'target' pole and ensure the placement steps are the same number to optimal solution according to disk number. Steps commited must be disk-size-concerned, that smaller disks must be placed above larger disks, otherwise, the step is illegal and not counted.
 
+![directory](https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/Tower-of-Hanoi-Tower-of-Brahma-or-Lucas-Tower.jpg)
+<sub>Figure 1: Tower of Hanoi illustration</sub>
+
 For the Tower of Hanoi problem, given the optimal amount of solution steps are based on pattern (2^n)-1 which 'n' is represent the stack thickness. The question is, how the algorithm going to find the optimal solution? How can we interpret it to the code? and How the comparison going between C and Go code of Tower of Hanoi interpretation?
 
 ## How the algorithm going?
@@ -58,11 +61,7 @@ If the data structure has been ready, moved on to solution-focused interpretatio
 
 <sub>Table 2: Methods of solution delivery</sub>
 
-With the specification and explanation above, implementations of the solution are embed below.
-
-{% gist 5555251 %}
-
-{% gist 5555251 %}
+With the specification and explanation above, implementations of the solution are listed in bonus section.
 
 ## How the comparison going?
 
@@ -83,6 +82,14 @@ In compilation time, C beats Go in every aspects of time, but in the execution t
 
 The measurement resulted that code in C was faster in terms of compilation time than code in Go, contrary to execution time, Go was faster than C.
 
+## Bonus
+
+The implementations are below.
+
+C: [https://git.io/J8i4a][https://git.io/J8i4a]
+
+Go: [https://git.io/J8iBt][https://git.io/J8iBt]
+
 ## Article Source
 
 - [https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/][https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/]
@@ -90,8 +97,8 @@ The measurement resulted that code in C was faster in terms of compilation time 
 - I. Moscovich, 1000 playthinks: puzzles, paradoxes, illusions & games. New York: Workman Pub., 2001.
 - Petković Miodrag, Famous puzzles of great mathematicians. Providence, RI: American Mathematical Society, 2013.
 - [https://www.geeksforgeeks.org/stack-data-structure-introduction-program/][https://www.geeksforgeeks.org/stack-data-structure-introduction-program/]
-- [https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1][https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1]
 - [https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm][https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm]
+- [https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1][https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1]
 
 
 [https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/]: https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/
@@ -99,3 +106,5 @@ The measurement resulted that code in C was faster in terms of compilation time 
 [https://www.geeksforgeeks.org/stack-data-structure-introduction-program/]: https://www.geeksforgeeks.org/stack-data-structure-introduction-program/
 [https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1]: https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1
 [https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm]: https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm
+[https://git.io/J8i4a]: https://git.io/J8i4a
+[https://git.io/J8iBt]: https://git.io/J8iBt
