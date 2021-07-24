@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "COMPARING C AND GO: TOWER OF HANOI PROBLEM"
-date:   2021-07-25 21:12:59 +0700
+date:   2021-07-22 21:12:59 +0700
 author: "Akhmal R"
 categories: english article
 ---
@@ -76,6 +76,8 @@ As mentioned above, we are comparing compilation time and execution time. Before
 <sub>Table 3: Measurement results</sub>
 
 Times showed on the table 3 consist 3 kind of time, 'real', 'user' and 'sys'. 'Real' indicates whole time taken on the processes running session, 'user' indicates time spent by CPU in computation process of the executable, 'sys' indicates time spent by CPU in system tasks in order to bring the executable a run.
+
+In compilation time, C beats Go in every aspects of time, but in the execution time, Go beats C in 'real' and 'user' time, Go and C are equal in 'sys' time.
 
 ## Conclusion
 

@@ -1,4 +1,146 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-24T18:09:06+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">NEW FORMAT</title><link href="http://localhost:4000/english/misc/2021/07/06/new-format.html" rel="alternate" type="text/html" title="NEW FORMAT" /><published>2021-07-06T21:12:59+07:00</published><updated>2021-07-06T21:12:59+07:00</updated><id>http://localhost:4000/english/misc/2021/07/06/new-format</id><content type="html" xml:base="http://localhost:4000/english/misc/2021/07/06/new-format.html">&lt;h1 id=&quot;new-content-format&quot;&gt;New Content Format&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-24T18:19:56+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">COMPARING C AND GO: TOWER OF HANOI PROBLEM</title><link href="http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-tower-of-hanoi-problem.html" rel="alternate" type="text/html" title="COMPARING C AND GO: TOWER OF HANOI PROBLEM" /><published>2021-07-22T21:12:59+07:00</published><updated>2021-07-22T21:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-tower-of-hanoi-problem</id><content type="html" xml:base="http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-tower-of-hanoi-problem.html">&lt;h1 id=&quot;comparing-c-and-go-solutions-of-tower-of-hanoi-problem&quot;&gt;Comparing C and Go Solutions of Tower of Hanoi Problem&lt;/h1&gt;
+
+&lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
+
+&lt;p&gt;I am going to write an article in comparison area, maybe I will write off few articles like this in near future but comes with different algorithms, in near past you can find the comparison article between paradigms that you can find it yourself on ‘post’ section, now I will commit the comparison between languages said the one to be the substitution of another, C and Go. C can be pronounced as Programming Languages’ father ‘cause so many programming language developed based on C or interpreted by C. Go on the other hand was relatively new compared to C, on the time before, Go claimed to be ‘modern C’ ‘cause of features it bore fulfils ‘modern language’ set but the speed was faster than most of said ‘modern language’ and also its compiled just like C.&lt;/p&gt;
+
+&lt;p&gt;Comparison commited using two programs written in C and Go that solved old classic problem of Tower of Hanoi, using same environment of hardware and software, and time of processes are parameters to be compared in order to have the comparison result. The comparison will comparing time of compilation and execution of both program. Using same algorithm and paradigm, I hope this comparison can be on-par in terms of two programming language performance comparison.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-tower-of-hanoi&quot;&gt;What is Tower of Hanoi?&lt;/h2&gt;
+
+&lt;p&gt;Tower of Hanoi is mathematical problem invented by E. Lucas in 1883. The problem given us stack of disks stacked over the pole and another two empty poles, the disks stacked are differ in term of size, top-most disk is the smallest and bottom-most disk is the largest. In order to solve the problem, solver has to place whole stack of disks to one of two empty poles named ‘target’ pole and ensure the placement steps are the same number to optimal solution according to disk number. Steps commited must be disk-size-concerned, that smaller disks must be placed above larger disks, otherwise, the step is illegal and not counted.&lt;/p&gt;
+
+&lt;p&gt;For the Tower of Hanoi problem, given the optimal amount of solution steps are based on pattern (2^n)-1 which ‘n’ is represent the stack thickness. The question is, how the algorithm going to find the optimal solution? How can we interpret it to the code? and How the comparison going between C and Go code of Tower of Hanoi interpretation?&lt;/p&gt;
+
+&lt;h2 id=&quot;how-the-algorithm-going&quot;&gt;How the algorithm going?&lt;/h2&gt;
+
+&lt;p&gt;Actually for solving Tower of Hanoi problem, there are two basic of approaches you can follow, iterative approach or recursive approach in order to interpret the solution but in this occasion, I will use iterative approach algorithm to interpret the solution to the code. Steps in iterative approach we must follow is written as pseudocode below. In pseudocode below, number of disks represented by ‘n’, initial pole (disks first stacked there) represented by ‘i’, mid pole (one of two empty poles) represented by ‘m’ and final pole (disks final place) represented by ‘f’.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if n is divisible by 2 then:
+ makes legal move from i to m or vice versa
+ makes legal move from i to f or vice versa
+ makes legal move from m to f or vice versa
+if n is not divisible by 2 then:
+ makes legal move from i to f or vice versa
+ makes legal move from i to m or vice versa
+ makes legal move from m to f or vice versa
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;how-can-we-interpret&quot;&gt;How can we interpret?&lt;/h2&gt;
+
+&lt;p&gt;Given algorithm must be executed iteratively until stack compeletely relocated to final pole. Before using above algorithm, we firstly choose data structure that fit well the situation, the situation only allows movement for last inserted disk (smallest disk) then ‘stack’ data structure is best fit. Tower of Hanoi requires smaller disk placed above larger disk, then add rules in our data structure that only smaller disk can be stacked by another disk. Specification of the data structure methods written below.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Method Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Usage&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;isFull&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Check if stack is full&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;pop&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Remove element (disk) from the stack&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;push&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Insert element (disk) to the stack&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;peek&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Return top-most element value of the stack&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;isSmaller&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Check if element value to be inserted is smaller than top-most element value of stack&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;sub&gt;Table 1: Methods of stack data structure&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;If the data structure has been ready, moved on to solution-focused interpretation, we basically interpret the pseudocode below to the more technical one. Earlier before solution delivered, we must initiate the problem by creating 3 stack places (poles) and create disks as required. Methods to solution delivery are listed below.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Method Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Usage&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;moveDisk&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Move disk from stack to stack&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;solveProblem&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;interpretation of solution pseudocode&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;sub&gt;Table 2: Methods of solution delivery&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;With the specification and explanation above, implementations of the solution are embed below.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5555251.js&quot;&gt; &lt;/script&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5555251.js&quot;&gt; &lt;/script&gt;
+
+&lt;h2 id=&quot;how-the-comparison-going&quot;&gt;How the comparison going?&lt;/h2&gt;
+
+&lt;p&gt;As mentioned above, we are comparing compilation time and execution time. Before gone to comparison, we define the scope of the comparison that the code used same approach and same algorithm, running on same machine (hardware and software) and deliver the solution of same number of disks, code executed don’t requested for user’s input so user can’t distort the results. The results of comparison, provided by ‘time’ command, are presented in table below.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Metrices&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;C&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Go&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Compilation time&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.263s&lt;br /&gt; user 0m0.089s&lt;br /&gt; sys 0m0.029s&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;real 0m1.036s&lt;br /&gt; user 0m0.285s&lt;br /&gt; sys 0m0.124s&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Execution time&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.054s&lt;br /&gt; user 0m0.052s&lt;br /&gt; sys 0m0.002s&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.025s&lt;br /&gt; user 0m0.024s&lt;br /&gt; sys 0m0.002s&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;sub&gt;Table 3: Measurement results&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;Times showed on the table 3 consist 3 kind of time, ‘real’, ‘user’ and ‘sys’. ‘Real’ indicates whole time taken on the processes running session, ‘user’ indicates time spent by CPU in computation process of the executable, ‘sys’ indicates time spent by CPU in system tasks in order to bring the executable a run.&lt;/p&gt;
+
+&lt;p&gt;In compilation time, C beats Go in every aspects of time, but in the execution time, Go beats C in ‘real’ and ‘user’ time, Go and C are equal in ‘sys’ time.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;The measurement resulted that code in C was faster in terms of compilation time than code in Go, contrary to execution time, Go was faster than C.&lt;/p&gt;
+
+&lt;h2 id=&quot;article-source&quot;&gt;Article Source&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/&quot;&gt;https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Tower_of_Hanoi&quot;&gt;https://en.wikipedia.org/wiki/Tower_of_Hanoi&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I. Moscovich, 1000 playthinks: puzzles, paradoxes, illusions &amp;amp; games. New York: Workman Pub., 2001.&lt;/li&gt;
+  &lt;li&gt;Petković Miodrag, Famous puzzles of great mathematicians. Providence, RI: American Mathematical Society, 2013.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/stack-data-structure-introduction-program/&quot;&gt;https://www.geeksforgeeks.org/stack-data-structure-introduction-program/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1&quot;&gt;https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm&quot;&gt;https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhmal R</name></author><category term="english" /><category term="article" /><summary type="html">Comparing C and Go Solutions of Tower of Hanoi Problem</summary></entry><entry><title type="html">NEW FORMAT</title><link href="http://localhost:4000/english/misc/2021/07/06/new-format.html" rel="alternate" type="text/html" title="NEW FORMAT" /><published>2021-07-06T21:12:59+07:00</published><updated>2021-07-06T21:12:59+07:00</updated><id>http://localhost:4000/english/misc/2021/07/06/new-format</id><content type="html" xml:base="http://localhost:4000/english/misc/2021/07/06/new-format.html">&lt;h1 id=&quot;new-content-format&quot;&gt;New Content Format&lt;/h1&gt;
 &lt;p&gt;I decided to create new format of writing content, until now, there are 2 category of writing format, ‘article’ and ‘misc’. I am going to make a category for paper breakdown writing, the content will be write down in 4 sections that can describe the paper well, the paper breaks into ‘features’, ‘facts’, ‘findings’ and ‘future works’. Feature section describes what did the paper offers in term of research topic, objective and scope. Facts section describes the facts existed by the research documented on the paper goes on. Findings section describes all new things found through the research process. Future Works section describes possible research conduction following the current research’s findings.&lt;/p&gt;
 
 &lt;p&gt;It seems more rigid than usual ‘article’ category format but I believe it is the efficient way to breakdown research papers, and obviously that format can change sometimes by the times fly. The paper breakdown seems to have more chance of more frequent content deliverability, so maybe the update will get longer in the future. (Akhmal R)&lt;/p&gt;</content><author><name>Akhmal R</name></author><category term="english" /><category term="misc" /><summary type="html">New Content Format I decided to create new format of writing content, until now, there are 2 category of writing format, ‘article’ and ‘misc’. I am going to make a category for paper breakdown writing, the content will be write down in 4 sections that can describe the paper well, the paper breaks into ‘features’, ‘facts’, ‘findings’ and ‘future works’. Feature section describes what did the paper offers in term of research topic, objective and scope. Facts section describes the facts existed by the research documented on the paper goes on. Findings section describes all new things found through the research process. Future Works section describes possible research conduction following the current research’s findings.</summary></entry><entry><title type="html">TELEGRAM BOT: WHAT, WHY AND HOW</title><link href="http://localhost:4000/english/article/2021/07/02/telegram-bot-what-why-and-how.html" rel="alternate" type="text/html" title="TELEGRAM BOT: WHAT, WHY AND HOW" /><published>2021-07-02T17:12:59+07:00</published><updated>2021-07-02T17:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/07/02/telegram-bot-what-why-and-how</id><content type="html" xml:base="http://localhost:4000/english/article/2021/07/02/telegram-bot-what-why-and-how.html">&lt;h1 id=&quot;telegram-bot-understand-reasoned-and-known-how-to&quot;&gt;Telegram Bot: Understand, reasoned and known how to&lt;/h1&gt;
@@ -704,150 +846,4 @@ Bus 001 Device 003: ID 22b8:2e76 Motorola PCS&lt;/code&gt;&lt;/pre&gt;&lt;/figur
 
 &lt;p&gt;Perubahan yang sudah disimpan akan perlu beberapa waktu untuk diterapkan, untuk itu bersabar. Cek website pribadi anda dengan mengunjungi https://&amp;lt;username&amp;gt;.github.io dan lihat penampilan dari website anda, lebih menarik bukan?&lt;/p&gt;
 
-&lt;p&gt;Saya kira artikel ini berakhir disini, mungkin akan di-update jika dirasa kurang. Terima kasih sudah mampir, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name>Akhmal R</name></author><category term="indonesian" /><category term="article" /><summary type="html">BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL</summary></entry><entry><title type="html">PYTHON DAN R BERSAMA</title><link href="http://localhost:4000/indonesian/article/2019/12/23/python-dan-r.html" rel="alternate" type="text/html" title="PYTHON DAN R BERSAMA" /><published>2019-12-23T09:36:59+07:00</published><updated>2019-12-23T09:36:59+07:00</updated><id>http://localhost:4000/indonesian/article/2019/12/23/python-dan-r</id><content type="html" xml:base="http://localhost:4000/indonesian/article/2019/12/23/python-dan-r.html">&lt;h1 id=&quot;penggunaan-bahasa-r-dan-python-secara-bersamaan&quot;&gt;PENGGUNAAN BAHASA R DAN PYTHON SECARA BERSAMAAN&lt;/h1&gt;
-
-&lt;h2 id=&quot;prakata&quot;&gt;Prakata&lt;/h2&gt;
-
-&lt;p&gt;Bahasa R dan Python seringkali digunakan dalam proses yang berkaitan dengan &lt;em&gt;data science&lt;/em&gt; dan sudah banyak pula yang membandingkan R dan Python dari segi kegunaan hingga &lt;em&gt;job opportunity&lt;/em&gt;. Pertanyaan yang timbul dari perbandingan antara dua bahasa yang masing-masing memiliki karakter yang berbeda adalah &quot;Bisakah keduanya dipakai bersamaan? Bagaimana jika dipakai bersamaan? Apakah lebih baik?&quot; dan pertanyaan lain yang menjurus ke &quot;R vs Python against the world&quot;.&lt;/p&gt;
-
-&lt;p&gt;Topik ini menarik untuk dibahas karena selama ini dan yang telah diketahui sebelumnya, R dan Python menjadi 2 hal yang harus dipilih untuk pekerjaan menyangkut data science dkk. dan hal ini tidak sepenuhnya salah, namun pada artikel ini, pilihan bertambah satu karena R dan Python bisa dipakai bersamaan.&lt;/p&gt;
-
-&lt;p&gt;Artikel ini bertujuan untuk membahas tujuan dari pemakaian masing-masing R dan Python dalam satu sistem pengolahan data dan bagaimana hal tersebut dapat dilakukan.&lt;/p&gt;
-
-&lt;h2 id=&quot;sekilas-tentang-python-dan-r&quot;&gt;Sekilas tentang Python dan R&lt;/h2&gt;
-
-&lt;p&gt;Python dikembangkan oleh Guido van Rossum dan rilis pertama kali tahun 1991 sebagai bahasa &lt;em&gt;scripting,&lt;/em&gt; high-level dan bersifat &lt;strong&gt;umum&lt;/strong&gt;. Pembuat dari Python menekankan aspek &lt;em&gt;readability&lt;/em&gt; pada desain bahasa Python dan memopulerkan &lt;em&gt;whitespace&lt;/em&gt; sebagai pengganti dari &lt;em&gt;bracket&lt;/em&gt; ({}).&lt;/p&gt;
-
-&lt;p&gt;Python pada dasarnya adalah bahasa pemrograman umum, Python dibuat tidak spesifik untuk statistika atau pengolahan data sebagai contoh Python dapat dimanfaatkan untuk pengembangan &lt;em&gt;game&lt;/em&gt;, pengolahan data atau machine learning (semakin populer karena ini), pengembangan aplikasi web sampai dengan pengembangan aplikasi berbasis &lt;em&gt;mobile&lt;/em&gt; (Android).&lt;/p&gt;
-
-&lt;p&gt;R adalah bahasa &lt;em&gt;scripting&lt;/em&gt; sama seperti Python dan R juga menyediakan &lt;em&gt;environment&lt;/em&gt; sendiri untuk pengembangan program dengan R. R yang diciptakan oleh Ross Ihaka dan Robert Gentleman dikhususkan untuk keperluan statistika atau masalah yang berhubungan dengan pengolahan data, hal itu menjadi salah satu hal yang membedakan R dengan bahasa lain khususnya Python.&lt;/p&gt;
-
-&lt;p&gt;R banyak digunakan pada masalah yang berkaitan dengan statistika dan data, seperti data mining, data analysis, data visualization dsb. R memiliki komunitas pemakai dan pengembang yang lumayan besar dan bisa memuat banyak paket dan library, sama seperti Python.&lt;/p&gt;
-
-&lt;p&gt;Python menjadi pilihan untuk data science karena banyaknya library scientific yang dapat diakses, bersifat umum dan &lt;em&gt;readable&lt;/em&gt; sehingga menawarkan kemudahan untuk tahap produksi (misal, deep learning). R sudah melabeli diri sebagai bahasa yang bersifat khusus dalam hal penggunaan, yaitu statistika yang menyebabkan R pilihan yang baik untuk data science dan menawarkan hasil analisis yang baik pada fokus penggunaan (statistika).&lt;/p&gt;
-
-&lt;h2 id=&quot;kelebihan-python-dan-r&quot;&gt;Kelebihan Python dan R&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;strong&gt;R&lt;/strong&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;strong&gt;Python&lt;/strong&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Lebih baik untuk analisis data&lt;/td&gt;
-      &lt;td&gt;Kegunaan lebih beragam&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Sangat statistikis&lt;/td&gt;
-      &lt;td&gt;Produksi&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;visualisasi data yang lebih rapi&lt;/td&gt;
-      &lt;td&gt;&lt;em&gt;Code readability&lt;/em&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Tabel 1: Kelebihan R dan Python&lt;/p&gt;
-
-&lt;p&gt;R berfokus kepada komputasi yang membantu tahapan penyelesaian masalah dalam statistika, berdasarkan tujuan itu, R menjadi bahasa yang sangat baik dipakai untuk menganalisis data melalui pendekatan statistika seperti mencari rataan, median, modus atau interkuartil. R dikembangkan untuk para statistikawan, jadi karakter atau sintaks bahasa R sangat statistikis, mulai dari penggunaan fungsi dan library yang dapat dipahami oleh statistikawan, bahkan yang tidak pernah belajar &lt;em&gt;coding&lt;/em&gt; sebelumnya. Paket dan library yang dimiliki oleh R lebih lengkap daripada library milik Python dalam hal analisis data dan visualisasi data, dalam hal visualisasi data, R unggul dibanding Python karena lebih lengkapnya library visualisasi data di R.&lt;/p&gt;
-
-&lt;p&gt;Python lebih fleksibel dibandingkan R karena Python bahasa &lt;em&gt;general-purpose&lt;/em&gt; yang bisa dipakai bahkan untuk bidang di luar pengolahan data. Python dengan library yang ada, dapat mengolah data sekaligus menghasilkan produk hasil pengolahan data tersebut (misal, model ML), juga kode Python mudah dibaca dan dipelajari.&lt;/p&gt;
-
-&lt;p&gt;Kelebihan yang ada di atas menurut saya dapat bersinergi dengan baik untuk membuat suatu sistem yang menerapkan analisis data, namun tetap memperhatikan tujuan awal pengembangan sistem&lt;/p&gt;
-
-&lt;h2 id=&quot;caranya&quot;&gt;Caranya?&lt;/h2&gt;
-
-&lt;p&gt;Ada beberapa cara yang mungkin dilakukan untuk menggunakan R dan Python secara bersamaan tergantung tujuan yang sedang ingin diraih, ada 2 jenis pemakaian, yaitu Python yang diakses di R dan sebaliknya.&lt;/p&gt;
-
-&lt;p&gt;Paket-paket yang dapat mengakses Python di R adalah sebagai berikut:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;rJython&lt;/li&gt;
-  &lt;li&gt;rPython&lt;/li&gt;
-  &lt;li&gt;SnakeCharmR&lt;/li&gt;
-  &lt;li&gt;PythonInR&lt;/li&gt;
-  &lt;li&gt;reticulate&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Paket-paket yang dapat mengakses R di Python adalah sebagai berikut:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;PypeR&lt;/li&gt;
-  &lt;li&gt;pyRserve&lt;/li&gt;
-  &lt;li&gt;rpy2&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Cara-cara di atas tidak akan saya bahas satu persatu, namun metode pemakaian rpy2 akan saya bahas di bagian bonus.&lt;/p&gt;
-
-&lt;h2 id=&quot;kesimpulan&quot;&gt;Kesimpulan&lt;/h2&gt;
-
-&lt;p&gt;Kesimpulan yang dapat diambil dari pembahasan di atas:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Python dan R dapat bersinergi dengan masing-masing kelebihan mereka&lt;/li&gt;
-  &lt;li&gt;Sinergi antara Python dan R dapat terasa dengan adanya paket dan library di atas&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;bonus&quot;&gt;Bonus&lt;/h2&gt;
-
-&lt;p&gt;Pada bagian bonus, saya akan menjelaskan langkah-langkah pemakaian rpy2 untuk Linux dengan Python 3.7 yang sudah terpasang.&lt;/p&gt;
-
-&lt;h3 id=&quot;pastikan-r-sudah-terpasang&quot;&gt;Pastikan R sudah terpasang&lt;/h3&gt;
-
-&lt;p&gt;Pasang R agar tahu apakah R sudah terpasang atau belum dengan command Linux Fedora:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Fedora&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;dnf &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;R
-
-&lt;span class=&quot;c&quot;&gt;# Ubuntu&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;R
-
-&lt;span class=&quot;c&quot;&gt;# sesuaikan dengan package manager yang anda pakai&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;pasang-rpy2-dengan-pip&quot;&gt;Pasang rpy2 dengan pip&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;rpy2
-&lt;span class=&quot;c&quot;&gt;# atau&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;rpy2&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;gunakan-rpy2-untuk-berbagai-keperluan-dengan-import&quot;&gt;Gunakan rpy2 untuk berbagai keperluan dengan Import&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rpy2.robjects.lib.ggplot2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ggplot2&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rpy2.robjects&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ro&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rpy2.robjects.packages&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;importr&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;importr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'base'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;mtcars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datasets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'mtcars'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'mtcars'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;dataf_rnorm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;robjects&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-                                  &lt;span class=&quot;s&quot;&gt;'other_value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-                                  &lt;span class=&quot;s&quot;&gt;'mean'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IntVector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# plotting
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ggplot2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ggplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mtcars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;pp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; \
-     &lt;span class=&quot;n&quot;&gt;ggplot2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aes_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'wt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'mpg'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; \
-     &lt;span class=&quot;n&quot;&gt;ggplot2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;geom_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;pp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# online at: https://rpy2.github.io/doc/latest/html/graphics.html#plot&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;gunakan-rpy2-untuk-berbagai-keperluan-dengan-load_ext&quot;&gt;Gunakan rpy2 untuk berbagai keperluan dengan load_ext&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# activate R magic
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load_ext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rpy2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipython&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;lalu untuk tiap line (jupyter notebook) yang berbahasa R, ditambahkan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%%R&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Terima kasih sudah mampir, akhir kata Salam. (Akhmal R)&lt;/p&gt;</content><author><name>Akhmal R</name></author><category term="indonesian" /><category term="article" /><summary type="html">PENGGUNAAN BAHASA R DAN PYTHON SECARA BERSAMAAN</summary></entry></feed>
+&lt;p&gt;Saya kira artikel ini berakhir disini, mungkin akan di-update jika dirasa kurang. Terima kasih sudah mampir, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name>Akhmal R</name></author><category term="indonesian" /><category term="article" /><summary type="html">BANGUN WEBSITE SENDIRI DENGAN GITHUB PAGES DAN JEKYLL</summary></entry></feed>
