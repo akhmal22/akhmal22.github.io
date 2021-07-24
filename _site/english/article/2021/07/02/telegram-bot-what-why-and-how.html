@@ -2,9 +2,9 @@
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>TELEGRAM BOT: WHAT, WHY AND HOW | akhmal22’s blog</title>
-<meta name="generator" content="Jekyll v3.8.5" />
+<meta name="generator" content="Jekyll v3.9.1" />
 <meta property="og:title" content="TELEGRAM BOT: WHAT, WHY AND HOW" />
 <meta name="author" content="Akhmal R" />
 <meta property="og:locale" content="en_US" />
@@ -15,6 +15,8 @@
 <meta property="og:site_name" content="akhmal22’s blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-07-02T17:12:59+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TELEGRAM BOT: WHAT, WHY AND HOW" />
 <script type="application/ld+json">
 {"author":{"@type":"Person","name":"Akhmal R"},"description":"Telegram Bot: Understand, reasoned and known how to","@type":"BlogPosting","headline":"TELEGRAM BOT: WHAT, WHY AND HOW","dateModified":"2021-07-02T17:12:59+07:00","datePublished":"2021-07-02T17:12:59+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/english/article/2021/07/02/telegram-bot-what-why-and-how.html"},"url":"http://localhost:4000/english/article/2021/07/02/telegram-bot-what-why-and-how.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
@@ -97,22 +99,22 @@
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="s">""" You should do this first """</span>
 <span class="kn">import</span> <span class="nn">telegram.ext</span>
 <span class="s">""" Declare and define your updater first """</span>
-<span class="n">updater</span> <span class="o">=</span> <span class="n">telegra</span><span class="o">.</span><span class="n">ext</span><span class="o">.</span><span class="n">Updater</span><span class="p">(</span><span class="n">YOURTOKEN</span><span class="p">,</span> <span class="n">use_context</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span></code></pre></figure>
+<span class="n">updater</span> <span class="o">=</span> <span class="n">telegra</span><span class="p">.</span><span class="n">ext</span><span class="p">.</span><span class="n">Updater</span><span class="p">(</span><span class="n">YOURTOKEN</span><span class="p">,</span> <span class="n">use_context</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span></code></pre></figure>
 
 <p>If written, your updater is ready and do declare the line to the dispatch, Dispatcher can be initialized from Updater class itself by using</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="s">""" Declare the dispatch """</span>
-<span class="n">dispatch</span> <span class="o">=</span> <span class="n">updater</span><span class="o">.</span><span class="n">dispatcher</span></code></pre></figure>
+<span class="n">dispatch</span> <span class="o">=</span> <span class="n">updater</span><span class="p">.</span><span class="n">dispatcher</span></code></pre></figure>
 
 <p>Only if the dispatch declared, you can able to do jobs based on event occurred, you can designed your bot to respond on sent message using handler, there’s many Handlers available but for the entry level how to, this article only use MessageHandler to carry on. Filters user by Handlers to determine the kind of request sent from dispatch so the Handlers can respond correctly</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="s">""" import handler from the library """</span>
 <span class="kn">from</span> <span class="nn">telegram.ext</span> <span class="kn">import</span> <span class="n">MessageHandler</span><span class="p">,</span> <span class="n">Filters</span>
 <span class="s">""" make up the handler to respond sent message filtered as text """</span>
-<span class="n">dispatch</span><span class="o">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">MessageHandler</span><span class="p">(</span><span class="n">Filters</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">yes</span><span class="p">))</span>
+<span class="n">dispatch</span><span class="p">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">MessageHandler</span><span class="p">(</span><span class="n">Filters</span><span class="p">.</span><span class="n">text</span><span class="p">,</span> <span class="n">yes</span><span class="p">))</span>
 <span class="s">""" previously you must define the function called 'yes' like this"""</span>
 <span class="k">def</span> <span class="nf">yes</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-  <span class="n">update</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s">"yes"</span><span class="p">)</span></code></pre></figure>
+  <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s">"yes"</span><span class="p">)</span></code></pre></figure>
 
 <p>Your reaching of this line means you are ready to get more exploration on the bot development, for the reference you can use your own bot using above explanation, for example <a href="https://www.codementor.io/@karandeepbatra/part-1-how-to-create-a-telegram-bot-in-python-in-under-10-minutes-19yfdv4wrq">echobot</a>.</p>
 
