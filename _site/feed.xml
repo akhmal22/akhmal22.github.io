@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-08-11T19:16:15+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">COMPARING C AND GO: TREE SORT</title><link href="http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-sorting-tree.html" rel="alternate" type="text/html" title="COMPARING C AND GO: TREE SORT" /><published>2021-07-22T22:12:59+07:00</published><updated>2021-07-22T22:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-sorting-tree</id><content type="html" xml:base="http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-sorting-tree.html">&lt;h1 id=&quot;comparing-c-and-go-solutions-of-tree-sorting&quot;&gt;Comparing C and Go Solutions of Tree Sorting&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-08-11T21:21:43+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">COMPARING C AND GO: TREE SORT</title><link href="http://localhost:4000/english/article/2021/08/11/comparing-c-and-go-sorting-tree.html" rel="alternate" type="text/html" title="COMPARING C AND GO: TREE SORT" /><published>2021-08-11T11:12:59+07:00</published><updated>2021-08-11T11:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/08/11/comparing-c-and-go-sorting-tree</id><content type="html" xml:base="http://localhost:4000/english/article/2021/08/11/comparing-c-and-go-sorting-tree.html">&lt;h1 id=&quot;comparing-c-and-go-solutions-of-tree-sorting&quot;&gt;Comparing C and Go Solutions of Tree Sorting&lt;/h1&gt;
 
 &lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
 
@@ -10,8 +10,8 @@
 
 &lt;p&gt;For the fast note, it is sorting machine made from binary tree data structure (binary by-design, difficulty reason). For longer explanation, said tree can put the collection of values sorted by inserting each values on collection to the tree and change its sequence mark based on the tree’s nature and sorting problem solving. As the problem already a well-known, we can focus on having the solution ready, interpret it and compare both interpreted solution.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/Tower-of-Hanoi-Tower-of-Brahma-or-Lucas-Tower.jpg&quot; alt=&quot;directory&quot; /&gt;
-&lt;sub&gt;Figure 1: Binary Tree illustration&lt;/sub&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/binary-tree-to-DLL.png&quot; alt=&quot;directory&quot; /&gt;
+&lt;br /&gt;&lt;sub&gt;Figure 1: Binary Tree illustration&lt;/sub&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;how-the-algorithm-going&quot;&gt;How the algorithm going?&lt;/h2&gt;
 
@@ -59,7 +59,7 @@
 &lt;p&gt;So the tree is consisted of several nodes, node of the tree had its own structure to store and represent the data, model below once again represent the tree if printed graphically.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://www.tutorialspoint.com/data_structures_algorithms/images/binary_tree.jpg&quot; alt=&quot;directory&quot; /&gt;
-&lt;sub&gt;Figure 2: Tree illustration&lt;/sub&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;sub&gt;Figure 2: Tree illustration&lt;/sub&gt;&lt;/p&gt;
 
 &lt;p&gt;Nodes in binary tree must be at least contain 3 attributes for the tree worked as structured data representation.&lt;/p&gt;
 &lt;ul&gt;
@@ -70,7 +70,7 @@
 
 &lt;p&gt;Thus the structure explained above, we can move forward.&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(functions)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;--- functions ---
 insert(element, tree):
   if tree is empty then:
     add the element to tree
@@ -84,9 +84,8 @@ inorderTraverse(tree, element):
   call self for left leaf
   traverse
   call self for right leaf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(main)
+--- main ---
 insert(a[1], t)
 
 run iteratively until 10 steps done:
@@ -131,8 +130,11 @@ inorderTraverse(t, a)
 
 &lt;p&gt;Comparison specification mentioned in previous article is the same for this article, same device, same algorithm and same number of elements for both programs. Screen capture below intended to give more evidence than the previous.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.tutorialspoint.com/data_structures_algorithms/images/binary_tree.jpg&quot; alt=&quot;directory&quot; /&gt;
-&lt;sub&gt;Figure 2: Tree illustration&lt;/sub&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/compiletree.png&quot; alt=&quot;directory&quot; /&gt;
+&lt;br /&gt;&lt;sub&gt;Figure 3: Compilation time&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/executetree.png&quot; alt=&quot;directory&quot; /&gt;
+&lt;br /&gt;&lt;sub&gt;Figure 4: Execution time&lt;/sub&gt;&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -145,206 +147,43 @@ inorderTraverse(t, a)
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Compilation time&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.263s&lt;br /&gt; user 0m0.089s&lt;br /&gt; sys 0m0.029s&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;real 0m1.036s&lt;br /&gt; user 0m0.285s&lt;br /&gt; sys 0m0.124s&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.270s&lt;br /&gt; user 0m0.094s&lt;br /&gt; sys 0m0.028s&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.308s&lt;br /&gt; user 0m0.313s&lt;br /&gt; sys 0m0.086s&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Execution time&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.054s&lt;br /&gt; user 0m0.052s&lt;br /&gt; sys 0m0.002s&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.025s&lt;br /&gt; user 0m0.024s&lt;br /&gt; sys 0m0.002s&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.003s&lt;br /&gt; user 0m0.002s&lt;br /&gt; sys 0m0.001s&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.003s&lt;br /&gt; user 0m0.000s&lt;br /&gt; sys 0m0.003s&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;sub&gt;Table 3: Measurement results&lt;/sub&gt;&lt;/p&gt;
+&lt;p&gt;&lt;sub&gt;Table 2: Measurement results&lt;/sub&gt;&lt;/p&gt;
 
-&lt;p&gt;Times showed on the table 3 consist 3 kind of time, ‘real’, ‘user’ and ‘sys’. ‘Real’ indicates whole time taken on the processes running session, ‘user’ indicates time spent by CPU in computation process of the executable, ‘sys’ indicates time spent by CPU in system tasks in order to bring the executable a run.&lt;/p&gt;
+&lt;p&gt;Times showed on the table 2 consist 3 kind of time, ‘real’, ‘user’ and ‘sys’. ‘Real’ indicates whole time taken on the processes running session, ‘user’ indicates time spent by CPU in computation process of the executable, ‘sys’ indicates time spent by CPU in system tasks in order to bring the executable a run.&lt;/p&gt;
 
-&lt;p&gt;In compilation time, C beats Go in every aspects of time, but in the execution time, Go beats C in ‘real’ and ‘user’ time, Go and C are equal in ‘sys’ time.&lt;/p&gt;
+&lt;p&gt;In compilation time, C beats Go in every aspects of time, but in the execution time, Go beats C in ‘user’ time, Go and C are equal in ‘real’ and ‘sys’ time.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;The measurement resulted that code in C was faster in terms of compilation time than code in Go, contrary to execution time, Go was faster than C.&lt;/p&gt;
+&lt;p&gt;The measurement resulted that code in C was faster in terms of compilation time than code in Go, contrary to previous article, Go and C have equal value in execution time.&lt;/p&gt;
 
 &lt;h2 id=&quot;bonus&quot;&gt;Bonus&lt;/h2&gt;
 
 &lt;p&gt;The implementations are below.&lt;/p&gt;
 
-&lt;p&gt;C: &lt;a href=&quot;https://git.io/J8i4a&quot;&gt;https://git.io/J8i4a&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;C: &lt;a href=&quot;https://git.io/JRPCA&quot;&gt;https://git.io/JRPCA&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Go: &lt;a href=&quot;https://git.io/J8iBt&quot;&gt;https://git.io/J8iBt&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;article-source&quot;&gt;Article Source&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/&quot;&gt;https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Tower_of_Hanoi&quot;&gt;https://en.wikipedia.org/wiki/Tower_of_Hanoi&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I. Moscovich, 1000 playthinks: puzzles, paradoxes, illusions &amp;amp; games. New York: Workman Pub., 2001.&lt;/li&gt;
-  &lt;li&gt;Petković Miodrag, Famous puzzles of great mathematicians. Providence, RI: American Mathematical Society, 2013.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/stack-data-structure-introduction-program/&quot;&gt;https://www.geeksforgeeks.org/stack-data-structure-introduction-program/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm&quot;&gt;https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1&quot;&gt;https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akhmal R</name></author><category term="english" /><category term="article" /><summary type="html">Comparing C and Go Solutions of Tree Sorting</summary></entry><entry><title type="html">COMPARING C AND GO: TREE SORT</title><link href="http://localhost:4000/english/article/2021/07/22/super-resolution.html" rel="alternate" type="text/html" title="COMPARING C AND GO: TREE SORT" /><published>2021-07-22T22:12:59+07:00</published><updated>2021-07-22T22:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/07/22/super-resolution</id><content type="html" xml:base="http://localhost:4000/english/article/2021/07/22/super-resolution.html">&lt;h1 id=&quot;comparing-c-and-go-solutions-of-tree-sorting&quot;&gt;Comparing C and Go Solutions of Tree Sorting&lt;/h1&gt;
-
-&lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
-
-&lt;p&gt;In a previous words, I sent the comparison of programming languages C and Go, I compared the times both take to execution and compilation. This specific article is about to do the same thing as previous did. Difference is the programs used in comparison is Tree Sort. With the exact same approach as before, I hope it can extract more data to the comparison than before.&lt;/p&gt;
-
-&lt;p&gt;Tree Sort, compared to previous problem Tower of Hanoi, aside of they had different objectives, the complexities are too different to each other. time complexity for Tower of Hanoi is O(2&lt;sup&gt;n&lt;/sup&gt; - 1) meanwhile this article’s problem’s is O(n&lt;sup&gt;2&lt;/sup&gt;) that indicates us two diversed comparison problem.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-tree-sort&quot;&gt;What is Tree Sort?&lt;/h2&gt;
-
-&lt;p&gt;For the fast note, it is sorting machine made from binary tree data structure (binary by-design, difficulty reason). For longer explanation, said tree can put the collection of values sorted by inserting each values on collection to the tree and change its sequence mark based on the tree’s nature and sorting problem solving. As the problem already a well-known, we can focus on having the solution ready, interpret it and compare both interpreted solution.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/Tower-of-Hanoi-Tower-of-Brahma-or-Lucas-Tower.jpg&quot; alt=&quot;directory&quot; /&gt;
-&lt;sub&gt;Figure 1: Binary Tree illustration&lt;/sub&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;how-the-algorithm-going&quot;&gt;How the algorithm going?&lt;/h2&gt;
-
-&lt;p&gt;The problem is pretty obvious so is the solution, basically comparing each element from the list to determine the sequence. Same as previous solution, this particular solution can make use of recursive approach and non-recursive approach and I will use recursive approach for the algorithm. All we should do in algorithm written in pseodocode below. Given the array of element and empty tree represented as nodes each sequentially defined as ‘a’ and ‘t’, ‘a’ will start from 1 and the element position in array (index) will be enclosed by ‘[]’, predefined function ‘insert()’ used to inserting array elements to the tree, data required for ‘insert()’ are array element and tree node.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(functions)
-insert(element, tree):
-  if tree is empty then:
-    add the element to tree
-
-  if given element lower than given tree node's value then:
-    add element to the left of given tree node
-  if given element greater than given tree node's value then:
-    add element to the right of given tree node
-
-inorderTraverse(tree, element):
-  call self for left leaf
-  traverse
-  call self for right leaf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(main)
-insert(a[1], t)
-
-run iteratively until 10 steps done:
-  insert(a[steps], t)
-  increment steps
-
-inorderTraverse(t, a)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;how-can-we-interpret&quot;&gt;How can we interpret?&lt;/h2&gt;
-
-&lt;p&gt;Given algorithm must be executed iteratively until stack compeletely relocated to final pole. Before using above algorithm, we firstly choose data structure that fit well the situation, the situation only allows movement for last inserted disk (smallest disk) then ‘stack’ data structure is best fit. Tower of Hanoi requires smaller disk placed above larger disk, then add rules in our data structure that only smaller disk can be stacked by another disk. Specification of the data structure methods written below.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Method Name&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Usage&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;isFull&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Check if stack is full&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;pop&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Remove element (disk) from the stack&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;push&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Insert element (disk) to the stack&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;peek&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Return top-most element value of the stack&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;isSmaller&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Check if element value to be inserted is smaller than top-most element value of stack&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;sub&gt;Table 1: Methods of stack data structure&lt;/sub&gt;&lt;/p&gt;
-
-&lt;p&gt;If the data structure has been ready, moved on to solution-focused interpretation, we basically interpret the pseudocode below to the more technical one. Earlier before solution delivered, we must initiate the problem by creating 3 stack places (poles) and create disks as required. Methods to solution delivery are listed below.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Method Name&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Usage&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;moveDisk&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Move disk from stack to stack&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;solveProblem&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;interpretation of solution pseudocode&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;sub&gt;Table 2: Methods of solution delivery&lt;/sub&gt;&lt;/p&gt;
-
-&lt;p&gt;With the specification and explanation above, implementations of the solution are listed in bonus section.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-the-comparison-going&quot;&gt;How the comparison going?&lt;/h2&gt;
-
-&lt;p&gt;As mentioned above, we are comparing compilation time and execution time. Before gone to comparison, we define the scope of the comparison that the code used same approach and same algorithm, running on same machine (hardware and software) and deliver the solution of same number of disks, code executed don’t requested for user’s input so user can’t distort the results. The results of comparison, provided by ‘time’ command, are presented in table below.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Metrices&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;C&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Go&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Compilation time&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.263s&lt;br /&gt; user 0m0.089s&lt;br /&gt; sys 0m0.029s&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;real 0m1.036s&lt;br /&gt; user 0m0.285s&lt;br /&gt; sys 0m0.124s&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Execution time&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.054s&lt;br /&gt; user 0m0.052s&lt;br /&gt; sys 0m0.002s&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;real 0m0.025s&lt;br /&gt; user 0m0.024s&lt;br /&gt; sys 0m0.002s&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;sub&gt;Table 3: Measurement results&lt;/sub&gt;&lt;/p&gt;
-
-&lt;p&gt;Times showed on the table 3 consist 3 kind of time, ‘real’, ‘user’ and ‘sys’. ‘Real’ indicates whole time taken on the processes running session, ‘user’ indicates time spent by CPU in computation process of the executable, ‘sys’ indicates time spent by CPU in system tasks in order to bring the executable a run.&lt;/p&gt;
-
-&lt;p&gt;In compilation time, C beats Go in every aspects of time, but in the execution time, Go beats C in ‘real’ and ‘user’ time, Go and C are equal in ‘sys’ time.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;The measurement resulted that code in C was faster in terms of compilation time than code in Go, contrary to execution time, Go was faster than C.&lt;/p&gt;
-
-&lt;h2 id=&quot;bonus&quot;&gt;Bonus&lt;/h2&gt;
-
-&lt;p&gt;The implementations are below.&lt;/p&gt;
-
-&lt;p&gt;C: &lt;a href=&quot;https://git.io/J8i4a&quot;&gt;https://git.io/J8i4a&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Go: &lt;a href=&quot;https://git.io/J8iBt&quot;&gt;https://git.io/J8iBt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Go: &lt;a href=&quot;https://git.io/JRPWs&quot;&gt;https://git.io/JRPWs&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;article-source&quot;&gt;Article Source&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/&quot;&gt;https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Tower_of_Hanoi&quot;&gt;https://en.wikipedia.org/wiki/Tower_of_Hanoi&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I. Moscovich, 1000 playthinks: puzzles, paradoxes, illusions &amp;amp; games. New York: Workman Pub., 2001.&lt;/li&gt;
-  &lt;li&gt;Petković Miodrag, Famous puzzles of great mathematicians. Providence, RI: American Mathematical Society, 2013.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/stack-data-structure-introduction-program/&quot;&gt;https://www.geeksforgeeks.org/stack-data-structure-introduction-program/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm&quot;&gt;https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1&quot;&gt;https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/iterative-tower-of-hanoi/&quot;&gt;https://www.geeksforgeeks.org/iterative-tower-of-hanoi/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/time-complexity-analysis-tower-hanoi-recursion/&quot;&gt;https://www.geeksforgeeks.org/time-complexity-analysis-tower-hanoi-recursion/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Tree_sort&quot;&gt;https://en.wikipedia.org/wiki/Tree_sort&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/tree-sort/&quot;&gt;https://www.geeksforgeeks.org/tree-sort/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/binary-tree-data-structure/&quot;&gt;https://www.geeksforgeeks.org/binary-tree-data-structure/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Akhmal R</name></author><category term="english" /><category term="article" /><summary type="html">Comparing C and Go Solutions of Tree Sorting</summary></entry><entry><title type="html">COMPARING C AND GO: TOWER OF HANOI PROBLEM</title><link href="http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-tower-of-hanoi-problem.html" rel="alternate" type="text/html" title="COMPARING C AND GO: TOWER OF HANOI PROBLEM" /><published>2021-07-22T21:12:59+07:00</published><updated>2021-07-22T21:12:59+07:00</updated><id>http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-tower-of-hanoi-problem</id><content type="html" xml:base="http://localhost:4000/english/article/2021/07/22/comparing-c-and-go-tower-of-hanoi-problem.html">&lt;h1 id=&quot;comparing-c-and-go-solutions-of-tower-of-hanoi-problem&quot;&gt;Comparing C and Go Solutions of Tower of Hanoi Problem&lt;/h1&gt;
 
 &lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
@@ -1053,4 +892,5 @@ Bus 001 Device 003: ID 22b8:2e76 Motorola PCS&lt;/code&gt;&lt;/pre&gt;&lt;/figur
 &lt;p&gt;Pengaplikasian timed background dapat dilakukan dengan GNOME Tweaks, oleh karena itu jika anda belum menginstall (GNOME Tweaks bukan aplikasi bawaan) anda harus menginstall GNOME Tweaks terlebih dulu, jika sudah, anda dapat langsung mengaplikasikan timed background dengan beralih ke seksi Appearance lalu pada file selector image, pilih file .xml yang telah dibuat sebelumnya dan selesai, timed background sudah teraplikasikan pada laptop/PC anda.&lt;/p&gt;
 
 &lt;p&gt;Sampai disini dulu artikel pertama saya di tahun 2021 semoga bukan menjadi satu-satunya di tahun ini, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name>Akhmal R</name></author><category term="indonesian" /><category term="article" /><summary type="html">Membuat Wallpaper yang mengikuti pergerakan matahari</summary></entry><entry><title type="html">PUASA PANJANG</title><link href="http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang.html" rel="alternate" type="text/html" title="PUASA PANJANG" /><published>2021-05-17T21:12:59+07:00</published><updated>2021-05-17T21:12:59+07:00</updated><id>http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang</id><content type="html" xml:base="http://localhost:4000/indonesian/misc/2021/05/17/puasa-panjang.html">&lt;h1 id=&quot;kembali-nulis-setelah-rehat&quot;&gt;KEMBALI NULIS SETELAH REHAT&lt;/h1&gt;
-&lt;p&gt;Dunia memang pada dasarnya terus berubah, begitu juga kebiasaan menulis penulis yang juga sedang turun tahun lalu, salah satu faktor perubahan itu ya skripsi (hmmhmm corona gak usah diingetin ya, udah pada tau). Iya dengan naiknya tulisan ini saya sebagai penulis menyatakan kembali aktif di blog sederhana ini (jujur gua juga baca-baca tutorial lagi pas nulis ini dan commit beberapa perubahan gak guna ckck). Semoga tulisan di blog ini semakin baik seiring berjalannya waktu, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name>Akhmal R</name></author><category term="indonesian" /><category term="misc" /><summary type="html">KEMBALI NULIS SETELAH REHAT Dunia memang pada dasarnya terus berubah, begitu juga kebiasaan menulis penulis yang juga sedang turun tahun lalu, salah satu faktor perubahan itu ya skripsi (hmmhmm corona gak usah diingetin ya, udah pada tau). Iya dengan naiknya tulisan ini saya sebagai penulis menyatakan kembali aktif di blog sederhana ini (jujur gua juga baca-baca tutorial lagi pas nulis ini dan commit beberapa perubahan gak guna ckck). Semoga tulisan di blog ini semakin baik seiring berjalannya waktu, akhir kata, Salam (Akhmal R)</summary></entry></feed>
+&lt;p&gt;Dunia memang pada dasarnya terus berubah, begitu juga kebiasaan menulis penulis yang juga sedang turun tahun lalu, salah satu faktor perubahan itu ya skripsi (hmmhmm corona gak usah diingetin ya, udah pada tau). Iya dengan naiknya tulisan ini saya sebagai penulis menyatakan kembali aktif di blog sederhana ini (jujur gua juga baca-baca tutorial lagi pas nulis ini dan commit beberapa perubahan gak guna ckck). Semoga tulisan di blog ini semakin baik seiring berjalannya waktu, akhir kata, Salam (Akhmal R)&lt;/p&gt;</content><author><name>Akhmal R</name></author><category term="indonesian" /><category term="misc" /><summary type="html">KEMBALI NULIS SETELAH REHAT Dunia memang pada dasarnya terus berubah, begitu juga kebiasaan menulis penulis yang juga sedang turun tahun lalu, salah satu faktor perubahan itu ya skripsi (hmmhmm corona gak usah diingetin ya, udah pada tau). Iya dengan naiknya tulisan ini saya sebagai penulis menyatakan kembali aktif di blog sederhana ini (jujur gua juga baca-baca tutorial lagi pas nulis ini dan commit beberapa perubahan gak guna ckck). Semoga tulisan di blog ini semakin baik seiring berjalannya waktu, akhir kata, Salam (Akhmal R)</summary></entry><entry><title type="html">NATAL DAN TAHUN BARU</title><link href="http://localhost:4000/indonesian/misc/2019/12/26/natal-dan-tahun-baru.html" rel="alternate" type="text/html" title="NATAL DAN TAHUN BARU" /><published>2019-12-26T23:12:59+07:00</published><updated>2019-12-26T23:12:59+07:00</updated><id>http://localhost:4000/indonesian/misc/2019/12/26/natal-dan-tahun-baru</id><content type="html" xml:base="http://localhost:4000/indonesian/misc/2019/12/26/natal-dan-tahun-baru.html">&lt;h1 id=&quot;selamat-liburan-natal-dan-tahun-baru&quot;&gt;SELAMAT LIBURAN NATAL DAN TAHUN BARU&lt;/h1&gt;
+&lt;p&gt;Di masa-masa libur kayak ini, sepertinya saya akan lebih banyak nulis artikel tentang IT/CompSci entah sekedar pengetahuan atau tuntunan lengkap, stay tune aja…&lt;/p&gt;</content><author><name>Akhmal R</name></author><category term="indonesian" /><category term="misc" /><summary type="html">SELAMAT LIBURAN NATAL DAN TAHUN BARU Di masa-masa libur kayak ini, sepertinya saya akan lebih banyak nulis artikel tentang IT/CompSci entah sekedar pengetahuan atau tuntunan lengkap, stay tune aja…</summary></entry></feed>

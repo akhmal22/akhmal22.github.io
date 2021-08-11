@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "COMPARING C AND GO: TREE SORT"
-date:   2021-07-22 22:12:59 +0700
+date:   2021-08-11 11:12:59 +0700
 author: "Akhmal R"
 categories: english article
 ---
@@ -18,8 +18,8 @@ Tree Sort, compared to previous problem Tower of Hanoi, aside of they had differ
 
 For the fast note, it is sorting machine made from binary tree data structure (binary by-design, difficulty reason). For longer explanation, said tree can put the collection of values sorted by inserting each values on collection to the tree and change its sequence mark based on the tree's nature and sorting problem solving. As the problem already a well-known, we can focus on having the solution ready, interpret it and compare both interpreted solution.
 
-![directory](https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/Tower-of-Hanoi-Tower-of-Brahma-or-Lucas-Tower.jpg)
-<sub>Figure 1: Binary Tree illustration</sub>
+![directory](https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/binary-tree-to-DLL.png)
+<br/><sub>Figure 1: Binary Tree illustration</sub>
 
 ## How the algorithm going?
 
@@ -41,7 +41,7 @@ Explaining tree as a data structure with a single figure but firstly I will show
 So the tree is consisted of several nodes, node of the tree had its own structure to store and represent the data, model below once again represent the tree if printed graphically.
 
 ![directory](https://www.tutorialspoint.com/data_structures_algorithms/images/binary_tree.jpg)
-<sub>Figure 2: Tree illustration</sub>
+<br/><sub>Figure 2: Tree illustration</sub>
 
 Nodes in binary tree must be at least contain 3 attributes for the tree worked as structured data representation.
 - Key: Literal representation of the data on the nodes.
@@ -51,7 +51,7 @@ Nodes in binary tree must be at least contain 3 attributes for the tree worked a
 Thus the structure explained above, we can move forward.
 
 ```
-(functions)
+--- functions ---
 insert(element, tree):
   if tree is empty then:
     add the element to tree
@@ -65,10 +65,8 @@ inorderTraverse(tree, element):
   call self for left leaf
   traverse
   call self for right leaf
-```
 
-```
-(main)
+--- main ---
 insert(a[1], t)
 
 run iteratively until 10 steps done:
@@ -96,50 +94,46 @@ For the problem solving lines, we can allocate array consists of several element
 
 Comparison specification mentioned in previous article is the same for this article, same device, same algorithm and same number of elements for both programs. Screen capture below intended to give more evidence than the previous.
 
-![directory](https://www.tutorialspoint.com/data_structures_algorithms/images/binary_tree.jpg)
-<sub>Figure 2: Tree illustration</sub>
+![directory](https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/compiletree.png)
+<br/><sub>Figure 3: Compilation time</sub>
+
+![directory](https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/executetree.png)
+<br/><sub>Figure 4: Execution time</sub>
 
 | Metrices | C | Go |
 | :----: | :----: | :----: |
-| Compilation time | real 0m0.263s<br /> user 0m0.089s<br /> sys 0m0.029s | real 0m1.036s<br /> user 0m0.285s<br /> sys 0m0.124s |
-| Execution time | real 0m0.054s<br /> user 0m0.052s<br /> sys 0m0.002s | real 0m0.025s<br /> user 0m0.024s<br /> sys 0m0.002s |
+| Compilation time | real 0m0.270s<br /> user 0m0.094s<br /> sys 0m0.028s | real 0m0.308s<br /> user 0m0.313s<br /> sys 0m0.086s |
+| Execution time | real 0m0.003s<br /> user 0m0.002s<br /> sys 0m0.001s | real 0m0.003s<br /> user 0m0.000s<br /> sys 0m0.003s |
 
-<sub>Table 3: Measurement results</sub>
+<sub>Table 2: Measurement results</sub>
 
-Times showed on the table 3 consist 3 kind of time, 'real', 'user' and 'sys'. 'Real' indicates whole time taken on the processes running session, 'user' indicates time spent by CPU in computation process of the executable, 'sys' indicates time spent by CPU in system tasks in order to bring the executable a run.
+Times showed on the table 2 consist 3 kind of time, 'real', 'user' and 'sys'. 'Real' indicates whole time taken on the processes running session, 'user' indicates time spent by CPU in computation process of the executable, 'sys' indicates time spent by CPU in system tasks in order to bring the executable a run.
 
-In compilation time, C beats Go in every aspects of time, but in the execution time, Go beats C in 'real' and 'user' time, Go and C are equal in 'sys' time.
+In compilation time, C beats Go in every aspects of time, but in the execution time, Go beats C in 'user' time, Go and C are equal in 'real' and 'sys' time.
 
 ## Conclusion
 
-The measurement resulted that code in C was faster in terms of compilation time than code in Go, contrary to execution time, Go was faster than C.
+The measurement resulted that code in C was faster in terms of compilation time than code in Go, contrary to previous article, Go and C have equal value in execution time.
 
 ## Bonus
 
 The implementations are below.
 
-C: [https://git.io/J8i4a][https://git.io/J8i4a]
+C: [https://git.io/JRPCA][https://git.io/JRPCA]
 
-Go: [https://git.io/J8iBt][https://git.io/J8iBt]
+Go: [https://git.io/JRPWs][https://git.io/JRPWs]
 
 ## Article Source
 
-- [https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/][https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/]
-- [https://en.wikipedia.org/wiki/Tower_of_Hanoi][https://en.wikipedia.org/wiki/Tower_of_Hanoi]
-- I. Moscovich, 1000 playthinks: puzzles, paradoxes, illusions & games. New York: Workman Pub., 2001.
-- Petković Miodrag, Famous puzzles of great mathematicians. Providence, RI: American Mathematical Society, 2013.
-- [https://www.geeksforgeeks.org/stack-data-structure-introduction-program/][https://www.geeksforgeeks.org/stack-data-structure-introduction-program/]
-- [https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm][https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm]
-- [https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1][https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1]
+- [https://www.geeksforgeeks.org/iterative-tower-of-hanoi/][https://www.geeksforgeeks.org/iterative-tower-of-hanoi/]
+- [https://www.geeksforgeeks.org/time-complexity-analysis-tower-hanoi-recursion/][https://www.geeksforgeeks.org/time-complexity-analysis-tower-hanoi-recursion/]
+- [https://en.wikipedia.org/wiki/Tree_sort][https://en.wikipedia.org/wiki/Tree_sort]
+- [https://www.geeksforgeeks.org/tree-sort/][https://www.geeksforgeeks.org/tree-sort/]
+- [https://www.geeksforgeeks.org/binary-tree-data-structure/][https://www.geeksforgeeks.org/binary-tree-data-structure/]
 
 
-[https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/]: https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/
-[https://en.wikipedia.org/wiki/Tower_of_Hanoi]: https://en.wikipedia.org/wiki/Tower_of_Hanoi
-[https://www.geeksforgeeks.org/stack-data-structure-introduction-program/]: https://www.geeksforgeeks.org/stack-data-structure-introduction-program/
-[https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1]: https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1
-[https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm]: https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm
-[https://git.io/J8i4a]: https://git.io/J8i4a
-[https://git.io/J8iBt]: https://git.io/J8iBt
+[https://git.io/JRPCA]: https://git.io/JRPCA
+[https://git.io/JRPWs]: https://git.io/JRPWs
 [https://www.geeksforgeeks.org/iterative-tower-of-hanoi/]: https://www.geeksforgeeks.org/iterative-tower-of-hanoi/
 [https://www.geeksforgeeks.org/time-complexity-analysis-tower-hanoi-recursion/]: https://www.geeksforgeeks.org/time-complexity-analysis-tower-hanoi-recursion/
 [https://en.wikipedia.org/wiki/Tree_sort]: https://en.wikipedia.org/wiki/Tree_sort
