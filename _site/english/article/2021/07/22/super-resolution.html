@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>COMPARING C AND GO: TREE SORT | akhmal22’s blog</title>
+<meta name="generator" content="Jekyll v3.9.1" />
+<meta property="og:title" content="COMPARING C AND GO: TREE SORT" />
+<meta name="author" content="Akhmal R" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Comparing C and Go Solutions of Tree Sorting" />
+<meta property="og:description" content="Comparing C and Go Solutions of Tree Sorting" />
+<link rel="canonical" href="http://localhost:4000/english/article/2021/07/22/super-resolution.html" />
+<meta property="og:url" content="http://localhost:4000/english/article/2021/07/22/super-resolution.html" />
+<meta property="og:site_name" content="akhmal22’s blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-22T22:12:59+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="COMPARING C AND GO: TREE SORT" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Akhmal R"},"description":"Comparing C and Go Solutions of Tree Sorting","@type":"BlogPosting","headline":"COMPARING C AND GO: TREE SORT","dateModified":"2021-07-22T22:12:59+07:00","datePublished":"2021-07-22T22:12:59+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/english/article/2021/07/22/super-resolution.html"},"url":"http://localhost:4000/english/article/2021/07/22/super-resolution.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="akhmal22's blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">akhmal22&#39;s blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/posts/">Posts</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">COMPARING C AND GO: TREE SORT</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-07-22T22:12:59+07:00" itemprop="datePublished">Jul 22, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Akhmal R</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="comparing-c-and-go-solutions-of-tree-sorting">Comparing C and Go Solutions of Tree Sorting</h1>
+
+<h2 id="preface">Preface</h2>
+
+<p>In a previous words, I sent the comparison of programming languages C and Go, I compared the times both take to execution and compilation. This specific article is about to do the same thing as previous did. Difference is the programs used in comparison is Tree Sort. With the exact same approach as before, I hope it can extract more data to the comparison than before.</p>
+
+<p>Tree Sort, compared to previous problem Tower of Hanoi, aside of they had different objectives, the complexities are too different to each other. time complexity for Tower of Hanoi is O(2<sup>n</sup> - 1) meanwhile this article’s problem’s is O(n<sup>2</sup>) that indicates us two diversed comparison problem.</p>
+
+<h2 id="what-is-tree-sort">What is Tree Sort?</h2>
+
+<p>For the fast note, it is sorting machine made from binary tree data structure (binary by-design, difficulty reason). For longer explanation, said tree can put the collection of values sorted by inserting each values on collection to the tree and change its sequence mark based on the tree’s nature and sorting problem solving. As the problem already a well-known, we can focus on having the solution ready, interpret it and compare both interpreted solution.</p>
+
+<p><img src="https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/Tower-of-Hanoi-Tower-of-Brahma-or-Lucas-Tower.jpg" alt="directory" />
+<sub>Figure 1: Binary Tree illustration</sub></p>
+
+<h2 id="how-the-algorithm-going">How the algorithm going?</h2>
+
+<p>The problem is pretty obvious so is the solution, basically comparing each element from the list to determine the sequence. Same as previous solution, this particular solution can make use of recursive approach and non-recursive approach and I will use recursive approach for the algorithm. All we should do in algorithm written in pseodocode below. Given the array of element and empty tree represented as nodes each sequentially defined as ‘a’ and ‘t’, ‘a’ will start from 1 and the element position in array (index) will be enclosed by ‘[]’, predefined function ‘insert()’ used to inserting array elements to the tree, data required for ‘insert()’ are array element and tree node.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(functions)
+insert(element, tree):
+  if tree is empty then:
+    add the element to tree
+
+  if given element lower than given tree node's value then:
+    add element to the left of given tree node
+  if given element greater than given tree node's value then:
+    add element to the right of given tree node
+
+inorderTraverse(tree, element):
+  call self for left leaf
+  traverse
+  call self for right leaf
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(main)
+insert(a[1], t)
+
+run iteratively until 10 steps done:
+  insert(a[steps], t)
+  increment steps
+
+inorderTraverse(t, a)
+</code></pre></div></div>
+
+<h2 id="how-can-we-interpret">How can we interpret?</h2>
+
+<p>Given algorithm must be executed iteratively until stack compeletely relocated to final pole. Before using above algorithm, we firstly choose data structure that fit well the situation, the situation only allows movement for last inserted disk (smallest disk) then ‘stack’ data structure is best fit. Tower of Hanoi requires smaller disk placed above larger disk, then add rules in our data structure that only smaller disk can be stacked by another disk. Specification of the data structure methods written below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Method Name</th>
+      <th style="text-align: center">Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">isFull</td>
+      <td style="text-align: center">Check if stack is full</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">pop</td>
+      <td style="text-align: center">Remove element (disk) from the stack</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">push</td>
+      <td style="text-align: center">Insert element (disk) to the stack</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">peek</td>
+      <td style="text-align: center">Return top-most element value of the stack</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">isSmaller</td>
+      <td style="text-align: center">Check if element value to be inserted is smaller than top-most element value of stack</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><sub>Table 1: Methods of stack data structure</sub></p>
+
+<p>If the data structure has been ready, moved on to solution-focused interpretation, we basically interpret the pseudocode below to the more technical one. Earlier before solution delivered, we must initiate the problem by creating 3 stack places (poles) and create disks as required. Methods to solution delivery are listed below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Method Name</th>
+      <th style="text-align: center">Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">moveDisk</td>
+      <td style="text-align: center">Move disk from stack to stack</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">solveProblem</td>
+      <td style="text-align: center">interpretation of solution pseudocode</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><sub>Table 2: Methods of solution delivery</sub></p>
+
+<p>With the specification and explanation above, implementations of the solution are listed in bonus section.</p>
+
+<h2 id="how-the-comparison-going">How the comparison going?</h2>
+
+<p>As mentioned above, we are comparing compilation time and execution time. Before gone to comparison, we define the scope of the comparison that the code used same approach and same algorithm, running on same machine (hardware and software) and deliver the solution of same number of disks, code executed don’t requested for user’s input so user can’t distort the results. The results of comparison, provided by ‘time’ command, are presented in table below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Metrices</th>
+      <th style="text-align: center">C</th>
+      <th style="text-align: center">Go</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Compilation time</td>
+      <td style="text-align: center">real 0m0.263s<br /> user 0m0.089s<br /> sys 0m0.029s</td>
+      <td style="text-align: center">real 0m1.036s<br /> user 0m0.285s<br /> sys 0m0.124s</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Execution time</td>
+      <td style="text-align: center">real 0m0.054s<br /> user 0m0.052s<br /> sys 0m0.002s</td>
+      <td style="text-align: center">real 0m0.025s<br /> user 0m0.024s<br /> sys 0m0.002s</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><sub>Table 3: Measurement results</sub></p>
+
+<p>Times showed on the table 3 consist 3 kind of time, ‘real’, ‘user’ and ‘sys’. ‘Real’ indicates whole time taken on the processes running session, ‘user’ indicates time spent by CPU in computation process of the executable, ‘sys’ indicates time spent by CPU in system tasks in order to bring the executable a run.</p>
+
+<p>In compilation time, C beats Go in every aspects of time, but in the execution time, Go beats C in ‘real’ and ‘user’ time, Go and C are equal in ‘sys’ time.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The measurement resulted that code in C was faster in terms of compilation time than code in Go, contrary to execution time, Go was faster than C.</p>
+
+<h2 id="bonus">Bonus</h2>
+
+<p>The implementations are below.</p>
+
+<p>C: <a href="https://git.io/J8i4a">https://git.io/J8i4a</a></p>
+
+<p>Go: <a href="https://git.io/J8iBt">https://git.io/J8iBt</a></p>
+
+<h2 id="article-source">Article Source</h2>
+
+<ul>
+  <li><a href="https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/">https://www.stemlittleexplorers.com/en/make-and-solve-tower-of-hanoi/</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Tower_of_Hanoi">https://en.wikipedia.org/wiki/Tower_of_Hanoi</a></li>
+  <li>I. Moscovich, 1000 playthinks: puzzles, paradoxes, illusions &amp; games. New York: Workman Pub., 2001.</li>
+  <li>Petković Miodrag, Famous puzzles of great mathematicians. Providence, RI: American Mathematical Society, 2013.</li>
+  <li><a href="https://www.geeksforgeeks.org/stack-data-structure-introduction-program/">https://www.geeksforgeeks.org/stack-data-structure-introduction-program/</a></li>
+  <li><a href="https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm">https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm</a></li>
+  <li><a href="https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1">https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1</a></li>
+</ul>
+
+
+  </div><a class="u-url" href="/english/article/2021/07/22/super-resolution.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">akhmal22&#39;s blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">akhmal22&#39;s blog</li><li><a class="u-email" href="mailto:rizkyantorig355@gmail.com">rizkyantorig355@gmail.com</a></li><li><a href="https://instagram.com/akhmalrakmal"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#instagram"></use></svg> <span class="username">akhmalrakmal</span></a></li><li><a href="https://www.linkedin.com/in/akhmal-rizkyanto"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">akhmal-rizkyanto</span></a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/akhmal22"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">akhmal22</span></a></li><li><a href="https://www.twitter.com/akhmalrakmal"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">akhmalrakmal</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>All about CompSci Stuff</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
