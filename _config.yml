@@ -27,12 +27,16 @@ linkedin_username: akhmal-rizkyanto
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: dark-minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 paginate: 5
 paginate_path: "/page:num/"
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

@@ -11,7 +11,8 @@ source "https://rubygems.org"
 # gem "jekyll", "~> 3.8.5"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.0"
+# gem "minima", "~> 2.0"
+gem "dark-minima"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
@@ -23,6 +24,7 @@ group :jekyll_plugins do
   gem 'jekyll-stickyposts'
   gem "jekyll-gist"
   gem "jekyll-paginate"
+  gem "jekyll-seo-tag"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -36,3 +38,4 @@ gem "kramdown", ">= 2.3.1"
 gem "addressable", ">= 2.8.0"
 gem "ffi", ">=1.11.3"
 gem "kramdown-parser-gfm"
+gem "rouge"
