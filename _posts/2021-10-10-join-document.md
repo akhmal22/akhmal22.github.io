@@ -1,47 +1,101 @@
 ---
 layout: post
-title:  "SUPER RESOLUTION"
-date:   2021-08-23 11:12:59 +0700
+title:  "JOIN DOCUMENT"
+date:   2021-10-10 11:12:59 +0700
 author: "Akhmal R"
-categories: english article
+categories: english documentation
 ---
 
-# Super Resolution
+# Documentation of JOIN
 
-## Preface
+## Foreword
 
-Took a break from programming matters awhile, new topic we got is Super Resolution. Classical concern from Computer Vision drew my attention lately since me too learned it in college so I can be a capable one to explain it.
+This document made to fulfill information providing act for the platform itself (JOIN) as a general topic or for its developer, to be exact, the objectives of this document are.
+- Place to log everything up about platform's development, in order to track every changes made.
+- Implementing good (hopefully) software quality assurance.
+- Information source for the developers.
 
-In this article we presented Super Resolution as implementation of Computer Vision, I tried not too theoretical in presenting it so there's not much things about model building in this article but just showcasing the interest of SR. This article explaining the Super Resolution as a matter, motivation to learn and the example.
+Before aligning to the document, JOIN is platform designed as communication infrastructure for those who had a project whom needs worker or workers who need project to work. Supposedly with JOIN, project owner can get desired project worker also the workers can get desired project to work on.
 
-## What is Super Resolution?
+## Documentation Table of Contents
 
-Super Resolution (SR) in simple term is prediction of images for larger resolution of images predicted. In Computer Vision (CV) theory, SR addressed as techniques done to construct higher resolution images from current images by adding some missing features in target images by predicting it, the prediction made based on non-redundant features collected from same images resembled the size of target image or lower size than target. Features added including edges, color and any other complementary features.
+1. Development Flow
+2. Overall description
+3. Implementation
+4. Testing
 
-## Why you must learn this?
+## Development Flow
 
-SR answered people's demand of better imaging quality through times, like always wanted sort of a good quality photo even from the past, like we know past's isn't as good as nowaday's imaging technologies thus worse photos than now. Also SR can overcome usage of such bad graphic tools like web camera or handheld camera to get next level results.
+![directory](/images/DiagramAlirTABlack.png)<br/>
+<sub>Figure 1: Development flow of JOIN</sub>
 
-## Is it really works?
+### System designing and defining
 
-Yes it is, with SR job on your picture you can tell the difference pre and post job. Depends on the technique adopted, SR added more features to your picture so it is become different from original picture. I might show you one picture predicted to SR version to you so you can actually tell the difference between two, the technique used in this article is example-based SR.
+In this step of development, system defined and designed from nothing to conceptual thing. Analytical study conducted based on the objective of the system given us use case of the system then use case can be broken down to more specific concept. all conceptual matter of the system depicted as UML diagram.
 
-![directory](https://raw.githubusercontent.com/akhmal22/akhmal22.github.io/master/images/comp.jpg)
-<br/><sub>Figure 1: SR and original picture comparison</sub>
+### Implementation preparation
 
-As depicted above, SR version picture appeared more sharp than initial picture hence the feature addition in the prediction.
+After conceptual of the system depicted, we can go to figuring out the prototype of the system. Before going to implement the system, prototyping is required in search of implementation guideline for the real system buildup.
 
-## Conclusion
+### System implementation
 
-SR are by-far serious topic to explore, since this article lacks the theoretic explanations, in the next occasion I will try to explain it in more detail fashion after decipher it to my brain.
+We had our prototype here, so we can start to build actual system, front-end, back-end, everything. Front-end development had user interface prototype as a guideline, back-end used data requirement and data schema as a guideline, then two of it integrated.
 
-## Article Source
+### Documentation
 
-- [https://medium.datadriveninvestor.com/using-the-super-resolution-convolutional-neural-network-for-image-restoration-ff1e8420d846][https://medium.datadriveninvestor.com/using-the-super-resolution-convolutional-neural-network-for-image-restoration-ff1e8420d846]
-- [https://ieeexplore.ieee.org/abstract/document/1203207][https://ieeexplore.ieee.org/abstract/document/1203207]
-- P. Milanfar, "Super-resolution Imaging" 2011
+Documentation is all about taking records out of the whole process of development, in order to provide information to fellow developer or system actual user. Documentation can be commited anytime in the process below as long as it can provide important information to other.
 
+## Overall description
 
+![directory](/images/UseCaseDiagramTABlack.png)<br/>
+<sub>Figure 2: Use Case of JOIN</sub>
 
-[https://medium.datadriveninvestor.com/using-the-super-resolution-convolutional-neural-network-for-image-restoration-ff1e8420d846]: https://medium.datadriveninvestor.com/using-the-super-resolution-convolutional-neural-network-for-image-restoration-ff1e8420d846
-[https://ieeexplore.ieee.org/abstract/document/1203207]: https://ieeexplore.ieee.org/abstract/document/1203207
+System can provide 4 uses for one actor, each uses can be broken down into parts but first let us show you the description.
+
+### Manage Projects
+
+| Name: Manage Projects |
+| Primary Actor: User  |
+| Interest: Project owner managing owned project |
+| Short description: Add new project, edit project detail, delete or read existing projects. |
+| Relationships: Association |
+| Normal Flow of Event:<br/>1. See existing projects<br/>2. Managing existing projects with delete and update operations. |
+| Subflow:<br/>If no project owned:<br/>1. Add new project<br/>2. Fill in data for project addition |
+| Alternate/Exceptional Flow |
+
+### Search for Projects
+
+| Name: Search for Projects |
+| Primary Actor: User  |
+| Interest: Searching for desired projects to join |
+| Short description: Inputting keyword for desired projects, set up search filter, send join requests. |
+| Relationships: Association |
+| Normal Flow of Event:<br/>1. Search with keyword<br/>If worked, to the next step<br/>If not, to  subflow 1<br/>2. See project detail<br/>3. Communicate to project owner<br/>4. Send join request |
+| Subflow:<br/>If search with keyword not worked:<br/>1. Search with search filter |
+| Alternate/Exceptional Flow |
+
+### Manage Profile
+
+| Name: Manage Profile |
+| Primary Actor: User  |
+| Interest: Managing own profile |
+| Short description: Add profile detail, edit or delete profile detail. |
+| Relationships: Association |
+| Normal Flow of Event:<br/>1. See profile<br/>2. Managing profile with delete and edit operation. |
+| Subflow: |
+| Alternate/Exceptional Flow |
+
+### Report Abusive
+
+| Name: Report Abusive |
+| Primary Actor: User  |
+| Interest: Send a report of inapproppriate project or profile to administrator |
+| Short description: Make a report of inapproppriate project or profile |
+| Relationships: Association |
+| Normal Flow of Event:<br/>1. See project detail<br/>2. Report project or owning profile |
+| Subflow: |
+| Alternate/Exceptional Flow |
+
+## Closure
+
+It needs time to rebuild the old project, restructured version of JOIN are being buttoned so maybe this page can be updated overtime.
