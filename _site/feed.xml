@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2021-10-11T07:54:51+07:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">JOIN DOCUMENT</title><link href="http://0.0.0.0:4000/english/documentation/2021/10/10/join-document.html" rel="alternate" type="text/html" title="JOIN DOCUMENT" /><published>2021-10-10T11:12:59+07:00</published><updated>2021-10-10T11:12:59+07:00</updated><id>http://0.0.0.0:4000/english/documentation/2021/10/10/join-document</id><content type="html" xml:base="http://0.0.0.0:4000/english/documentation/2021/10/10/join-document.html">&lt;h1 id=&quot;documentation-of-join&quot;&gt;Documentation of JOIN&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2021-11-22T08:20:06+07:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">akhmal22’s blog</title><subtitle>All about CompSci Stuff</subtitle><entry><title type="html">JOIN DOCUMENT</title><link href="http://0.0.0.0:4000/english/documentation/2021/10/10/join-document.html" rel="alternate" type="text/html" title="JOIN DOCUMENT" /><published>2021-10-10T11:12:59+07:00</published><updated>2021-10-10T11:12:59+07:00</updated><id>http://0.0.0.0:4000/english/documentation/2021/10/10/join-document</id><content type="html" xml:base="http://0.0.0.0:4000/english/documentation/2021/10/10/join-document.html">&lt;h1 id=&quot;documentation-of-join&quot;&gt;Documentation of JOIN&lt;/h1&gt;
 
 &lt;h2 id=&quot;foreword&quot;&gt;Foreword&lt;/h2&gt;
 
@@ -10,6 +10,12 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Before aligning to the document, JOIN is platform designed as communication infrastructure for those who had a project whom needs worker or workers who need project to work. Supposedly with JOIN, project owner can get desired project worker also the workers can get desired project to work on.&lt;/p&gt;
+
+&lt;h2 id=&quot;update-from-restructured&quot;&gt;Update from Restructured&lt;/h2&gt;
+
+&lt;p&gt;Below content is not an original JOIN development notes anymore, Restructured version will take over the page so it would be Restructured’s development notes.&lt;/p&gt;
+
+&lt;p&gt;I make the demo page to it, it is in &lt;a href=&quot;https://joinwebfr.herokuapp.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;documentation-table-of-contents&quot;&gt;Documentation Table of Contents&lt;/h2&gt;
 
@@ -43,7 +49,7 @@
 
 &lt;h2 id=&quot;overall-description&quot;&gt;Overall description&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/UseCaseDiagramTABlack.png&quot; alt=&quot;directory&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;/images/JOIN_UseCase.png&quot; alt=&quot;directory&quot; /&gt;&lt;br /&gt;
 &lt;sub&gt;Figure 2: Use Case of JOIN&lt;/sub&gt;&lt;/p&gt;
 
 &lt;p&gt;System can provide 4 uses for one actor, each uses can be broken down into parts but first let us show you the description.&lt;/p&gt;
@@ -146,22 +152,22 @@
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;Name: Report Abusive&lt;/td&gt;
+      &lt;td&gt;Name: Join to Project&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Primary Actor: User&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Interest: Send a report of inapproppriate project or profile to administrator&lt;/td&gt;
+      &lt;td&gt;Interest: Joining project that selected before&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Short description: Make a report of inapproppriate project or profile&lt;/td&gt;
+      &lt;td&gt;Short description: Send a request to join selected project to project owner&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Relationships: Association&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Normal Flow of Event:&lt;br /&gt;1. See project detail&lt;br /&gt;2. Report project or owning profile&lt;/td&gt;
+      &lt;td&gt;Normal Flow of Event:&lt;br /&gt;1. See project detail&lt;br /&gt;2. Request to Join&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Subflow:&lt;/td&gt;

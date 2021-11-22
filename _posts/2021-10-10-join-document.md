@@ -17,6 +17,14 @@ This document made to fulfill information providing act for the platform itself 
 
 Before aligning to the document, JOIN is platform designed as communication infrastructure for those who had a project whom needs worker or workers who need project to work. Supposedly with JOIN, project owner can get desired project worker also the workers can get desired project to work on.
 
+## Update from Restructured
+
+Below content is not an original JOIN development notes anymore, Restructured version will take over the page so it would be Restructured's development notes.
+
+I make the demo page to it, it is in [here][https://joinwebfr.herokuapp.com/]
+
+[https://joinwebfr.herokuapp.com/]: https://joinwebfr.herokuapp.com/
+
 ## Documentation Table of Contents
 
 1. Development Flow
@@ -47,7 +55,7 @@ Documentation is all about taking records out of the whole process of developmen
 
 ## Overall description
 
-![directory](/images/UseCaseDiagramTABlack.png)<br/>
+![directory](/images/JOIN_UseCase.png)<br/>
 <sub>Figure 2: Use Case of JOIN</sub>
 
 System can provide 4 uses for one actor, each uses can be broken down into parts but first let us show you the description.
@@ -87,12 +95,12 @@ System can provide 4 uses for one actor, each uses can be broken down into parts
 
 ### Report Abusive
 
-| Name: Report Abusive |
+| Name: Join to Project |
 | Primary Actor: User  |
-| Interest: Send a report of inapproppriate project or profile to administrator |
-| Short description: Make a report of inapproppriate project or profile |
+| Interest: Joining project that selected before |
+| Short description: Send a request to join selected project to project owner |
 | Relationships: Association |
-| Normal Flow of Event:<br/>1. See project detail<br/>2. Report project or owning profile |
+| Normal Flow of Event:<br/>1. See project detail<br/>2. Request to Join |
 | Subflow: |
 | Alternate/Exceptional Flow |
 
